@@ -1,4 +1,7 @@
+
 {% extends 'base.html' %}
+
+{% load static %}
 
 {% block body %}
 
@@ -14,8 +17,8 @@
                                 <div class="banner-middle text-center text-justify text-break">
                                     <p>
                                         <span class="text-warning p-1">Bar</span>
-                                        / Restaurant</p>
-                                    <a href="index.html"><img src="/assets/images/logo1.png" alt="logo" width="80px" id="logo"></a>
+                                        / Restaurant</p>'
+                                    <a href="index.html"><img src="/static/site_static/images/logo1.png" alt="logo" width="80px" id="logo"></a>
                                     <p>Incredible Food, Unforgettable Experiences.<br>
                                         If you are looking for a truly special dining experience, then La Grill is the perfect choice.
                                         <br>
@@ -110,7 +113,7 @@
                                 <!-- Menu item 1 -->
                                 <div class="row menu-item-1">
                                     <div class="col-3">
-                                        <img class="menu-item-photo" src="/assets/images/menu-item-images/menu-item-1.jpeg" alt="menu item one">
+                                        <img class="menu-item-photo" src="{% static 'site_static/images/menu-item-images/menu-item-1.jpeg' %}" alt="menu item one">
                                     </div>
                                     <div class="col-7">
                                         <h5 class="menu-item-title">Truffled Lobster Bisque</h5>
