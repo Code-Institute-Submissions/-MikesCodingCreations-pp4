@@ -1,0 +1,208 @@
+/* --- Root Styles --- */
+:root {
+    --primary-col: rgb(26, 26, 26);
+    --secondary-col: #EEB307;
+    --tertiary-col: #F0F0F0;
+    --main-fnt: 'Rozha One', serif;
+}
+
+/* --- General stlyes --- */
+
+p{
+    font-size: 20px;
+}
+
+.padding{
+    padding: 60px;
+}
+
+/* --- Navbar CSS start--- */
+.navbar {
+    margin: 10px;
+    font-family: var(--main-fnt);
+    font-size: 20px;
+}
+
+#logo {
+    width: 60px;
+    padding-bottom: 5px;
+}
+
+#navbarSupportedContent {
+    margin-left: 15px;
+}
+
+.nav-item a {
+    padding: 5px 0 0 0;
+}
+
+.nav-item a:hover {
+    text-decoration: overline;
+}
+
+.banner #logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+/* --- Navbar CSS end--- */
+
+/* --- Hero CSS start --- */
+.banner{
+    position: relative;
+    background: url(/assets/images/hero-images/hero-img2.jpeg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    height: 800px;
+    background-attachment: fixed;
+}
+
+.banner-social,.banner-address{
+    position: absolute;
+    top: 45%;
+    transform: translateY(350px);
+    color: white;
+}
+
+.banner-middle {
+    position: absolute;
+    transform: translate(220px,230px);
+    color: white
+}
+
+.fab {
+    font-size: 24px;
+    padding: 10px;
+}
+
+.fab:hover {
+    color: var(--secondary-col);
+    cursor: pointer;
+}
+/* --- Hero CSS end --- */
+
+/* --- About-us-section Start --- */
+#about {
+    height: 100vh;
+}
+
+.about-us-top-one p {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 3;
+    padding-top: 50%;
+}
+
+.about-us-top-one p span {
+    color: var(--secondary-col);
+}
+
+.about-us-top-two {
+    padding-top: 60px;
+}
+
+.about-us-top-three h3{
+    margin-bottom: 40px;
+}
+
+.about-us-bottom-one h3 {
+    margin-bottom: 40px;
+}
+
+/* --- About-us-section End --- */
+
+/* --- Menu Section Start --- */
+#menu-section {
+    height: 100%;
+    color: white;
+    background-color: var(--primary-col);
+    padding-bottom: 20px;
+}
+
+#menu-section h3 {
+    font-family: var(--main-fnt);
+    font-size: 50px;
+    color: var(--secondary-col);
+}
+
+.menu-item-photo {
+    width: 150px;
+}
+
+.menu-item-title {
+    color: var(--secondary-col);
+}
+
+.menu-item-info {
+    font-size: 16px;
+}
+/* --- Menu Section End --- */
+
+/* --- Gallery Section Start */
+#gallery-section img{
+    border: 3px solid var(--secondary-col);
+}
+
+.gallery-section-header{
+    color: var(--secondary-col);
+    font-family: var(--main-fnt);
+    font-size: 50px;
+}
+
+.gallery-section-info{
+    color: var(--primary-col);
+    padding-bottom: 13px;
+}
+/* --- Gallery Section end */
+
+/* --- Reservartion Section Start--- */
+#reservation-section {
+    background-color: var(--primary-col);
+    color: var(--tertiary-col);
+}
+
+#reservation-section .container {
+    padding: 20px 0 30px 0;
+    width: 85%;
+}
+
+#reservation-section h3{
+    font-family: var(--main-fnt);
+    font-size: 50px;
+    color: var(--secondary-col);
+    padding-bottom: 20px;
+}
+
+#reservation-section p {
+    padding-bottom: 30px;
+}
+
+#reservation-section span {
+    color: var(--secondary-col);
+}
+/* --- Reservartion Section End --- */
+
+/* --- Footer/contact us Section Start --- */
+#footer {
+    background-color: var(--tertiary-col);
+    padding: 20px 0;
+}
+
+.footer-about h3,
+.footer-contact h3,
+.footer-hours h3 {
+    color: var(--secondary-col);
+    font-family: var(--main-fnt);
+    font-size: 25px;
+    text-align: center;
+}
+
+#footer p {
+    text-align: center;
+    font-size: 15px;
+}
+
+/* --- Footer/contact us Section End --- */
+
+
+/* Media Queries */
