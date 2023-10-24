@@ -16,5 +16,9 @@ class Menu(models.Model):
             self.slug = slugify(self.name)
         super(Menu, self).save(*args, **kwargs)
 
+    class Meta:
+        verbose_name = 'menu'
+        verbose_name_plural = 'menus'
+
     def __str__(self):
         return self.name
