@@ -12,5 +12,9 @@ def menu_list(request):
     return render(request, 'Menus/list.html', context)
 
 
-def menu_detail(request):
-    pass
+def menu_detail(request, slug):
+    menu_detail = Menu.objects.get(slug=slug)
+
+    context = {'menu_detail': menu_detail}
+
+    return render(request, 'Menus/detail.html', context)
