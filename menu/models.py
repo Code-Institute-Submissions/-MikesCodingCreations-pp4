@@ -2,6 +2,8 @@ from django.db import models
 from django.utils.text import slugify
 
 # Create your models here.
+
+
 class Menu(models.Model):
     name = models.CharField(max_length=50)
     description = models.TextField(max_length=500)
@@ -10,5 +12,10 @@ class Menu(models.Model):
     image = models.ImageField(upload_to='menu/')
     slug = models.SlugField(blank=True, null=True)
 
-    def __str__(self): 
-        return self.name
+    def save(self, *args, **kwargs):
+        if not self.slug and self.name:
+            self.slug = slugify(self.name)
+        super(Menu, self).save(*args, **kwargs)
+
+    def __str__(self):
+        return self.menu.models.Menus.name
