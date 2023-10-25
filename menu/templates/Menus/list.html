@@ -7,7 +7,7 @@
 
     <!-- body wrapper -->
     <div class="body-part-between-nav-and-footer">
-
+        {% comment %}
         <!-- ********** Hero Section ********** -->
             <div class="banner">
                 <div class="mask d-flex justify-content-center align-items-center">
@@ -96,7 +96,7 @@
                     </div>
                 </div>
             </section>
-
+        {% endcomment %}
         <!-- ********** Menu Section ********** -->
             <div class="container-fluid mh-100" id="menu-section">
                 <div class="row">
@@ -105,112 +105,38 @@
                             <p class="mb-4">A culinary canvas where artistry and indulgence converge, each dish a symphony of flavors meticulously crafted to delight the senses and leave a lasting impression.</p>
                         </div>
 
-                <!-- Menu Items -->
-                <div class="menu-items">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-12">
+                    <!-- Menu Items -->
+                    <div class="menu-items">
+                        <div class="container">
+                            <div class="row">
+
                                 <!-- Menu item 1 -->
-                                <div class="row menu-item-1">
-                                    <div class="col-3">
-                                        <img class="menu-item-photo" src="{% static 'site_static/images/menu-item-images/menu-item-1.jpeg' %}" alt="menu item one">
+                                {% for menu in menu_list %}
+                                    <div class="col-lg-6 col-md-12">
+                                        <div class="row menu-item-1">
+                                            <div class="col-3">
+                                                <img class="menu-item-photo" src="{% static 'site_static/images/menu-item-images/menu-item-1.jpeg' %}" alt="menu item one">
+                                            </div>
+                                            <div class="col-7">
+                                                <h5 class="menu-item-title"><a href="{% url 'menu:menu_detail' menu.slug %}">{{menu.name}}</a></h5>
+                                                <p class="menu-item-info pt-2">{{menu.description}}</p>
+                                            </div>
+                                            <div class="col-2">
+                                                <span class="dollar font-weight-bold">{{menu.price}}</span>
+                                            </div>
+                                        </div>
+                                        <hr class="my-4">
                                     </div>
-                                    <div class="col-7">
-                                        <h5 class="menu-item-title">Truffled Lobster Bisque</h5>
-                                        <p class="menu-item-info pt-2">This classic French soup is made with a rich lobster stock, cream, and butter, and is infused with the earthy flavor of truffles. It is typically served with a garnish of fresh lobster meat.</p>
-                                    </div>
-                                    <div class="col-2">
-                                        <span class="dollar font-weight-bold">$25</span>
-                                    </div>
-                                </div>
-                                <hr class="my-4">
+                                {% endfor %}
+
                             </div>
-                            <div class="col-lg-6 col-md-12">
-                                <!-- Menu item 2 -->
-                                <div class="row menu-item-2">
-                                    <div class="col-3">
-                                        <img class="menu-item-photo" src="/assets/images/menu-item-images/menu-item-2.jpeg" alt="menu item one">
-                                    </div>
-                                    <div class="col-7">
-                                        <h5 class="menu-item-title">Foie Gras Terrine</h5>
-                                        <p class="menu-item-info pt-2">This French dish is made with a pâté of foie gras, a fatty liver from a duck or goose. It is typically served with a sweet or savory accompaniment, such as toasted brioche, and fig chutney.</p>
-                                    </div>
-                                    <div class="col-2">
-                                        <span class="dollar font-weight-bold">$27</span>
-                                    </div>
-                                </div>
-                                    <hr class="my-4">
-                            </div>
-                            <div class="col-lg-6 col-md-12">
-                                <!-- Menu item 3 -->
-                                <div class="row menu-item-3">
-                                    <div class="col-3">
-                                        <img class="menu-item-photo" src="/assets/images/menu-item-images/menu-item-3.jpeg" alt="menu item one">
-                                    </div>
-                                    <div class="col-7">
-                                        <h5 class="menu-item-title">Seared Scallops + Black Truffle Risotto</h5>
-                                        <p class="menu-item-info pt-2">This dish features perfectly seared scallops served atop a creamy risotto made with black truffles. The risotto is typically flavored with white wine, Parmesan cheese, and fresh herbs.</p>
-                                    </div>
-                                    <div class="col-2">
-                                        <span class="dollar font-weight-bold">$37</span>
-                                    </div>
-                                </div>
-                                <hr class="my-4">
-                            </div>
-                            <div class="col-lg-6 col-md-12">
-                                <!-- Menu item 4 -->
-                                <div class="row menu-item-4">
-                                    <div class="col-3">
-                                        <img class="menu-item-photo" src="/assets/images/menu-item-images/menu-item-4.jpeg" alt="menu item one">
-                                    </div>
-                                    <div class="col-7">
-                                        <h5 class="menu-item-title">Roasted Rack of Lamb</h5>
-                                        <p class="menu-item-info pt-2">This dish features a rack of lamb that has been seasoned with herbs and spices for over 48 hours. It is typically served with a mint sauce and a side of roasted vegetables or potatoes.</p>
-                                    </div>
-                                    <div class="col-2">
-                                        <span class="dollar font-weight-bold">$53</span>
-                                    </div>
-                                </div>
-                                    <hr class="my-4">
-                            </div>
-                            <div class="col-lg-6 col-md-12">
-                                <!-- Menu item 5 -->
-                                <div class="row menu-item-5">
-                                    <div class="col-3">
-                                        <img class="menu-item-photo" src="/assets/images/menu-item-images/menu-item-5.jpeg" alt="menu item one">
-                                    </div>
-                                    <div class="col-7">
-                                        <h5 class="menu-item-title">Wagyu Beef Wellington</h5>
-                                        <p class="menu-item-info pt-2">This dish features a tenderloin of Wagyu beef that is wrapped in puff pastry and baked. It is typically served with a side of roasted vegetables and a horseradish cream sauce.</p>
-                                    </div>
-                                    <div class="col-2">
-                                        <span class="dollar font-weight-bold">$44</span>
-                                    </div>
-                                </div>
-                                    <hr class="my-4">
-                            </div>
-                            <div class="col-lg-6 col-md-12">
-                                <!-- Menu item 6 -->
-                                <div class="row menu-item-6">
-                                    <div class="col-3">
-                                        <img class="menu-item-photo" src="/assets/images/menu-item-images/menu-item-6.jpeg" alt="menu item one">
-                                    </div>
-                                    <div class="col-7">
-                                        <h5 class="menu-item-title">Decadent Chocolate Soufflé</h5>
-                                        <p class="menu-item-info pt-2">This classic French dessert is made with a light and airy chocolate batter that is baked until it rises high and puffy. It is typically served with a side of chocolate sauce or vanilla ice cream.</p>
-                                    </div>
-                                    <div class="col-2">
-                                        <span class="dollar font-weight-bold">$13</span>
-                                    </div>
-                                </div>
-                                    <hr class="my-4">
-                            </div>
-                        </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
+        {% comment %}
         <!-- ********** Gallery Section ********** -->
             <div class="gallery padding" id="gallery-section">
                 <div class="container">
@@ -279,6 +205,7 @@
                     <button  type="submit" class="btn btn-outline-warning btn-lg mx-auto d-block">RESERVE A TABLE</button>
                 </div>
             </section>
+        {% endcomment %}
     </div>
 
 {% endblock body %}

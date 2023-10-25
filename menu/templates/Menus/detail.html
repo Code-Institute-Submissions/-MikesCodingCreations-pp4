@@ -1,9 +1,27 @@
-<h1> Menu Detail </h1>
 
-<h2>{{menu_detail}}</h2>
+{% extends 'base.html' %}
 
-<h3>{{menu_detail.description}}</h3>
-<h3>{{menu_detail.people}}</h3>
-<h3>{{menu_detail.price}}</h3>
+{% load static %}
 
-<img src="{{menu_detail.image.url}}">
+{% block body %}
+
+        <!-- ********** Menu Section ********** -->
+            <div class="container-fluid mh-100" id="menu-section">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="row menu-item-1 d-flex justify-content-center">
+                            <h2 class="text-center pt-3 display-2 text-warning" id="menu-detail-title">{{menu_detail}}</h2>
+                            <img src="{{menu_detail.image.url}}" alt="menu item image" style=" width: 500px; align-items: center;" class="pb-3">
+                            <p class="text-center">{{menu_detail.description}}</p>
+
+                            <p class="text-center">For: {{menu_detail.people}} Guests</p>
+                            <p class="text-center">Price: {{menu_detail.price}}$</p>
+                        </div>
+                        <hr class="my-4">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock body %}
