@@ -1,8 +1,5 @@
-
 {% extends 'base.html' %}
-
 {% load static %}
-
 {% block body %}
 
     <!-- body wrapper -->
@@ -110,12 +107,12 @@
                         <div class="container">
                             <div class="row">
 
-                                <!-- Menu item 1 -->
+                                <!-- Menu item -->
                                 {% for menu in menu_list %}
                                     <div class="col-lg-6 col-md-12">
                                         <div class="row menu-item-1">
                                             <div class="col-3">
-                                                <img class="menu-item-photo" src="{% static 'site_static/images/menu-item-images/menu-item-1.jpeg' %}" alt="menu item one">
+                                                <img class="menu-item-photo" src="{{image.menu_detail.url}}" alt="menu item one">
                                             </div>
                                             <div class="col-7">
                                                 <h5 class="menu-item-title"><a href="{% url 'menu:menu_detail' menu.slug %}">{{menu.name}}</a></h5>

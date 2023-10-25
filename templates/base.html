@@ -11,15 +11,15 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Rozha+One&display=swap" rel="stylesheet">
 
-        <linkrel="stylesheet" href="{% static 'site_static/css/style.csss' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
         <title>La Grill - Fine Dining Restaurant</title>
     </head>
 
     <body>
     <!-- ********** Navbar Section********** -->
-        <nav class="navbar navbar-expand-sm bg-dark">
+        <nav class="navbar navbar-expand-sm">
             <div class="container-fluid">
-                <a href="/templates/base.html"><img src="/static/site_static/images/logo1.png" alt="logo" width="80px" id="logo"></a>
+                <a href="/templates/base.html"><img src="/static/images/logo1.png" alt="logo" width="80px" id="logo"></a>
                 <button class="navbar-toggler text-success bg-alert" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -27,13 +27,13 @@
                 <div class="collapse navbar-collapse justify-content-start" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link link-warning" href="#about">About</a>
+                            <a class="nav-link link-warning" href="#">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link link-warning" href="#menu-section">Menu</a>
+                            <a class="nav-link link-warning" href="#">Menu</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link link-warning" href="#gallery-section">Gallery</a>
+                            <a class="nav-link link-warning" href="#">Gallery</a>
                         </li>
                     </ul>
                 </div>
@@ -42,15 +42,54 @@
                     <ul class="navbar-nav ">
 
                         <li class="nav-item">
-                            <a class="nav-link link-warning" href="#reservation-section">Reservations</a>
+                            <a class="nav-link link-warning" href="{% url 'reservation:reserve_table' %}">Reservations</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link link-warning" href="#footer">Contact Us</a>
+                            <a class="nav-link link-warning" href="#">Contact Us</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
+
+        <!-- ********** Hero Section ********** -->
+        <div class="banner" style="position: relative; background: url(/static/images/hero-images/hero-img2.jpeg); background-repeat:no-repeat; background-size: cover; max-width: 100%; height: 800px; background-attachment: fixed;">
+            <div class="mask d-flex justify-content-center align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="banner-middle text-center text-justify text-break">
+                                <p>
+                                    <span class="text-warning p-1">Bar</span>
+                                    / Restaurant</p>
+                                <a href="index.html"><img src="/static/images/logo1.png" alt="logo" width="80px" id="logo"></a>
+                                <p>Incredible Food, Unforgettable Experiences.<br>
+                                    If you are looking for a truly special dining experience, then La Grill is the perfect choice.
+                                    <br>
+                                    It is an opportunity to experience the pinnacle of culinary artistry and to create lasting memories.</p>
+                                <a href="#reservation-section" class="btn btn-outline-warning btn-lg" type="button">RESERVE A TABLE</a>
+                            </div>
+                        </div>
+
+                        <div class="col-8">
+                            <div class="banner-social text-dark">
+                                <i class="fab fa-facebook"></i>
+                                <i class="fab fa-instagram"></i>
+                                <i class="fab fa-twitter"></i>
+                            </div>
+                        </div>
+
+                        <div class="col-4">
+                            <div class="banner-address">
+                                <p class="text-dark">
+                                    <i class="fas fa-map-marker text-warning p-1 "></i>
+                                    One Restaurant Place, Food City, 0000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         {% block body %}
 
@@ -90,10 +129,10 @@
     <!-- ***** JS Links ***** -->
 
         <!-- Font Awesome -->
-        <script src="{% static 'https://kit.fontawesome.com/1a5fa01ebf.js' %}" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/1a5fa01ebf.js" crossorigin="anonymous"></script>
 
         <!-- Bootstrap -->
-        <script src="{% static 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js' %}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     </body>
 </html>

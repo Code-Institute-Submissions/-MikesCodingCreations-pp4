@@ -18,9 +18,10 @@ p{
 
 /* --- Navbar CSS start--- */
 .navbar {
-    margin: 10px;
     font-family: var(--main-fnt);
     font-size: 20px;
+    background-color: var(--primary-col);
+    border-bottom: 1px solid var(--secondary-col);
 }
 
 #logo {
@@ -49,7 +50,7 @@ p{
 /* --- Hero CSS start --- */
 .banner{
     position: relative;
-    background: url(/assets/images/hero-images/hero-img2.jpeg);
+    background: url(/static/images/hero-images/hero-img2.jpeg);
     background-repeat:no-repeat;
     background-size: cover;
     max-width: 100%;
