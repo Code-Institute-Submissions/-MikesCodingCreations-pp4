@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['restaurant-pp4-app.herokuapp.com', '8000-mikescoding-restaurants-z6v4sdsjknb.ws-eu105.gitpod.io']
+ALLOWED_HOSTS = ['mike-pp4-3d62f6360b85.herokuapp.com', '8000-mikescoding-restaurants-z6v4sdsjknb.ws-eu105.gitpod.io']
 
 
 # Application definition
