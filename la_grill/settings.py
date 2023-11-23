@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 import os
 from pathlib import Path
+import dj_database_url
 if os.path.isfile('env.py'):
     import env
 
@@ -23,12 +24,12 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = os.environ.get('SECRET_KEY', '4g(42wm)dv%p*nz8j#h+ri$@u(apyu_a0dm&t^fd$c_qy)1ikg')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mike-pp4-3d62f6360b85.herokuapp.com', '8000-mikescoding-restaurants-z6v4sdsjknb.ws-eu105.gitpod.io']
+ALLOWED_HOSTS = ['mike-pp4-3d62f6360b85.herokuapp.com', '8000-mikescodingcreations-res-0w56sqjamn.us2.codeanyapp.com']
 
 
 # Application definition
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
     'menu',
     'reservation',
     'home',
+    'aboutus',
 ]
 
 MIDDLEWARE = [
@@ -86,8 +88,19 @@ WSGI_APPLICATION = 'la_grill.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+# }
+
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'DatabaseName',
+        'USER': 'DatabaseUserName',
+        'PASSWORD': 'DatabaseUserpassword',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
 }
 
 # Password validation
