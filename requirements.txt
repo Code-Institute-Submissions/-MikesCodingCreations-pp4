@@ -16,6 +16,8 @@ lazr.uri==1.0.6
 more-itertools==8.10.0
 oauthlib==3.2.0
 packaging==23.2
+Pillow==10.1.0
+psycopg2-binary==2.9.9
 Pygments==2.11.2
 PyGObject==3.42.1
 PyJWT==2.3.0
