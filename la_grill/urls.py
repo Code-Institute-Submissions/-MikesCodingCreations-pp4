@@ -21,6 +21,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('menu/', include('menu.urls', namespace='menu')),
+    # path('blog/', include('blog.urls', namespace='blog')),
+    path('about-us/', include('aboutus.urls', namespace='aboutus')),
     path('reserve_table/', include('reservation.urls', namespace='reservation')),
 ]
 

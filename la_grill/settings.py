@@ -32,7 +32,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-mikescodingcreations-pp4-kh2ybr77hr.us2.codeanyapp.com']
+ALLOWED_HOSTS = ['8000-mikescodingcreat-pp4-cc9rjymb5h0.ws-eu106.gitpod.io']
 
 
 # Application definition

@@ -17,3 +17,11 @@ Unfortunetly due to personal circumstances, i was not able to compelte this prob
 
 I would appriciate if you could offer an extension on me re-submitting the project at a later date.
 
+
+
+<!-- images -->
+
+CHEF 1 - https://pixabay.com/photos/chef-cooking-street-costumer-4807317/
+CHEF 2 - https://pixabay.com/photos/platting-chef-food-fine-dining-4282016/
+CHEF 3 - https://pixabay.com/photos/asian-cuisine-chef-cooking-cookware-1850233/
+CHEF 4 - https://pixabay.com/photos/pizza-chef-cook-uniform-food-366111/
