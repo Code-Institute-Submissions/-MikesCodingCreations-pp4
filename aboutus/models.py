@@ -14,6 +14,17 @@ class AboutUs(models.Model):
     def __str__(self):
         return self.title
 
+class History(models.Model):
+    title = models.CharField(max_length = 50)
+    content = models.TextField()
+
+    class Meta:
+        verbose_name = 'resturant history'
+        verbose_name_plural = 'resturant history'
+
+    def __str__(self):
+        return self.title
+
 class Why_Choose_Us(models.Model):
     title = models.CharField(max_length = 50)
     content = models.TextField()
