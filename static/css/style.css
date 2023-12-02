@@ -25,6 +25,31 @@ p{
 }
 
 
+
+/* .logo-test {
+    width: 90px;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+
+    border: 3px solid black;
+    margin: 20px;
+    padding: 3px 3px;
+
+    color: #EEB307;
+}
+
+.logo-inside-border { 
+    background-color: black;
+    color: white;
+    padding: 1px 12px;
+} */
+
+
+
+
+
 /* --- Navbar CSS start--- */
 .navbar {
     font-family: var(--main-fnt);

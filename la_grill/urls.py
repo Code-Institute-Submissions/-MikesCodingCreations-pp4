@@ -24,6 +24,7 @@ urlpatterns = [
     # path('blog/', include('blog.urls', namespace='blog')),
     path('about-us/', include('aboutus.urls', namespace='aboutus')),
     path('reserve_table/', include('reservation.urls', namespace='reservation')),
+    path('', include('home.urls', namespace='home')),
 ]
 
 
