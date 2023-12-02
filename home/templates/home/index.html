@@ -29,11 +29,13 @@
         <div class="container">
             <div class="row mt-5">
                 <div class="col-md-4" data-aos="fade-up">
-                    <img src="{% static '/images/about-us-images/about-us-img1.jpeg' %}" alt="Image Placeholder">
+                    <img src="{% static '/images/about-us-images/about-us-img1.jpeg' %}" alt="Image Placeholder" class="img-fluid rounded center">
                 </div>
+
+
                 <div class="col-md-8 pl-md-5" data-aos="fade-up" data-aos-delay="200">
                     <h2 class="mb-4 lead display-5 text-center" style="color: #EEB307">{{history.title}}</h2>
-                    <p class="lead mt-2">{{history.content}}</p>
+                    <p class="lead mt-2 text-center">{{history.content}}</p>    
                 </div>
             </div>
         </div>
@@ -51,7 +53,7 @@
             </div>
             <div class="row large-gutters">
                 <div class="col-md-5 why_choose_us_img" data-aos="fade-up" data-aos-delay="200">
-                    <img src="{% static '/images/about-us-images/about-us-img2.jpeg' %}" alt="Why choose us image" class="img-fluid rounded">
+                    <img src="{% static '/images/about-us-images/about-us-img2.jpeg' %}" alt="Why choose us image" class="img-fluid rounded mb-3">
                 </div>
                 <div class="col-md-7" data-aos="fade-up" data-aos-delay="300">
                     <div class="accordion" id="accordion">
@@ -90,14 +92,14 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="row menu-item-1">
                                     <div class="col-3">
-                                        <img class="menu-item-photo" src="{{menu_detail.image.url}}" alt="menu item one">
+                                        <img class="menu-item-photo" src="{{menu_detail.image.url}}" alt="menu item">
                                     </div>
                                     <div class="col-7">
                                         <h5 class="menu-item-title"><a href="{% url 'menu:menu_detail' menu.slug %}">{{menu.name}}</a></h5>
                                         <p class="menu-item-info pt-2">{{menu.description}}</p>
                                     </div>
                                     <div class="col-2">
-                                        <span class="dollar font-weight-bold">{{menu.price}}</span>
+                                        <span class="dollar font-weight-bold">€{{menu.price}}</span>
                                     </div>
                                 </div>
                                 <hr class="my-4">

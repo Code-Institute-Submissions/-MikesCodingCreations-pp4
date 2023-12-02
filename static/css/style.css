@@ -144,6 +144,17 @@ p{
     margin-bottom: 40px;
 }
 
+
+
+#accordion {
+    --bs-accordion-active-bg: white;
+    --bs-accordion-active-bg: none;
+}
+
+.accordion {
+    --bs-accordion-active-bg: white;
+}
+
 /* --- About-us-section End --- */
 
 /* --- Menu Section Start --- */
