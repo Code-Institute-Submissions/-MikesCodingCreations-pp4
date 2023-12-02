@@ -16,6 +16,15 @@ p{
     padding: 60px;
 }
 
+
+/* remove bootsrap styles */
+.accordion-button:focus {
+    background: none;
+    box-shadow: none;
+    transition: none;
+}
+
+
 /* --- Navbar CSS start--- */
 .navbar {
     font-family: var(--main-fnt);
