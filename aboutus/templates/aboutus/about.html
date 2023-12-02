@@ -51,20 +51,15 @@
                     <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
                         <div class="accordion" id="accordion">
                             {% for info in why_choose_us %}
-
                             <div class="accordion-item">
-                                <h3 class="mb-0">
-                                    <a href="#collapse{{info.id}}" data-toggle="collapse" class="btn-block p-3" role="button" aria-expanded="true" aria-controls="collapseONE">{{info.title}}<span class="icon"></span></a>
-                                </h3>
-                                <div class="collapse show" id="collapse{{info.id}}" aria-labelledby="headingONE" data-parent="#accordion">
-                                    <div class="p-3">
-                                        <p>{{info.content}}</p>
-                                    </div>
+                                <h2 class="accordion-header" id="headingOne">
+                                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{info.id}}" aria-expanded="true" aria-controls="collapse{{info.id}}">{{info.title}}</button>
+                                </h2>
+                                <div id="collapse{{info.id}}" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordion">
+                                  <div class="accordion-body">{{info.content}}</div>
                                 </div>
-                            </div>
+                              </div>
                             {% endfor %}
-
-
                         </div>
                     </div>
                 </div>
@@ -116,30 +111,14 @@
                     </div>
                 </div>
                 <div class="row">
+                    {% for one in chef %}
                     <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
-                        <img src="/media/chef/john-smith-chef-1.jpeg" alt="Chef1" class="img-fluid mb-4 rounded">
-                        <h3 class="mb-3">John Smith</h3>
-                        <p class="post-meta text-muted">Chef 1</p>
-                        <p class="mb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid sunt similique fugiat atque iste dicta!</p>
+                        <img src="{{one.image.url}}" alt="Chef1" class="img-fluid mb-4 rounded">
+                        <h3 class="mb-3">{{one.name}}</h3>
+                        <p class="post-meta text-muted">{{one.title}}</p>
+                        <p class="mb-5">{{one.bio}}</p>
                     </div>
-                    <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
-                        <img src="/media/chef/john-smith-chef-1.jpeg" alt="Chef2" class="img-fluid mb-4 rounded">
-                        <h3 class="mb-3">Dave Jones</h3>
-                        <p class="post-meta text-muted">Chef 2</p>
-                        <p class="mb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid sunt similique fugiat atque iste dicta!</p>
-                    </div>
-                    <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
-                        <img src="/media/chef/john-smith-chef-1.jpeg" alt="Chef3" class="img-fluid mb-4 rounded">
-                        <h3 class="mb-3">Michael Mitch</h3>
-                        <p class="post-meta text-muted">Chef 3</p>
-                        <p class="mb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid sunt similique fugiat atque iste dicta!</p>
-                    </div>
-                    <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
-                        <img src="/media/chef/john-smith-chef-1.jpeg" alt="Chef4" class="img-fluid mb-4 rounded">
-                        <h3 class="mb-3">Andrew James</h3>
-                        <p class="post-meta text-muted">Chef 4</p>
-                        <p class="mb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid sunt similique fugiat atque iste dicta!</p>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>

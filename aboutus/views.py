@@ -6,7 +6,7 @@ def aboutus_list(request):
     about = AboutUs.objects.last()
     history = History.objects.last()
     why_choose_us = Why_Choose_Us.objects.all()
-    chef = Chef.objects.last()
+    chef = Chef.objects.all()
 
     context = {
         'about' : about,
