@@ -28,12 +28,12 @@ p{
 .navbar {
     font-family: var(--main-fnt);
     font-size: 20px;
-    background-color: white;
-    border-bottom: 1px solid var(--secondary-col);
+    background-color: black;
+    border-bottom: 3px solid var(--secondary-col);
 }
 
 #logo {
-    width: 60px;
+    width: 80px;
     padding-bottom: 5px;
 }
 
@@ -41,8 +41,14 @@ p{
     margin-left: 15px;
 }
 
+.nav-item a {
+    color: var(--secondary-col);
+    font-size: 1.5rem;
+}
+
 .nav-item a:hover {
     text-decoration: overline;
+    color: var(--secondary-col);
 }
 
 .banner #logo {
@@ -53,27 +59,20 @@ p{
 
 /* --- Hero CSS start --- */
 .banner{
-    position: relative;
-    /* background: url(/static/images/hero-images/hero-img2.jpeg); */
     background-color: black;
-    background-repeat:no-repeat;
-    background-size: cover;
-    max-width: 100%;
-    height: 800px;
-    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .banner-social,.banner-address{
-    position: absolute;
-    top: 45%;
-    transform: translateY(350px);
     color: white;
 }
 
 .banner-middle {
-    position: absolute;
-    transform: translate(220px,230px);
-    color: white
+    color: white;
 }
 
 .fab {
@@ -114,8 +113,6 @@ p{
 .about-us-bottom-one h3 {
     margin-bottom: 40px;
 }
-
-
 
 #accordion {
     --bs-accordion-active-bg: white;

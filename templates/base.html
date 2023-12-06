@@ -18,20 +18,24 @@
 
     <body>
     <!-- ********** Navbar Section********** -->
-        <nav class="navbar navbar-expand-sm d-flex bg-light">
+        <nav class="navbar navbar-expand-sm d-flex">
             <div class="container-fluid">
-                <a href="/templates/base.html"><img src="/static/images/logo1.png" alt="logo" width="80px" id="logo"></a>
+                <a href="/"><img src="/static/images/logo1.png" alt="logo" width="80px" id="logo"></a>
                 <button class="navbar-toggler text-success bg-alert" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse align-items-center justify-content-center" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse align-items-center justify-content-around" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="/">About</a>
+                            <a class="nav-link" href="/">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Menu</a>
+                            <a class="nav-link" href="{% url 'aboutus:aboutus_list' %}">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'menu:menu_list' %}">Menu</a>
+                            
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'reservation:reserve_table' %}">Reservations</a>
@@ -45,12 +49,12 @@
         </nav>
 
         <!-- ********** Hero Section ********** -->
-        <div class="banner" style="position: relative; background-repeat:no-repeat; background-size: cover; max-width: 100%; height: 800px; background-attachment: fixed;">
+        <div class="banner">
             <div class="mask d-flex justify-content-center align-items-center">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12">
-                            <div class="banner-middle text-center text-justify text-break">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                            <div class="banner-middle text-center text-justify text-break mb-5">
                                 <p class="display-5">
                                     Bar
                                     <span class="text-warning p-1">/</span>
@@ -65,17 +69,17 @@
                             </div>
                         </div>
 
-                        <div class="col-8">
-                            <div class="banner-social text-dark">
+                        <div class="col-xs-5 col-sm-12 col-md-5 col-lg-6 col-xl-6">
+                            <div class="banner-social text-light text-center pb-3">
                                 <i class="fab fa-facebook"></i>
                                 <i class="fab fa-instagram"></i>
                                 <i class="fab fa-twitter"></i>
                             </div>
                         </div>
 
-                        <div class="col-4">
+                        <div class="col-xs-7 col-sm-12 col-md-7 col-lg-6 col-xl-6">
                             <div class="banner-address">
-                                <p class="text-dark"><i class="fas fa-map-marker text-warning p-1"></i>One Restaurant Place, Food City, 0000</p>
+                                <p class="text-light text-center"><i class="fas fa-map-marker text-warning p-1"></i> One Restaurant Place, Food City, 9000</p>
                             </div>
                         </div>
                     </div>
