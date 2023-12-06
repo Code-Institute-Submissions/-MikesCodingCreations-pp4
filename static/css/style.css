@@ -24,37 +24,11 @@ p{
     transition: none;
 }
 
-
-
-/* .logo-test {
-    width: 90px;
-    height: auto;
-
-    display: flex;
-    justify-content: center;
-
-    border: 3px solid black;
-    margin: 20px;
-    padding: 3px 3px;
-
-    color: #EEB307;
-}
-
-.logo-inside-border { 
-    background-color: black;
-    color: white;
-    padding: 1px 12px;
-} */
-
-
-
-
-
 /* --- Navbar CSS start--- */
 .navbar {
     font-family: var(--main-fnt);
     font-size: 20px;
-    background-color: var(--primary-col);
+    background-color: white;
     border-bottom: 1px solid var(--secondary-col);
 }
 
@@ -65,10 +39,6 @@ p{
 
 #navbarSupportedContent {
     margin-left: 15px;
-}
-
-.nav-item a {
-    padding: 5px 0 0 0;
 }
 
 .nav-item a:hover {
@@ -84,7 +54,8 @@ p{
 /* --- Hero CSS start --- */
 .banner{
     position: relative;
-    background: url(/static/images/hero-images/hero-img2.jpeg);
+    /* background: url(/static/images/hero-images/hero-img2.jpeg); */
+    background-color: black;
     background-repeat:no-repeat;
     background-size: cover;
     max-width: 100%;

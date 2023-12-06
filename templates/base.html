@@ -18,35 +18,26 @@
 
     <body>
     <!-- ********** Navbar Section********** -->
-        <nav class="navbar navbar-expand-sm">
+        <nav class="navbar navbar-expand-sm d-flex bg-light">
             <div class="container-fluid">
                 <a href="/templates/base.html"><img src="/static/images/logo1.png" alt="logo" width="80px" id="logo"></a>
                 <button class="navbar-toggler text-success bg-alert" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse justify-content-start" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse align-items-center justify-content-center" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link link-warning" href="#">About</a>
+                            <a class="nav-link" href="/">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link link-warning" href="#">Menu</a>
+                            <a class="nav-link" href="#">Menu</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link link-warning" href="#">Gallery</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                    <ul class="navbar-nav ">
-
-                        <li class="nav-item">
-                            <a class="nav-link link-warning" href="{% url 'reservation:reserve_table' %}">Reservations</a>
+                            <a class="nav-link" href="{% url 'reservation:reserve_table' %}">Reservations</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link link-warning" href="#">Contact Us</a>
+                            <a class="nav-link" href="#">Contact Us</a>
                         </li>
                     </ul>
                 </div>
@@ -54,7 +45,7 @@
         </nav>
 
         <!-- ********** Hero Section ********** -->
-        <div class="banner" style="position: relative; background: url(/static/images/hero-images/hero-img2.jpeg); background-repeat:no-repeat; background-size: cover; max-width: 100%; height: 800px; background-attachment: fixed;">
+        <div class="banner" style="position: relative; background-repeat:no-repeat; background-size: cover; max-width: 100%; height: 800px; background-attachment: fixed;">
             <div class="mask d-flex justify-content-center align-items-center">
                 <div class="container">
                     <div class="row">
