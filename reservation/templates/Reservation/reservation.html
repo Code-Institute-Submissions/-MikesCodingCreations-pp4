@@ -18,43 +18,15 @@
                     </div>
                     <div class="col-xs-12">
                         <div class="reservation-form">
-
-                           {% comment %}
-                            <form action="#" method="POST">
+                            <form action="" method="POST" class="d-flex justify-content-center align-items-center flex-column center text-center">
                                 {% csrf_token %}
-                                <input type="text" name="Full name" id="full name" class="form-control mb-4 form-control-lg" placeholder="Full name">
-                                <input type="number" name="Phone number" id="phone number" class="form-control mb-4 form-control-lg" placeholder="Phone number">
-                                <input type="email" name="Email address" id="email address" class="form-control mb-4 form-control-lg" placeholder="E-mail address">
-   
-                                <select name="select" id="select-option" class="form-control form-control-lg mb-4">
-                                    <option value="0">Select Guests</option>
-                                    <option value="1">1 Guest</option>
-                                    <option value="2">2 Guests</option>
-                                    <option value="3">3 Guests</option>
-                                    <option value="4">4 Guests</option>
-                                    <option value="5">5 Guests</option>
-                                    <option value="6">6+ Guests</option>
-                                </select>
-                                <input type="date" name="date" id="date" class="form-control form-control-lg mb-4">
-                                <input type="time" name="date" id="date" class="form-control form-control-lg mb-4">
-                                <button  type="submit" class="btn btn-outline-warning btn-lg mx-auto d-block">RESERVE A TABLE</button>
-
+                                {{form}}
+                                <br>
+                                <button  type="submit" class="btn btn-outline-warning btn-lg mx-auto d-block">RESERVE A TABLE</button>    
                             </form>
-                            <hr>
-
-                            {% endcomment %}
-
-                                <form action="" method="POST" class="d-flex justify-content-center align-items-center flex-column center text-center">
-                                    {% csrf_token %}
-                                    {{form}}
-                                    <br>
-                                    <button  type="submit" class="btn btn-outline-warning btn-lg mx-auto d-block">RESERVE A TABLE</button>    
-                                </form>
-
                         </div>
                     </div>
                 </div>
-                <!-- <button  type="submit" class="btn btn-outline-warning btn-lg mx-auto d-block">RESERVE A TABLE</button> -->
             </div>
         </section>
 

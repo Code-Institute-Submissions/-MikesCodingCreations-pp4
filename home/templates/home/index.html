@@ -145,8 +145,10 @@
                                 Book a table with <span>La Grill</span> today.</p>
                         </div>
                     </div>
+
                     <div class="col-12">
                         <div class="reservation-form">
+                            <form action="" method="POST">
                                 {% csrf_token %}
                                     <input type="text" name="Full name" id="full name" class="form-control mb-4 form-control-lg" placeholder="Full name">
                                     <input type="number" name="Phone number" id="phone number" class="form-control mb-4 form-control-lg" placeholder="Phone number">
@@ -163,18 +165,12 @@
                                 </select>
                                     <input type="date" name="date" id="date" class="form-control form-control-lg mb-4">
                                     <input type="time" name="date" id="date" class="form-control form-control-lg mb-4">
+                                    <button  type="submit" class="btn btn-outline-warning btn-lg mx-auto d-block">RESERVE A TABLE</button>    
                             </form>
                         </div>
                     </div>
                 </div>
-                    <form action="" method="POST" class="d-flex justify-content-center align-items-center flex-column center text-center">
-                        {% csrf_token %}
-                        {{form}}
-                        <br>
-                        
-                        <button  type="submit" class="btn btn-outline-warning btn-lg mx-auto d-block">RESERVE A TABLE</button>    
-                    </form>
-                </div>
+            </div>
         </section>
         
 {% endblock %}
