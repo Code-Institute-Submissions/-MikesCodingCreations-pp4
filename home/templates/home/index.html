@@ -132,32 +132,6 @@
                 </div>
             </div>
         </div>
-
-    <!-- ********** Reservations Section ********** -->
-    <section class="padding" id="reservation-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="reservation-section-header text-center">
-                        <h3>Reservations</h3>
-                        <p>
-                            Interested in trying some of our sublime dishes? <br>
-                            Book a table with <span>La Grill</span> today.</p>
-                    </div>
-                </div>
-                <div class="col-xs-12">
-                    <div class="reservation-form">
-                        <form action="" method="POST" class="d-flex justify-content-center align-items-center flex-column center text-center">
-                            {% csrf_token %}
-                            {{form}}
-                            <br>
-                            <button  type="submit" class="btn btn-outline-warning btn-lg mx-auto d-block">RESERVE A TABLE</button>    
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
         
 {% endblock %}
 

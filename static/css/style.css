@@ -196,7 +196,10 @@ p{
     color: var(--secondary-col);
 }
 
-
+form input {
+    width: 300px;
+    background-color: red;
+}
 
 
 /* --- Reservartion Section End --- */
