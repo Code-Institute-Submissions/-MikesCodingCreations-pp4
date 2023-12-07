@@ -22,11 +22,11 @@
                                     <div class="col-lg-6 col-md-12">
                                         <div class="row menu-item-1">
                                             <div class="col-3">
-                                                <img class="menu-item-photo" src="{{image.menu_detail.url}}" alt="menu item one">
+                                                <img class="menu-item-photo" src="{{menu.image.url}}" alt="menu item one">
                                             </div>
                                             <div class="col-7">
                                                 <h5 class="menu-item-title"><a href="{% url 'menu:menu_detail' menu.slug %}">{{menu.name}}</a></h5>
-                                                <p class="menu-item-info pt-2">{{menu.description}}</p>
+                                                <p class="menu-item-info pt-2">{{menu.description|truncatewords:25}}</p>
                                             </div>
                                             <div class="col-2">
                                                 <span class="dollar font-weight-bold">{{menu.price}}</span>
