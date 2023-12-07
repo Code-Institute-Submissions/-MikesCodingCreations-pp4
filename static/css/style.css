@@ -6,22 +6,20 @@
     --main-fnt: 'Rozha One', serif;
 }
 
-/* --- General stlyes --- */
+/* remove bootsrap styles on accordion btn*/
+.accordion-button:focus {
+    background: none;
+    box-shadow: none;
+    transition: none;
+}
 
+/* --- General stlyes --- */
 p{
     font-size: 20px;
 }
 
 .padding{
     padding: 60px;
-}
-
-
-/* remove bootsrap styles */
-.accordion-button:focus {
-    background: none;
-    box-shadow: none;
-    transition: none;
 }
 
 /* --- Navbar CSS start--- */
@@ -121,6 +119,15 @@ p{
 
 .accordion {
     --bs-accordion-active-bg: white;
+}
+
+.accordion-item {
+    border: none;
+}
+
+.accordion-header {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #EEB307;
 }
 
 /* --- About-us-section End --- */
