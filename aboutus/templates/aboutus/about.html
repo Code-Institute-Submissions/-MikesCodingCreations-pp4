@@ -66,43 +66,8 @@
             </div>
         </div>
 
-
-
-        <!-- <div class="section"> 
-            <div class="container">
-                <div class="row justify-content-center mb-5 mt-5" data-aos="fade-up">
-                    <div class="col-md-8 text-center">
-                        <h2 class="mb-3 lead display-5" style="color: #EEB307">{{why_choose_us.title}}</h2>
-                        <p>{{why_choose_us.content}}</p>
-                    </div>
-                </div>
-                <div class="row large-gutters">
-                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                        <img src="{% static '/images/about-us-images/about-us-img2.jpeg' %}" alt="Image Placeholder" class="img-fluid">
-                    </div>
-                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-                        <div class="accordion" id="accordion">
-                            <h3 class="mb-0">
-                                <a href=""></a>
-                            </h3>
-                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                                <div class="p-3">
-                                    <p class="lead">
-                                        Embark on a culinary journey beyond the ordinary at La Grill, where our commitment to exquisite fine dining is unmatched. Choose us for a symphony of flavors orchestrated by our passionate chefs, who infuse each dish with a blend of tradition and innovation. Our menu is a canvas of gastronomic delights, meticulously curated with the finest ingredients sourced globally, promising a sensory adventure that tantalizes the taste buds and captivates the senses. Delight in the convergence of classic sophistication and contemporary creativity, where every plate tells a story of culinary mastery. Nestled in an ambiance of refined elegance, our dedication to delivering an exceptional dining experience ensures that each visit to La Grill is a celebration of exceptional cuisine, creating memories to savor long after the last exquisite bite.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-
-
         <!-- ********** CHEFS section ********** -->
-        <div class="section">
+        <div class="section" id="chef-section">
             <div class="container">
                 <div class="row justify-content-center mb-5" data-aos="fade-up">
                     <div class="col-md-8 text-center">
@@ -113,7 +78,7 @@
                 <div class="row">
                     {% for one in chef %}
                     <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
-                        <img src="{{one.image.url}}" alt="Chef1" class="img-fluid mb-4 rounded">
+                        <img src="{{one.image.url}}" alt="Chef1" class="img-fluid mb-4 rounded chef-img" style="width: 300px; height: 450px;">
                         <h3 class="mb-3">{{one.name}}</h3>
                         <p class="post-meta text-muted">{{one.title}}</p>
                         <p class="mb-5">{{one.bio}}</p>

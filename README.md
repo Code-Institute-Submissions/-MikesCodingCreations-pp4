@@ -21,7 +21,8 @@ I would appriciate if you could offer an extension on me re-submitting the proje
 
 <!-- images -->
 
-CHEF 1 - https://pixabay.com/photos/chef-cooking-street-costumer-4807317/
-CHEF 2 - https://pixabay.com/photos/platting-chef-food-fine-dining-4282016/
-CHEF 3 - https://pixabay.com/photos/asian-cuisine-chef-cooking-cookware-1850233/
-CHEF 4 - https://pixabay.com/photos/pizza-chef-cook-uniform-food-366111/
+Chef Thomas - https://www.pexels.com/photo/man-in-white-dress-shirt-wearing-eyeglasses-3814446/
+Chef James - https://unsplash.com/photos/man-in-black-nike-jacket-wearing-white-cap-SiQgni-cqFg
+Chef JP - https://unsplash.com/photos/man-preparing-food-v3OlBE6-fhU
+Chef Brian - https://www.pexels.com/photo/man-cooking-a-dish-3338675/
+
