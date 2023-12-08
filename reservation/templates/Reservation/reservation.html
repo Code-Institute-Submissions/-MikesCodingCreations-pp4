@@ -4,32 +4,6 @@
 
 {% block body %}
 
-<!-- ********** Reservations Section ********** -->
-<!-- <section class="padding" id="reservation-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="reservation-section-header text-center">
-                    <h3>Reservations</h3>
-                    <p>
-                        Interested in trying some of our sublime dishes? <br>
-                        Book a table with <span>La Grill</span> today.</p>
-                </div>
-            </div>
-            <div class="col-xs-12">
-                <div class="reservation-form">
-                    <form action="#" method="POST" class="d-flex justify-content-center align-items-center flex-column center text-center">
-                        {% csrf_token %}
-                        {{form}}
-                        <br>
-                        <button  type="submit" class="btn btn-outline-warning btn-lg mx-auto d-block">RESERVE A TABLE</button>    
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-
 <section class="main-wrap" id="reservation-section">   
     <div class="section" data-aos="fade-up">
         <div class="container">
@@ -50,42 +24,42 @@
                                 <label for="name" class="label">Name</label>
                                 <div class="form-field-icon-wrap">
                                     <span class="icon ion-android-person"></span>
-                                    <input type="text" class="form-control" id="name" name="full_Name">
+                                    <input type="text" class="form-control" id="name" name="full_Name" placeholder="e.g John Smith">
                                 </div>
                             </div>
                             <div class="form-group col-md-6 pb-3">
                                 <label for="email" class="label">Email</label>
                                 <div class="form-field-icon-wrap">
                                     <span class="icon ion-email"></span>
-                                    <input type="email" class="form-control" id="email" name="email">
+                                    <input type="email" class="form-control" id="email" name="email" >
                                 </div>
                             </div>
                             <div class="form-group col-md-6 pb-3">
                                 <label for="phone" class="label">Phone</label>
                                 <div class="form-field-icon-wrap">
                                     <span class="icon ion-phone"></span>
-                                    <input type="phone" class="form-control" id="phone" name="phone">
+                                    <input type="phone" class="form-control" id="phone" name="phone" minlength="8" maxlength="12">
                                 </div>
                             </div>
                             <div class="form-group col-md-6 pb-3">
                                 <label for="guests" class="label">Guests</label>
                                 <div class="form-field-icon-wrap">
                                     <span class="icon ion-date"></span>
-                                    <input type="number" class="form-control" id="guests" name="guests">
+                                    <input type="number" class="form-control" id="guests" name="guests" min="1" max="12">
                                 </div>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="date" class="label">Date</label>
                                 <div class="form-field-icon-wrap">
                                     <span class="icon ion-date"></span>
-                                    <input type="text" class="form-control" id="date" name="date">
+                                    <input type="date" class="form-control" id="date" name="date" min="2023-12-10">
                                 </div>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="time" class="label">Time</label>
                                 <div class="form-field-icon-wrap">
                                     <span class="icon ion-time"></span>
-                                    <input type="text" class="form-control" id="time" name="time">
+                                    <input type="time" class="form-control" id="time" name="time" min="15:00" max="03:00">
                                 </div>
                             </div>
                             <div class="form-group col-md-12 mt-5">
