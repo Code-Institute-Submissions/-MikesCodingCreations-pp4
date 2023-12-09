@@ -260,8 +260,8 @@ form input {
 @media only screen and (max-width: 768px) {
     /* HERO/BANNER SECTION */
     .banner-middle {
-        margin: 0;
-        padding: 0;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
     .banner-middle p {
