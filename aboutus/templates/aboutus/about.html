@@ -71,17 +71,17 @@
             <div class="container">
                 <div class="row justify-content-center mb-5" data-aos="fade-up">
                     <div class="col-md-8 text-center">
-                        <h2 class="mb-3 mt-5 lead display-5" style="color: #EEB307">Our Chef's</h2>
+                        <h2 class="mb-1 mt-5 lead display-5" style="color: #EEB307">Our Chef's</h2>
                         <p>Our talented chefs blend tradition with innovation for exceptional grill-inspired creations.</p>
                     </div>
                 </div>
                 <div class="row">
                     {% for one in chef %}
                     <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
-                        <img src="{{one.image.url}}" alt="Chef1" class="img-fluid mb-4 rounded chef-img" style="width: 300px; height: 450px;">
-                        <h3 class="mb-3">{{one.name}}</h3>
+                        <img src="{{one.image.url}}" alt="Chef1" class="img-fluid mb-4 rounded chef-img" style="width: 300px; height: 400px;">
+                        <h3 class="mb-3" style="font-size: 24px;">{{one.name}}</h3>
                         <p class="post-meta text-muted">{{one.title}}</p>
-                        <p class="mb-5">{{one.bio}}</p>
+                        <p class="mb-5" style="font-size: 12px;">{{one.bio}}</p>
                     </div>
                     {% endfor %}
                 </div>

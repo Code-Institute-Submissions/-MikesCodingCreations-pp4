@@ -3,7 +3,7 @@
 
 {% block body %}
     <body>
-    
+    <!-- ********** ABOUT US section ********** -->
     <div class="cover_1 cover_sm">
         <div data-stellar-background-ratio="0.5">
             <div class="container">
@@ -18,7 +18,7 @@
     </div>
 
     <!-- ********** HISTORY section ********** -->
-    <div class="section">
+    <div class="section mb-5">
         <div class="container">
             <div class="row mt-5">
                 <div class="col-md-4" data-aos="fade-up">
@@ -29,38 +29,6 @@
                 <div class="col-md-8 pl-md-5" data-aos="fade-up" data-aos-delay="200">
                     <h2 class="mb-4 lead display-5 text-center" style="color: #EEB307">{{history.title}}</h2>
                     <p class="lead mt-2 text-center">{{history.content}}</p>    
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ********** Why Choose Us Section ********** -->
-
-    <div class="section why_choose_us_section mb-5 mt-5">
-        <div class="container">
-            <div class="row justify-content-center mb-2" data-aos="fade-up">
-                <div class="col-md-8 text-center">
-                    <h2 class="mb-1 mt-3 lead display-5" style="color: #EEB307">Why Choose Us</h2>
-                    <p class="lead">Just <span class="text-warning">some</span> of the incredible reasons to dine at La Grill.</p>
-                </div>
-            </div>
-            <div class="row large-gutters">
-                <div class="col-md-5 why_choose_us_img" data-aos="fade-up" data-aos-delay="200">
-                    <img src="{% static '/images/about-us-images/about-us-img2.jpeg' %}" alt="Why choose us image" class="img-fluid rounded">
-                </div>
-                <div class="col-md-7" data-aos="fade-up" data-aos-delay="300">
-                    <div class="accordion" id="accordion">
-                        {% for info in why_choose_us %}
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
-                              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{info.id}}" aria-expanded="true" aria-controls="collapse{{info.id}}">{{info.title}}</button>
-                            </h2>
-                            <div id="collapse{{info.id}}" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordion">
-                              <div class="accordion-body">{{info.content}}</div>
-                            </div>
-                          </div>
-                        {% endfor %}
-                    </div>
                 </div>
             </div>
         </div>
@@ -85,11 +53,11 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="row menu-item-1">
                                     <div class="col-3">
-                                        <img class="menu-item-photo mb-5" src="{{menu.image.url}}" alt="menu item">
+                                        <img class="menu-item-photo" src="{{menu.image.url}}" alt="menu item">
                                     </div>
                                     <div class="col-7">
-                                        <a href="{% url 'menu:menu_detail' menu.slug %}">{{menu.name}}</a>
-                                        <p class="menu-item-info pt-2">{{menu.description|truncatewords:25}}</p>
+                                        <a class="text-warning" href="{% url 'menu:menu_detail' menu.slug %}">{{menu.name}}</a>
+                                        <p class="menu-item-info">{{menu.description|truncatewords:50}}</p>
                                     </div>
                                     <div class="col-2">
                                         <span class="dollar font-weight-bold">€{{menu.price}}</span>

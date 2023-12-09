@@ -131,6 +131,10 @@ p{
     border-bottom: 1px solid #EEB307;
 }
 
+.accordion-body {
+    margin: 0;
+}
+
 .chef-img {
     width: 200px;
     height: 200px;
