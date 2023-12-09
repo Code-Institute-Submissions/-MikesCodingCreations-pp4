@@ -214,6 +214,13 @@ form input {
     background-color: red;
 }
 
+.messages li{
+    color: var(--secondary-col);
+    text-align: center;
+    list-style-type: none;
+    font-size: 2rem;
+    padding-bottom: 20px;
+}
 
 /* --- Reservartion Section End --- */
 
