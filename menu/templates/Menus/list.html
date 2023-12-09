@@ -2,40 +2,38 @@
 {% load static %}
 {% block body %}
 
-    <!-- body wrapper -->
-    <div class="body-part-between-nav-and-footer">
         <!-- ********** Menu Section ********** -->
+        <div class="section bg-warning">
             <div class="container-fluid mh-100" id="menu-section">
                 <div class="row">
                         <div class="container col-10 text-center p-4">
                             <h3>Our Menu</h3>
                             <p class="mb-4">A culinary canvas where artistry and indulgence converge, each dish a symphony of flavors meticulously crafted to delight the senses and leave a lasting impression.</p>
                         </div>
-
+        
                     <!-- Menu Items -->
                     <div class="menu-items">
                         <div class="container">
                             <div class="row">
-
+        
                                 <!-- Menu item -->
                                 {% for menu in menu_list %}
                                     <div class="col-lg-6 col-md-12">
                                         <div class="row menu-item-1">
-                                            <div class="col-3">
-                                                <img class="menu-item-photo" src="{{menu.image.url}}" alt="menu item one">
+                                            <div class="col-lg-3 col-xl-3 col-md-5 col-sm-12 col-12 menu-item-photo-container">
+                                                <img class="menu-item-photo" src="{{menu.image.url}}" alt="menu item">
                                             </div>
-                                            <div class="col-7">
-                                                <a href="{% url 'menu:menu_detail' menu.slug %}">{{menu.name}}</a>
-                                                <p class="menu-item-info pt-2">{{menu.description|truncatewords:25}}</p>
+                                            <div class="col-lg-7 col-xl-7 col-md-5 col-sm-12 col-12 menu-item-details-container">
+                                                <a class="text-warning" href="{% url 'menu:menu_detail' menu.slug %}">{{menu.name}}</a>
+                                                <p class="menu-item-info">{{menu.description|truncatewords:50}}</p>
                                             </div>
-                                            <div class="col-2">
-                                                <span class="dollar font-weight-bold">{{menu.price}}</span>
+                                            <div class="col-lg-2 col-xl-2 col-md-2 col-sm-12 col-12 menu-item-price-container">
+                                                <span class="dollar font-weight-bold">€{{menu.price}}</span>
                                             </div>
                                         </div>
                                         <hr class="my-4">
                                     </div>
                                 {% endfor %}
-
                             </div>
                         </div>
                     </div>

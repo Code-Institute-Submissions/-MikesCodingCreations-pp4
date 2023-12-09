@@ -199,7 +199,7 @@ p{
 }
 
 #reservation-section .container {
-    padding: 20px 0 30px 0;
+    padding: 20px 0 15px 0;
     width: 85%;
 }
 
@@ -258,9 +258,101 @@ form input {
 
 /* Media Queries */
 @media only screen and (max-width: 768px) {
-    /*  */
-    
+    /* HERO/BANNER SECTION */
+    .banner-middle {
+        margin: 0;
+        padding: 0;
+    }
+
+    .banner-middle p {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    .banner-social {
+        padding-bottom: 0 !important;
+    }
+
+    .banner-address p {
+        font-size: 16px;
+        margin-bottom: 0 !important;
+    }
+
+    /* ABOUT US SECTION */
+    .about-us-content {
+        font-size: 1rem;
+    }
+
+    .our-history-container-inner {
+        margin-top: 15px !important;
+    }
+
+    /* OUR HISTORY SECTION */
+    .our-history-container {
+        padding: 0 !important;
+        margin-bottom: 20px !important;
+    }
+    .our-history-title {
+        margin: 20px 0 0 0 !important;
+    }
+
+    .our-history-content {
+        font-size: 16px;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .why-choose-us-container .row {
+        margin-bottom: 0 !important;
+    }
+
+    .why-choose-us-container .row p {
+        font-size: 18px;
+    }
+
+    /* CHEFS */
+    #chef-section .row {
+        margin-bottom: 0 !important;
+    }
+
+    #chef-section h2 {
+        margin-top: 10px !important;
+    }
+
+    #chef-section p {
+        font-size: 16px;
+    }
+
+    #chef-section img {
+        width: 100% !important;
+        padding: 0 10px !important;
+        margin-bottom: 5px !important;
+        border-radius: 10px !important;
+    }
+
+    #chef-section h3 {
+        text-align: center;
+    }
+
+    #chef-section p {
+        text-align: center;
+        margin-bottom: 15px !important;
+    }
+
     /* MENU SECTION */
+    #menu-section .container{
+        padding: 0.6rem !important;
+    }
+
+    #menu-section .container h3 {
+        font-size: 30px;
+    }
+
+    #menu-section .container p {
+        font-size: 14px !important;
+        margin-bottom: 10px !important;
+    }
+
     .menu-item-photo-container {
         display: flex;
         justify-content: center;
@@ -280,6 +372,16 @@ form input {
 
     .menu-item-price-container {
         text-align: center;
+    }
+
+    /* RESERVATION SECTION */
+    .reservation-section-header p {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .reservation-button-container {
+        margin-top: 10px !important;
     }
 
     /* GALLERY SECTION */

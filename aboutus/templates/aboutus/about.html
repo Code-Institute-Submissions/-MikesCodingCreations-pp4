@@ -12,33 +12,35 @@
                 <div class="container">
                     <div class="row align-items center justify-content-center">
                         <div class="col-md-7" data-aos="fade-up">
-                            <h2 class="heading mt-3 text-center display-4 mb-3" style="color: #EEB307">{{about.title}}</h2>
-                            <p class="lead mb-2 text-center">{{about.content}}</p>
+                            <h2 class="about-us-title heading mt-3 text-center display-4 mb-2" style="color: #EEB307">{{about.title}}</h2>
+                            <p class="about-us-content lead mb-2 text-center">{{about.content}}</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
+    
         <!-- ********** HISTORY section ********** -->
-        <div class="section">
+        <div class="section mb-5 our-history-container">
             <div class="container">
-                <div class="row mt-5">
-                    <div class="col-md-5" data-aos="fade-up">
-                        <img src="{% static '/images/about-us-images/about-us-img1.jpeg' %}" alt="Image Placeholder" class="" style="width: 80%;">
+                <div class="row mt-5 our-history-container-inner">
+                    <div class="col-md-4" data-aos="fade-up">
+                        <img src="{% static '/images/about-us-images/about-us-img1.jpeg' %}" alt="Image Placeholder" class="img-fluid rounded center">
                     </div>
-                    <div class="col-md-7 pl-md-5" data-aos="fade-up" data-aos-delay="200">
-                        <h2 class="mb-4 lead display-5 text-center" style="color: #EEB307">{{history.title}}</h2>
-                        <p class="lead mt-2">{{history.content}}</p>
+    
+    
+                    <div class="col-md-8 pl-md-5" data-aos="fade-up" data-aos-delay="200">
+                        <h2 class="mb-4 lead display-5 text-center our-history-title" style="color: #EEB307">{{history.title}}</h2>
+                        <p class="lead mt-2 text-center our-history-content">{{history.content}}</p>    
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- ********** WHY CHOOSE US section ********** -->
-        <div class="section">
+        <div class="section why-choose-us-container">
             <div class="container">
-                <div class="row justify-content-center mb-5" data-aos="fade-up">
+                <div class="row justify-content-center mb-5 why-choose-us-header" data-aos="fade-up">
                     <div class="col-md-8 text-center">
                         <h2 class="mb-3 mt-3 lead display-5" style="color: #EEB307">Why Choose Us</h2>
                         <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste, illum.</p>
