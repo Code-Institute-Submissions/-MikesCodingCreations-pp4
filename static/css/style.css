@@ -41,7 +41,8 @@ p{
 
 .nav-item a {
     color: var(--secondary-col);
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
 }
 
 .nav-item a:hover {
