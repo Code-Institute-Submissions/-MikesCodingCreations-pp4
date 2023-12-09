@@ -30,6 +30,14 @@ p{
     border-bottom: 3px solid var(--secondary-col);
 }
 
+.navbar button {
+    background-color: var(--secondary-col);
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
 #logo {
     width: 80px;
     padding-bottom: 5px;
@@ -41,7 +49,7 @@ p{
 
 .nav-item a {
     color: var(--secondary-col);
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     text-transform: uppercase;
 }
 
@@ -54,6 +62,7 @@ p{
     width: 150px;
     margin-bottom: 20px;
 }
+
 /* --- Navbar CSS end--- */
 
 /* --- Hero CSS start --- */
@@ -248,3 +257,42 @@ form input {
 
 
 /* Media Queries */
+@media only screen and (max-width: 768px) {
+    /*  */
+    
+    /* MENU SECTION */
+    .menu-item-photo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu-item-photo-container img {
+        width: 100%;
+    }
+    .menu-item-details-container {
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .menu-item-details-container p {
+        padding-top: 5px;
+    }
+
+    .menu-item-price-container {
+        text-align: center;
+    }
+
+    /* GALLERY SECTION */
+    #gallery-section {
+        padding: 10px;
+    }
+
+    .gallery-section-header {
+        font-size: 30px;
+    }
+
+    .gallery-section-info {
+        font-size: 18px;
+        margin: 0;
+    }
+}
