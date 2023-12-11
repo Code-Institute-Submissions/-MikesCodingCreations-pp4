@@ -32,7 +32,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-mikescodingcreat-pp4-qh3gxsjrf49.ws-eu106.gitpod.io']
+ALLOWED_HOSTS = ['8000-mikescodingcreat-pp4-qh3gxsjrf49.ws-eu106.gitpod.io', 'la-grill-pp4-40d10c869885.herokuapp.com']
 
 
 # Application definition
