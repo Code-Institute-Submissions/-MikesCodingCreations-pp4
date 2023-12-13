@@ -302,6 +302,12 @@ form input {
         margin: 0 !important;
     }
 
+    .history-img-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .why-choose-us-container .row {
         margin-bottom: 0 !important;
     }
