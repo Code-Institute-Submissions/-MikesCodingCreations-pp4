@@ -14,7 +14,7 @@ Welcome to La Grill, a fine dinning restaurant. Here we have specialy catered fo
 
         1. As a Visitor/User, I want to easily understand the main purpose of the site and learn more about what the restaurant offers.
         2. As a Visitor/User, I want to be able to easily navigate throughout the site to find content such as the menu, how much items cost and what they look like from photos. 
-        3. As a Visitor/User, I want to verify who is preparing the food in an 'about the chefs section' so i am aware of the quality i will recieve. 
+        3. As a Visitor/User, I want to verify who is preparing the food in an 'about the chefs section' so i am aware of the quality i will receive. 
         4. As a Visitor/User, I want to locate their social media links to see verify the followings on social media to determine how trusted and known they are.
         5. As a Visitor/User, I want to be able to make make reservations and receive a confirmation on the screen that my reservation has been confirmed. 
 
