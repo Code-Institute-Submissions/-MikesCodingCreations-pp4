@@ -1,27 +1,10 @@
-
-<!-- images -->
-<!-- 
-    Chef 1 - https://unsplash.com/photos/man-in-black-t-shirt-holding-stainless-steel-bowl-eBmyH7oO5wY
-    Chef 2 - https://unsplash.com/photos/man-preparing-food-v3OlBE6-fhU
-    Chef 3 - https://unsplash.com/photos/a-man-cooking-food-in-a-kitchen-wNQoaYCFcsI
-    Chef 4 - https://unsplash.com/photos/man-in-black-nike-jacket-wearing-white-cap-SiQgni-cqFg
-
-    Menu item 1 (pasta) - https://unsplash.com/photos/pasta-in-tomato-sauce-PLyJqEJVre0
-    Menu item 2 (osyers) - https://www.pexels.com/photo/delicious-oysters-with-lemon-served-in-fancy-restaurant-4946440/
-    Menu item 3 (gnocci) - https://www.pexels.com/photo/plate-of-food-next-to-glass-of-red-wine-2878742/
-    Menu item 4 (lobster) - https://www.pexels.com/photo/delicious-boiled-lobster-on-plate-in-restaurant-4553120/
-    Menu item 5 (steak) - https://www.pexels.com/photo/appetizing-steak-served-on-table-with-mussel-salad-6542793/
-    Menu item 6 (tacos) - https://www.pexels.com/photo/tacos-served-in-a-restaurant-19250424/ 
--->
-
-
 <h1 align="center">La Grill - Fine Dinning Restaurant</h1>
 
 [View the live project here.](https://la-grill-pp4-40d10c869885.herokuapp.com/)
 
-Welcome to ~La Grill, a fine dinning restaurant. Here we have specialy catered food from the top chefs around the world.~
+Welcome to La Grill, a fine dinning restaurant. Here we have specialy catered food from the top chefs around the world.
 
-<h2 align="center"><img src="https://la-grill-pp4-40d10c869885.herokuapp.com/"></h2>
+<h2 align="center"><img src="https://github.com/MikesCodingCreations/pp4/blob/main/la-grill-full-site.png"></h2>
 
 ## User Experience (UX)
 
@@ -188,6 +171,21 @@ The project was deployed to Heroku using the following steps...
 ### Media
 
 -   All Images were gathered from Pexels and Upsplash..
+
+<!-- images -->
+<!-- 
+    Chef 1 - https://unsplash.com/photos/man-in-black-t-shirt-holding-stainless-steel-bowl-eBmyH7oO5wY
+    Chef 2 - https://unsplash.com/photos/man-preparing-food-v3OlBE6-fhU
+    Chef 3 - https://unsplash.com/photos/a-man-cooking-food-in-a-kitchen-wNQoaYCFcsI
+    Chef 4 - https://unsplash.com/photos/man-in-black-nike-jacket-wearing-white-cap-SiQgni-cqFg
+
+    Menu item 1 (pasta) - https://unsplash.com/photos/pasta-in-tomato-sauce-PLyJqEJVre0
+    Menu item 2 (osyers) - https://www.pexels.com/photo/delicious-oysters-with-lemon-served-in-fancy-restaurant-4946440/
+    Menu item 3 (gnocci) - https://www.pexels.com/photo/plate-of-food-next-to-glass-of-red-wine-2878742/
+    Menu item 4 (lobster) - https://www.pexels.com/photo/delicious-boiled-lobster-on-plate-in-restaurant-4553120/
+    Menu item 5 (steak) - https://www.pexels.com/photo/appetizing-steak-served-on-table-with-mussel-salad-6542793/
+    Menu item 6 (tacos) - https://www.pexels.com/photo/tacos-served-in-a-restaurant-19250424/ 
+-->
 
 ### Acknowledgements
 
