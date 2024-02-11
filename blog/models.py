@@ -7,6 +7,7 @@ class Post(models.Model):
     title = models.CharField(max_length=50)
     content = models.TextField()
     author = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
+    # image = models.ImageField(upload_to='blog/', blank=True, null=True)
     #tags
     category = models.ForeignKey('Category', null=True, on_delete=models.SET_NULL)
     created = models.DateTimeField(default=timezone.now)
@@ -20,7 +21,7 @@ class Post(models.Model):
 
 
 class Category(models.Model):
-    Category_name = models.CharField(max_length=50)
+    category_name = models.CharField(max_length=50)
 
     class Meta:
         verbose_name = 'category'
