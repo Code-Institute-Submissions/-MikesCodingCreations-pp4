@@ -10,10 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+from pathlib import Path
 import os
 import dj_database_url
-from pathlib import Path
-
 if os.path.isfile('env.py'):
     import env
 
@@ -27,12 +26,12 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WSECRET_KEY = os.environ['SECRET_KEY']ction secret!
-SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = 'p@ei#69*b*zz3u4yie-$()@cy^l(+x9&@6ypx+b0lm(3%_9hr7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-mikescodingcreat-pp4-qh3gxsjrf49.ws-eu106.gitpod.io', 'la-grill-pp4-40d10c869885.herokuapp.com']
+ALLOWED_HOSTS = ['8000-mikescodingcreat-pp4-uag4xg79dee.ws-eu108.gitpod.io', 'la-grill-pp4-40d10c869885.herokuapp.com']
 
 
 # Application definition
@@ -49,6 +48,7 @@ INSTALLED_APPS = [
     'home',
     'aboutus',
     'django_summernote',
+    'profiles',
 ]
 
 MIDDLEWARE = [
