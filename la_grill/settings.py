@@ -43,13 +43,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
     'menu',
     'reservation',
     'home',
     'aboutus',
-    'django_summernote',
     'profiles',
     'blog',
+
+    'django_summernote',
+    'taggit',
 ]
 
 MIDDLEWARE = [
@@ -89,6 +92,11 @@ WSGI_APPLICATION = 'la_grill.wsgi.application'
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
+
+CSRF_TRUSTED_ORIGINS=[
+    'https://8000-mikescodingcreat-pp4-uag4xg79dee.ws-eu108.gitpod.io',
+    'https://la-grill-pp4-40d10c869885.herokuapp.com',
+]
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -137,3 +145,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
