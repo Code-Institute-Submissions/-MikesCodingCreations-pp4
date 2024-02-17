@@ -58,6 +58,11 @@ p{
     color: var(--secondary-col);
 }
 
+.account-nav-item a:hover {
+    text-decoration: underline !important;
+    color: var(--secondary-col);
+}
+
 .banner #logo {
     width: 150px;
     margin-bottom: 20px;

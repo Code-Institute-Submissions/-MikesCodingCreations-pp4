@@ -38,7 +38,6 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'menu:menu_list' %}">Menu</a>
-                            
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'reservation:reserve_table' %}">Reservations</a>
@@ -46,6 +45,22 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#footer">Contact Us</a>
                         </li>
+
+                        <ul class="account-links d-flex flex-row">
+                            {% if user.is_authenticated %}
+                            <li class="nav-item account-nav-item">
+                                <a href="{% url 'account_logout' %}" class="nav-link">Logout</a>
+                            </li>
+                            {% else %}
+                            <li class="nav-item account-nav-item">
+                                <a href="{% url 'account_signup' %}" class="nav-link">Register</a>
+                            </li>
+                            <li class="nav-item account-nav-item">
+                                <a href="{% url 'account_login' %}" class="nav-link">Login</a>
+                            </li>
+                            {% endif %}
+                        </ul>
+
                     </ul>
                 </div>
             </div>

@@ -10,6 +10,13 @@ Welcome to La Grill, a fine dining restaurant. Here we have specially catered fo
 
 -   ### User stories
 
+    - ### Viewing & Navigation
+
+    - ### Registration & User Accounts
+        1. Account registration: 
+    - ### Sorting & Searching
+
+
     -   #### Customer Goals
         1. As a Customer I can scroll through/review the website so that easily understand the main purpose of the site and learn more about what the restaurant offers.
         2. As a Customer I can navigate the website smoothly so that I can find the menu, how much items cost, and what they look like from photos.
@@ -36,6 +43,8 @@ Welcome to La Grill, a fine dining restaurant. Here we have specially catered fo
 -   Responsive on all device sizes.
 -   Interactive elements such as the Nav bar and menu page.
 -   Ability to POST a reservation request to the backend.
+-   Ability to login to view reservations.
+-   Able to login to interact with blog posts.
 
 ## Technologies Used
 -   [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)
@@ -43,6 +52,7 @@ Welcome to La Grill, a fine dining restaurant. Here we have specially catered fo
 -   [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 -   [Python](https://developer.mozilla.org/en-US/docs/Glossary/Python)
 -   [Django](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django)
+-   [AllAuth](https://docs.allauth.org/en/latest/)
 
 ### Frameworks, Libraries & Programs Used
 1. [Bootstrap 5.3.2:](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
