@@ -1,9 +1,5 @@
 {% load static %}
 
-{% url 'account_login' as login_url %}
-{% url 'account_signup' as signup_url %}
-{% url 'account_logout' as logout_url %}
-
 <!DOCTYPE html>
 <html lang="en">
     <!-- ********** Header ********** -->
@@ -53,14 +49,14 @@
                         <ul class="account-links d-flex flex-row">
                             {% if user.is_authenticated %}
                             <li class="nav-item account-nav-item">
-                                <a href="{% url 'account_logout' %}" class="nav-link {% if request.path == login_url %}active{% endif %}">Logout</a>
+                                <a href="{% url 'account_logout' %}" class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page">Logout</a>
                             </li>
                             {% else %}
                             <li class="nav-item account-nav-item">
-                                <a href="{% url 'account_signup' %}" class="nav-link {% if request.path == login_url %}active{% endif %}">Register</a>
+                                <a href="{% url 'account_signup' %}" class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page">Register</a>
                             </li>
                             <li class="nav-item account-nav-item">
-                                <a href="{% url 'account_login' %}" class="nav-link {% if request.path == login_url %}active{% endif %}">Login</a>
+                                <a href="{% url 'account_login' %}" class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page">Login</a>
                             </li>
                             {% endif %}
                         </ul>
@@ -70,48 +66,20 @@
             </div>
         </nav>
 
-        <!-- ********** Hero Section ********** -->
-        <div class="banner">
-            <div class="mask d-flex justify-content-center align-items-center">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-5">
-                            <div class="banner-middle text-center text-justify text-break mb-5">
-                                <p class="display-5">
-                                    Bar
-                                    <span class="text-warning p-1">/</span>
-                                    Restaurant
-                                </p>
-                                <a href="/"><img src="/static/images/logo1.png" alt="logo" width="90" id="logo"></a>
-                                <p>Incredible Food, Unforgettable Experiences.<br>
-                                    If you are looking for a truly special dining experience, then La Grill is the perfect choice.
-                                    <br>
-                                    It is an opportunity to experience the pinnacle of culinary artistry and to create lasting memories.</p>
-                                <a href="{% url 'reservation:reserve_table' %}" class="btn btn-outline-warning btn-lg mt-3" type="button">RESERVE A TABLE</a>
-                            </div>
-                        </div>
+        <main class="flex-shrink-0 main-bg">
+            <!-- {% if user.is_authenticated %}
+            <p class="text-center m-3">You are logged in as {{ user.username }}</p>
+            {% else %}
+            <p class="text-center m-3">You are not logged in</p>
+            {% endif %} -->
 
-                        <div class="col-xs-5 col-sm-12 col-md-5 col-lg-6 col-xl-6">
-                            <div class="banner-social text-light text-center pb-3">
-                                <i class="fab fa-facebook"></i>
-                                <i class="fab fa-instagram"></i>
-                                <i class="fab fa-twitter"></i>
-                            </div>
-                        </div>
-
-                        <div class="col-xs-7 col-sm-12 col-md-7 col-lg-6 col-xl-6">
-                            <div class="banner-address">
-                                <p class="text-light text-center"><i class="fas fa-map-marker text-warning p-1"></i> One Restaurant Place, Food City, NW</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="page-content pb-5">
+                {% block content %}
+                <!-- Content Goes here -->
+                {% endblock content %}
             </div>
-        </div>
-
-        {% block body %}
-
-        {% endblock body %}
+    
+        </main>
 
     <!-- ***** Footer / Contact Us Section ***** -->
     <footer id="footer">
@@ -154,8 +122,3 @@
 
     </body>
 </html>
-
-
-
-
-

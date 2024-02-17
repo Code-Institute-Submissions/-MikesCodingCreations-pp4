@@ -223,11 +223,6 @@ p{
     color: var(--secondary-col);
 }
 
-form input {
-    width: 300px;
-    background-color: red;
-}
-
 .messages li{
     color: var(--secondary-col);
     text-align: center;
