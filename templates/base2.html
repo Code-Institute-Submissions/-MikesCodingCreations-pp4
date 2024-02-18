@@ -46,11 +46,17 @@
                             <a class="nav-link" href="#footer">Contact Us</a>
                         </li>
 
-                        <ul class="account-links d-flex flex-row">
+                        <ul class="account-links d-flex flex-row pl-1 m-0">
                             {% if user.is_authenticated %}
                             <li class="nav-item account-nav-item">
                                 <a href="{% url 'account_logout' %}" class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page">Logout</a>
                             </li>
+                            <ul class="profile d-flex flex-column align-items-center justify-content-center">
+                                <li style="color: white;" class="profile-li">
+                                    <i class="fas fa-user fa-lg"></i>
+                                    <a href="{% url 'profile' %}">My Account</a>
+                                </li>
+                            </ul>
                             {% else %}
                             <li class="nav-item account-nav-item">
                                 <a href="{% url 'account_signup' %}" class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page">Register</a>
@@ -60,6 +66,7 @@
                             </li>
                             {% endif %}
                         </ul>
+
 
                     </ul>
                 </div>

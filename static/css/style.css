@@ -68,6 +68,19 @@ p{
     margin-bottom: 20px;
 }
 
+.profile {
+    list-style-type: none;
+}
+
+.fa-user,
+.profile li a{
+    color: var(--secondary-col);
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    text-decoration: none;
+
+}
+
 /* --- Navbar CSS end--- */
 
 /* --- Hero CSS start --- */

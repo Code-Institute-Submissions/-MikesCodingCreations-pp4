@@ -55,6 +55,12 @@
                             <li class="nav-item account-nav-item">
                                 <a href="{% url 'account_logout' %}" class="nav-link {% if request.path == login_url %}active{% endif %}">Logout</a>
                             </li>
+                            <ul class="profile d-flex flex-column align-items-center justify-content-center" style="list-style-type: none;">
+                                <li style="color: white;" class="profile-li">
+                                    <i class="fas fa-user fa-lg"></i>
+                                    <a href="{% url 'profile' %}">My Account</a>
+                                </li>
+                            </ul>
                             {% else %}
                             <li class="nav-item account-nav-item">
                                 <a href="{% url 'account_signup' %}" class="nav-link {% if request.path == login_url %}active{% endif %}">Register</a>
@@ -64,6 +70,8 @@
                             </li>
                             {% endif %}
                         </ul>
+
+
 
                     </ul>
                 </div>
