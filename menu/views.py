@@ -2,6 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from .models import Menu
+from .forms import MenuForm
 
 
 def menu_list(request):
@@ -18,3 +19,13 @@ def menu_detail(request, slug):
     context = {'menu_detail': menu_detail}
 
     return render(request, 'Menus/detail.html', context)
+
+
+def add_menu(request):
+    form = MenuForm()
+    template = 'Menus/add_menu.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
