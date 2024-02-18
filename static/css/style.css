@@ -157,7 +157,28 @@ p{
 /* --- About-us-section End --- */
 
 /* Blog Section Start */
+/* ---Post lists - Blog */
+#post-heading-container h2{
+    font-family: var(--main-fnt);
+    text-align: center; 
+    color: #EEB307; 
+    font-weight: 300; 
+    font-size: 3rem;
+}
 
+#post-heading-container p {
+    text-align: center;
+}
+
+#post_list_title {
+    color: var(--secondary-col); 
+    font-size: 1.5rem; 
+    text-decoration: none;
+}
+
+.fa-calendar {
+    font-size: 0.8rem;
+}
 /* Blog Section End */
 
 /* --- Menu Section Start --- */
