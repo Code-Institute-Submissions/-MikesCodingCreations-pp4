@@ -58,8 +58,8 @@ p{
     color: var(--secondary-col);
 }
 
-.account-nav-item a:hover {
-    text-decoration: underline !important;
+.account-nav-item a:hover,
+#account-link:hover {
     color: var(--secondary-col);
 }
 
@@ -70,16 +70,23 @@ p{
 
 .profile {
     list-style-type: none;
+    margin-left: 15px;
+    padding-left: 15px;
 }
 
-.fa-user,
-.profile li a{
+.profile-li a{
     color: var(--secondary-col);
     font-size: 1.4rem;
     text-transform: uppercase;
     text-decoration: none;
-
+    margin: 0 5px;
 }
+
+.account-links {
+    margin: 0;
+    padding: 0;
+}
+
 
 /* --- Navbar CSS end--- */
 
