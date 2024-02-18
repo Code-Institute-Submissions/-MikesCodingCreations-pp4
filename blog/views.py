@@ -3,16 +3,11 @@ from .models import Post, Category, Comment
 from django.http import HttpResponse
 from taggit.models import Tag
 from .forms import CommentForm
-from django.core.paginator import Paginator
 # Create your views here.
 
 # POST LIST
 def post_list(request):
     post_list = Post.objects.all()
-    paginator = Paginator(post_list, 1)
-
-    page = request.GET.get('page')
-    posts_list = paginator.get_page(page)
     context = {
         'post_list' : post_list,
     }
@@ -46,15 +41,6 @@ def post_detail(request, id):
     }
 
     return render(request, 'Post/post_detail.html', context)
-
-# TAGS
-def post_by_tag(request, tag):
-    post_by_tag = Post.objects.filter(tags__name__in=[tag])
-    context = {
-        'post_list': post_by_tag,
-    }
-
-    return render(request, 'Post/post_list.html', context)
 
 # CATEGORIES
 def post_by_category(request, category):

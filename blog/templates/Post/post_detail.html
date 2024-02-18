@@ -4,109 +4,76 @@
 
 {% load crispy_forms_tags %}
 
-    <div class="main-wrap">
-        <div class="cover_1 cover_sm">
-            <div class="img_bg">
-                <div class="container">
-                    <div class="row align-items center justify-content-center">
-                        <div class="col-md-7 text-center" data-aos="fade-up">
-                            <h2 class="heading">{{post_detail}}</h2>
+<div class="main-wrap">
+    <div class="cover_1 cover_sm">
+        <div class="img_bg">
+            <div class="container">
+                <div class="row align-items center justify-content-center">
+                    <div class="col-md-7 text-center" data-aos="fade-up">
+                        <h2 class="heading mt-3">{{post_detail}}</h2>
 
-                            <div class="post-info">
-                                <div class="date-info">{{post_detail.created}}</div>
-                                <div class="category-info">In <a href="#" data-title="View all posts in this category">{{post_detail.category}}</a></div>
-                                <div class="author-info">By <a href="#">{{post_detail.author}}</a></div>
-                            </div>
-
+                        <div class="post-info">
+                            <div class="date-info">{{post_detail.created}}</div>
+                            <div class="category-info">In <a href="#" data-title="View all posts in this category">{{post_detail.category}}</a></div>
+                            <div class="author-info">By <a href="#">{{post_detail.author}}</a></div>
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="section">
-            <div class="container">
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <!-- Main blog section -->
+                <div class="col-md-9">
+                    <p>{{post_detail.content}}</p>
 
-                <div class="row">
-
-                    <div class="col-md-12">
-                        <p>{{post_detail.content}}</p>
-
-                        <div class="tag-widget post-tag-container mb-5 mt-5">
-                            <div class="tagcloud">
-                                {% for tag in post_detail.tags.all %}
-                                    <a href="{% url 'blog:post_by_tag' tag %}" class="tag-cloud-link">{{tag.name}}</a>
-                                {% endfor %}
-                            </div>
-                        </div>
-
-                        <div class="pt-5 mt-5">
-                            <h3 class="mb-5">Comments</h3>
-                            <ul class="comment-list">
-
-                                {% for comment in comments %}
-                                <li class="comment">
-
-                                    <div class="comment-body">
-                                        <h3>{{comment.user}}</h3>
-                                        <div class="meta">{{comment.created}}</div>
-                                        <p>{{comment.content}}</p>
-                                    </div>
-                                </li>
-
-                                {% endfor %}
-                            </ul>
-
-                            <div class="comment-form-wrap pt-5">
-                                {% if user.is_authenticated %}
-                                <h3 class="mb-5">Leave a comment</h3>
-                                <form method="POST" class="p-5 bg-light">
-
-                                    {% csrf_token %}
-                                    {{comment_form | crispy}}
-                                    <br>
-                                    <button type="submit" class="btn btn-primary">Leave a comment</button>
-                                    {% endif %}
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Right Sidebar -->
-                    <!-- <div class="col-md-4 sidebar">
-
-                        <div class="sidebar-box">
-                            <form action="#" method="POST" class="search-form">
-                                {% csrf_token %}
-                                <div class="form-group">
-                                    <span class="icon fa fa-search"></span>
-                                    <input type="text" class="form-control" placeholder="Search for something">
+                    <div class="mt-5">
+                        <h3 class="mb-1">Comments</h3>
+                        <ul class="comment-list">
+                            {% for comment in comments %}
+                            <li class="comment">
+                                <div class="comment-body">
+                                    <h3>{{comment.user}}</h3>
+                                    <div class="meta">{{comment.created}}</div>
+                                    <p>{{comment.content}}</p>
                                 </div>
+                            </li>
+
+                            {% endfor %}
+                        </ul>
+
+                        <div class="comment-form-wrap pt-2 mb-3">
+                            {% if user.is_authenticated %}
+                            <h3 class="mb-5">Leave a comment</h3>
+                            <form method="POST" class="p-3 bg-light">
+                                {% csrf_token %}
+                                {{comment_form | crispy}}
+                                <br>
+                                <button type="submit" class="btn btn-primary">Leave a comment</button>
+                                {% endif %}
                             </form>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="sidebar-box">
-                            <div class="categories">
-                                <h3>Categories</h3>
-                                {% for category in categories %}
-                                    <li><a href="{% url 'blog:post_by_category' category %}">{{category}}</a></li>
-                                {% endfor %}
-                            </div>
+                <!-- Right Sidebar -->
+                <div class="col-md-3 sidebar">
+                    <div class="sidebar-box">
+                        <div class="categories">
+                            <h3 class="mt-3">Categories</h3>
+                            {% for category in categories %}
+                                <li><a href="{% url 'blog:post_by_category' category %}">{{category}}</a></li>
+                            {% endfor %}
                         </div>
-
-                        <div class="sidebar-box">
-                            <h3>Tags</h3>
-                            <div class="tagcloud">
-                                {% for tag in all_tags %}
-                                    <a href="{% url 'blog:post_by_tag' tag %}" class="tag-cloud-link">{{tag}}</a>
-                                {% endfor %}
-                            </div>
-                        </div>
-
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
 {% endblock body %}
