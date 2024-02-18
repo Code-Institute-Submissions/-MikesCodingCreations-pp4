@@ -156,6 +156,10 @@ p{
 
 /* --- About-us-section End --- */
 
+/* Blog Section Start */
+
+/* Blog Section End */
+
 /* --- Menu Section Start --- */
 #menu-section {
     height: 100%;
@@ -254,6 +258,24 @@ p{
 }
 
 /* --- Footer/contact us Section End --- */
+
+
+/* Login section Start*/
+
+#id_password,
+#id_login {
+    display: block;
+}
+
+.login .helptext {
+    display: none;
+}
+
+.login p:nth-child(4) {
+    display: none;
+}
+
+/* Login section End */
 
 
 /* Media Queries */
