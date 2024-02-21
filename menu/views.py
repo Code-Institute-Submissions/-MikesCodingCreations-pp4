@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.contrib import messages
+from django.urls import reverse
 
 from .models import Menu
 from .forms import MenuForm
@@ -28,7 +29,7 @@ def add_menu(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully added a menu item!')
-            return redirect(reverse('add_menu'))
+            return redirect('menu:menu_list')
         else:
             messages.error(request, 'Failed to add menu item. Please ensure the form is valid.')
     else: form = MenuForm()
