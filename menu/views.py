@@ -31,7 +31,7 @@ def add_menu(request):
             messages.success(request, 'Successfully added a menu item!')
             return redirect('menu:menu_list')
         else:
-            messages.error(request, 'Failed to add menu item. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add menu item.')
     else: form = MenuForm()
 
     template = 'Menus/add_menu.html'

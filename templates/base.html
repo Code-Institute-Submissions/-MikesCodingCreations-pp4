@@ -22,7 +22,7 @@
 
     <body>
         <!-- ********** Navbar Section********** -->
-        <nav class="navbar navbar-expand-sm d-flex">
+        <nav class="navbar navbar-expand-sm d-flex fixed">
             <div class="container-fluid">
                 <a href="/"><img src="/static/images/logo1.png" alt="logo" id="logo"></a>
                 <button class="navbar-toggler text-success bg-alert" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,7 +30,9 @@
                 </button>
 
                 <div class="collapse navbar-collapse align-items-center justify-content-around" id="navbarSupportedContent">
-                    <ul class="navbar-nav">
+
+                    <ul class="navbar-nav d-flex justify-content-center align-items-center">
+
                         <li class="nav-item">
                             <a class="nav-link" href="/">Home</a>
                         </li>
@@ -50,30 +52,28 @@
                             <a class="nav-link" href="#footer">Contact Us</a>
                         </li>
 
-                        {% if user.is_authenticated %}
+                        
+                        {% if request.user.is_authenticated %}
+                        {% if request.user.is_superuser %}
+                            <li class="nav-item">
+                                <a href="{% url 'menu:add_menu' %}" class="dropdown-item">Menu Management</a>
+                            </li>
+                        {% endif %}
                         <li class="nav-item">
                             <a href="{% url 'profile' %}" class="nav-link">My Account</a>
                         </li>
-
-                        {% if user.is_superuser %}
-                        <li class="nav-item edit-menu-link">
-                            <a href="{% url 'menu:add_menu' %}" class="nav-link ">Edit Menu</a>
-                        </li>
-                        {% endif %}
-
-                        <li class="nav-item account-nav-item">
+                        <li class="nav-item">
                             <a href="{% url 'account_logout' %}" class="nav-link" aria-current="page">Logout</a>
                         </li>
-
                         {% else %}
-                        <li class="nav-item account-nav-item">
+                        <li class="nav-item">
                             <a href="{% url 'account_signup' %}" class="nav-link" aria-current="page">Register</a>
                         </li>
-                        <li class="nav-item account-nav-item">
+                        <li class="nav-item">
                             <a href="{% url 'account_login' %}" class="nav-link" aria-current="page">Login</a>
                         </li>
                         {% endif %}
-                        
+
                     </ul>
                 </div>
             </div>

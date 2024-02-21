@@ -6,6 +6,12 @@
         <div class="section bg-warning">
             <div class="container-fluid mh-100" id="menu-section">
                 <div class="row">
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert bg-success alert-dismissible p-2 text-center">{{ message }}</div>
+                        {% endfor %}
+                    {% endif %}
+                    
                         <div class="container col-10 text-center p-4">
                             <h3>Our Menu</h3>
                             <p class="mb-4">A culinary canvas where artistry and indulgence converge, each dish a symphony of flavors meticulously crafted to delight the senses and leave a lasting impression.</p>

@@ -32,6 +32,10 @@ p{
     font-size: 20px;
     background-color: rgb(26, 26, 26);
     border-bottom: 3px solid var(--secondary-col);
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%;
+    margin-bottom: 100px;
 }
 
 .navbar button {
@@ -58,7 +62,7 @@ p{
 }
 
 .nav-item a:hover {
-    text-decoration: overline;
+    text-decoration: underline;
     color: var(--secondary-col);
 }
 
@@ -121,6 +125,12 @@ p{
     /* ----- Login section End ----- */
 
 /* ------------ Navbar CSS end------------ */
+
+/*  */
+.page-content {
+    margin-top: 50px;
+}
+/*  */
 
 /* ------------ Hero CSS start ------------ */
 .banner{

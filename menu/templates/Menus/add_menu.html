@@ -8,6 +8,7 @@
             <div class="col"></div>
         </div>
     </div>
+
 {% endblock %}
 
 {% block content %}
@@ -18,21 +19,26 @@
                 <hr>
                 <h2 class="logo-font mb-4">Menu Management</h2>
                 <h4 class="text-muted">Add a Menu Item</h4>
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert bg-danger alert-dismissible p-2">{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
                 <hr>
             </div>
         </div>
 
         <div class="row">
             <div class="col-12 col-md-6">
-                    <form method="POST" action="" class="form mb-2" enctype="multipart/form-data">
-                        {% csrf_token %}
-                        {{ form | crispy }}
-                        <br>
-                        <div class="text-right">
-                            <a href="{% url 'menu:menu_list' %}" class="btn btn-outline-warning btn-md">Cancel</a>
-                            <button class="btn btn-outline-warning btn-md" type="submit">Add A Menu Item</button>
-                        </div>
-                    </form>
+                <form method="POST" action="" class="form mb-2" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <br>
+                    <div class="text-right">
+                        <a href="{% url 'menu:menu_list' %}" class="btn btn-outline-warning btn-md">Cancel</a>
+                        <button class="btn btn-outline-warning btn-md" type="submit">Add A Menu Item</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
