@@ -1,6 +1,6 @@
 from django.shortcuts import render
+from django.contrib import messages
 
-# Create your views here.
 from .models import Menu
 from .forms import MenuForm
 
@@ -22,7 +22,17 @@ def menu_detail(request, slug):
 
 
 def add_menu(request):
-    form = MenuForm()
+    """ Add a menu item """
+    if request.method == 'POST':
+        form = MenuForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added a menu item!')
+            return redirect(reverse('add_menu'))
+        else:
+            messages.error(request, 'Failed to add menu item. Please ensure the form is valid.')
+    else: form = MenuForm()
+
     template = 'Menus/add_menu.html'
     context = {
         'form': form,
