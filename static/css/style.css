@@ -1,4 +1,4 @@
-/* --- Root Styles --- */
+/* ------------ Root Styles ------------ */
 :root {
     --primary-col: rgb(26, 26, 26);
     --secondary-col: #EEB307;
@@ -13,7 +13,7 @@
     transition: none;
 }
 
-/* --- General stlyes --- */
+/* ------------ General stlyes ------------ */
 li {
     list-style: none
 }
@@ -26,7 +26,7 @@ p{
     padding: 60px;
 }
 
-/* --- Navbar CSS start--- */
+/* ------------ Navbar CSS start------------ */
 .navbar {
     font-family: var(--main-fnt);
     font-size: 20px;
@@ -91,10 +91,38 @@ p{
     padding: 0;
 }
 
+    /* ----- Edit Menu section start ----- */
 
-/* --- Navbar CSS end--- */
+    /* ----- Edit Menu section end ----- */
 
-/* --- Hero CSS start --- */
+    /* ----- Register Section Start ----- */
+
+    #sign-up-container form li {
+        font-size: 25px;
+    }
+
+    /* ----- Register Section End ----- */
+
+    /* ----- Login section Start ----- */
+
+#id_password,
+#id_login {
+    display: block;
+}
+
+.login .helptext {
+    display: none;
+}
+
+.login p:nth-child(4) {
+    display: none;
+}
+
+    /* ----- Login section End ----- */
+
+/* ------------ Navbar CSS end------------ */
+
+/* ------------ Hero CSS start ------------ */
 .banner{
     background-color: black;
     width: 100vw;
@@ -121,9 +149,9 @@ p{
     color: var(--secondary-col);
     cursor: pointer;
 }
-/* --- Hero CSS end --- */
+/* ------------ Hero CSS end ------------ */
 
-/* --- About-us-section Start --- */
+/* ------------ About-us-section Start ------------ */
 #about {
     height: 100vh;
 }
@@ -178,10 +206,10 @@ p{
     height: 200px;
 }
 
-/* --- About-us-section End --- */
+/* ------------ About-us-section End ------------ */
 
-/* Blog Section Start */
-/* ---Post lists - Blog */
+/* ------------ Blog Section Start ------------ */
+    /* --- Post lists - Blog */
 #post-heading-container h2{
     font-family: var(--main-fnt);
     text-align: center; 
@@ -212,12 +240,12 @@ p{
     background-color: rgba(255, 255, 255, 0.2); 
 }
 
-/* ---Post details - Blog */
+    /* ---Post details - Blog */
 
 
-/* Blog Section End */
+/* ------------ Blog Section End ------------ */
 
-/* --- Menu Section Start --- */
+/* ------------ Menu Section Start ------------ */
 #menu-section {
     height: 100%;
     color: white;
@@ -239,9 +267,9 @@ p{
     font-size: 16px;
 }
 
-/* --- Menu Section End --- */
+/* ------------ Menu Section End ------------ */
 
-/* --- Gallery Section Start */
+/* ------------ Gallery Section Start ------------ */
 #gallery-section img{
     border: 3px solid var(--secondary-col);
 }
@@ -256,9 +284,9 @@ p{
     color: var(--primary-col);
     padding-bottom: 13px;
 }
-/* --- Gallery Section end */
+/* ------------ Gallery Section end ------------ */
 
-/* --- Reservartion Section Start--- */
+/* ------------ Reservartion Section Start------------ */
 #reservation-section {
     background-color: var(--primary-col);
     color: var(--tertiary-col);
@@ -292,9 +320,9 @@ p{
     padding-bottom: 20px;
 }
 
-/* --- Reservartion Section End --- */
+/* ------------ Reservartion Section End ------------ */
 
-/* --- Footer/contact us Section Start --- */
+/* ------------ Footer/contact us Section Start ------------ */
 #footer {
     background-color: var(--tertiary-col);
     padding: 20px 0;
@@ -314,28 +342,9 @@ p{
     font-size: 15px;
 }
 
-/* --- Footer/contact us Section End --- */
+/* ------------ Footer/contact us Section End ------------ */
 
-
-/* Login section Start*/
-
-#id_password,
-#id_login {
-    display: block;
-}
-
-.login .helptext {
-    display: none;
-}
-
-.login p:nth-child(4) {
-    display: none;
-}
-
-/* Login section End */
-
-
-/* Media Queries */
+/* ------------Media Queries------------ */
 @media only screen and (max-width: 768px) {
     /* HERO/BANNER SECTION */
     .banner-middle {

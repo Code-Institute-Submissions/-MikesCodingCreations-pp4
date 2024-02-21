@@ -50,31 +50,36 @@
                             <a class="nav-link" href="#footer">Contact Us</a>
                         </li>
 
-                        <ul class="account-links d-flex flex-row align-items-center m-0">
-                            {% if user.is_authenticated %}
-                            <li class="profile-li">
-                                <a href="{% url 'profile' %}" class="nav-link">My Account</a>
-                            </li>
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a href="{% url 'profile' %}" class="nav-link">My Account</a>
+                        </li>
 
-                            <li class="nav-item account-nav-item">
-                                <a href="{% url 'account_logout' %}" class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page">Logout</a>
-                            </li>
+                        {% if user.is_superuser %}
+                        <li class="nav-item edit-menu-link">
+                            <a href="{% url 'menu:add_menu' %}" class="nav-link ">Edit Menu</a>
+                        </li>
+                        {% endif %}
 
-                            {% else %}
-                            <li class="nav-item account-nav-item">
-                                <a href="{% url 'account_signup' %}" class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page">Register</a>
-                            </li>
-                            <li class="nav-item account-nav-item">
-                                <a href="{% url 'account_login' %}" class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page">Login</a>
-                            </li>
-                            {% endif %}
-                        </ul>
+                        <li class="nav-item account-nav-item">
+                            <a href="{% url 'account_logout' %}" class="nav-link" aria-current="page">Logout</a>
+                        </li>
+
+                        {% else %}
+                        <li class="nav-item account-nav-item">
+                            <a href="{% url 'account_signup' %}" class="nav-link" aria-current="page">Register</a>
+                        </li>
+                        <li class="nav-item account-nav-item">
+                            <a href="{% url 'account_login' %}" class="nav-link" aria-current="page">Login</a>
+                        </li>
+                        {% endif %}
+                        
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <!-- Main content -->
+        <!-- Main content goes here!! -->
         <main class="flex-shrink-0 main-bg">
             <div class="page-content pb-5">
                 {% block content %}
