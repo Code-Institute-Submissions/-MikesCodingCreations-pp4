@@ -55,9 +55,14 @@
                         
                         {% if request.user.is_authenticated %}
                         {% if request.user.is_superuser %}
-                            <li class="nav-item">
-                                <a href="{% url 'menu:add_menu' %}" class="dropdown-item">Menu Management</a>
-                            </li>
+                            <li class="dropdown nav-item">
+                                <a href="javascript:void(0)" class="dropbtn">Menu Management</a>
+                                <div class="dropdown-content">
+                                  <a href="{% url 'menu:add_menu' %}">Add Menu Item</a>
+                                  <a href="{% url 'menu:add_menu' %}">Edit Menu Item</a>
+                                </div>
+                              </li>
+                            
                         {% endif %}
                         <li class="nav-item">
                             <a href="{% url 'profile' %}" class="nav-link">My Account</a>
@@ -66,6 +71,7 @@
                             <a href="{% url 'account_logout' %}" class="nav-link" aria-current="page">Logout</a>
                         </li>
                         {% else %}
+
                         <li class="nav-item">
                             <a href="{% url 'account_signup' %}" class="nav-link" aria-current="page">Register</a>
                         </li>
