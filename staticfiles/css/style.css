@@ -1,4 +1,4 @@
-/* --- Root Styles --- */
+/* ------------ Root Styles ------------ */
 :root {
     --primary-col: rgb(26, 26, 26);
     --secondary-col: #EEB307;
@@ -13,7 +13,11 @@
     transition: none;
 }
 
-/* --- General stlyes --- */
+/* ------------ General stlyes ------------ */
+li {
+    list-style: none
+}
+
 p{
     font-size: 20px;
 }
@@ -22,12 +26,24 @@ p{
     padding: 60px;
 }
 
-/* --- Navbar CSS start--- */
+/* ------------ Navbar CSS start------------ */
 .navbar {
     font-family: var(--main-fnt);
     font-size: 20px;
-    background-color: black;
+    background-color: rgb(26, 26, 26);
     border-bottom: 3px solid var(--secondary-col);
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.navbar button {
+    background-color: var(--secondary-col);
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
 }
 
 #logo {
@@ -41,11 +57,18 @@ p{
 
 .nav-item a {
     color: var(--secondary-col);
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
 }
 
 .nav-item a:hover {
     text-decoration: overline;
+    text-underline-offset: 4px;
+    color: var(--secondary-col);
+}
+
+.account-nav-item a:hover,
+#account-link:hover {
     color: var(--secondary-col);
 }
 
@@ -53,9 +76,84 @@ p{
     width: 150px;
     margin-bottom: 20px;
 }
-/* --- Navbar CSS end--- */
 
-/* --- Hero CSS start --- */
+.profile {
+    list-style-type: none;
+    margin-left: 15px;
+    padding-left: 15px;
+}
+
+.profile-li a{
+    color: var(--secondary-col);
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.account-links {
+    margin: 0;
+    padding: 0;
+}
+
+    /* ----- Menu Management section start ----- */
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: var(--primary-col);
+
+        z-index: 1;
+      }
+      
+      .dropdown-content a {
+        color: var(--secondary-col);
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+      
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+    /* ----- Menu Management section end ----- */
+
+    /* ----- Register Section Start ----- */
+
+    #sign-up-container form li {
+        font-size: 25px;
+    }
+
+    /* ----- Register Section End ----- */
+
+    /* ----- Login section Start ----- */
+
+#id_password,
+#id_login {
+    display: block;
+}
+
+.login .helptext {
+    display: none;
+}
+
+.login p:nth-child(4) {
+    display: none;
+}
+
+    /* ----- Login section End ----- */
+
+/* ------------ Navbar CSS end------------ */
+
+/*  */
+.page-content {
+    margin-top: 50px;
+}
+/*  */
+
+/* ------------ Hero CSS start ------------ */
 .banner{
     background-color: black;
     width: 100vw;
@@ -82,9 +180,9 @@ p{
     color: var(--secondary-col);
     cursor: pointer;
 }
-/* --- Hero CSS end --- */
+/* ------------ Hero CSS end ------------ */
 
-/* --- About-us-section Start --- */
+/* ------------ About-us-section Start ------------ */
 #about {
     height: 100vh;
 }
@@ -130,9 +228,55 @@ p{
     border-bottom: 1px solid #EEB307;
 }
 
-/* --- About-us-section End --- */
+.accordion-body {
+    margin: 0;
+}
 
-/* --- Menu Section Start --- */
+.chef-img {
+    width: 200px;
+    height: 200px;
+}
+
+/* ------------ About-us-section End ------------ */
+
+/* ------------ Blog Section Start ------------ */
+    /* --- Post lists - Blog */
+#post-heading-container h2{
+    font-family: var(--main-fnt);
+    text-align: center; 
+    color: #EEB307; 
+    font-weight: 300; 
+    font-size: 3rem;
+}
+
+#post-heading-container p {
+    text-align: center;
+}
+
+#post_list_title {
+    color: var(--secondary-col); 
+    font-size: 1.5rem; 
+    text-decoration: none;
+}
+
+.fa-calendar {
+    font-size: 0.8rem;
+}
+
+.media-body {
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+    backdrop-filter: blur(14px); 
+    background-color: rgba(255, 255, 255, 0.2); 
+}
+
+    /* ---Post details - Blog */
+
+
+/* ------------ Blog Section End ------------ */
+
+/* ------------ Menu Section Start ------------ */
 #menu-section {
     height: 100%;
     color: white;
@@ -150,17 +294,13 @@ p{
     width: 150px;
 }
 
-.menu-item-title {
-    color: var(--secondary-col);
-}
-
 .menu-item-info {
     font-size: 16px;
 }
 
-/* --- Menu Section End --- */
+/* ------------ Menu Section End ------------ */
 
-/* --- Gallery Section Start */
+/* ------------ Gallery Section Start ------------ */
 #gallery-section img{
     border: 3px solid var(--secondary-col);
 }
@@ -175,16 +315,16 @@ p{
     color: var(--primary-col);
     padding-bottom: 13px;
 }
-/* --- Gallery Section end */
+/* ------------ Gallery Section end ------------ */
 
-/* --- Reservartion Section Start--- */
+/* ------------ Reservartion Section Start------------ */
 #reservation-section {
     background-color: var(--primary-col);
     color: var(--tertiary-col);
 }
 
 #reservation-section .container {
-    padding: 20px 0 30px 0;
+    padding: 20px 0 15px 0;
     width: 85%;
 }
 
@@ -203,15 +343,17 @@ p{
     color: var(--secondary-col);
 }
 
-form input {
-    width: 300px;
-    background-color: red;
+.messages li{
+    color: var(--secondary-col);
+    text-align: center;
+    list-style-type: none;
+    font-size: 2rem;
+    padding-bottom: 20px;
 }
 
+/* ------------ Reservartion Section End ------------ */
 
-/* --- Reservartion Section End --- */
-
-/* --- Footer/contact us Section Start --- */
+/* ------------ Footer/contact us Section Start ------------ */
 #footer {
     background-color: var(--tertiary-col);
     padding: 20px 0;
@@ -231,7 +373,153 @@ form input {
     font-size: 15px;
 }
 
-/* --- Footer/contact us Section End --- */
+/* ------------ Footer/contact us Section End ------------ */
 
+/* ------------Media Queries------------ */
+@media only screen and (max-width: 768px) {
+    /* HERO/BANNER SECTION */
+    .banner-middle {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
 
-/* Media Queries */
+    .banner-middle p {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    .banner-social {
+        padding-bottom: 0 !important;
+    }
+
+    .banner-address p {
+        font-size: 16px;
+        margin-bottom: 0 !important;
+    }
+
+    /* ABOUT US SECTION */
+    .about-us-content {
+        font-size: 1rem;
+    }
+
+    .our-history-container-inner {
+        margin-top: 15px !important;
+    }
+
+    /* OUR HISTORY SECTION */
+    .our-history-container {
+        padding: 0 !important;
+        margin-bottom: 20px !important;
+    }
+    .our-history-title {
+        margin: 20px 0 0 0 !important;
+    }
+
+    .our-history-content {
+        font-size: 16px;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .history-img-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .why-choose-us-container .row {
+        margin-bottom: 0 !important;
+    }
+
+    .why-choose-us-container .row p {
+        font-size: 18px;
+    }
+
+    /* CHEFS */
+    #chef-section .row {
+        margin-bottom: 0 !important;
+    }
+
+    #chef-section h2 {
+        margin-top: 10px !important;
+    }
+
+    #chef-section p {
+        font-size: 16px;
+    }
+
+    #chef-section img {
+        width: 100% !important;
+        padding: 0 10px !important;
+        margin-bottom: 5px !important;
+        border-radius: 10px !important;
+    }
+
+    #chef-section h3 {
+        text-align: center;
+    }
+
+    #chef-section p {
+        text-align: center;
+        margin-bottom: 15px !important;
+    }
+
+    /* MENU SECTION */
+    #menu-section .container{
+        padding: 0.6rem !important;
+    }
+
+    #menu-section .container h3 {
+        font-size: 30px;
+    }
+
+    #menu-section .container p {
+        font-size: 14px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .menu-item-photo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu-item-photo-container img {
+        width: 100%;
+    }
+    .menu-item-details-container {
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .menu-item-details-container p {
+        padding-top: 5px;
+    }
+
+    .menu-item-price-container {
+        text-align: center;
+    }
+
+    /* RESERVATION SECTION */
+    .reservation-section-header p {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .reservation-button-container {
+        margin-top: 10px !important;
+    }
+
+    /* GALLERY SECTION */
+    #gallery-section {
+        padding: 10px;
+    }
+
+    .gallery-section-header {
+        font-size: 30px;
+    }
+
+    .gallery-section-info {
+        font-size: 18px;
+        margin: 0;
+    }
+}

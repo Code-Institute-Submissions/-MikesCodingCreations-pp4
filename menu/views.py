@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.urls import reverse
 
@@ -7,6 +7,7 @@ from .forms import MenuForm
 
 
 def menu_list(request):
+    """ Display menu list """
     menu_list = Menu.objects.all()
 
     context = {'menu_list': menu_list}
@@ -15,6 +16,7 @@ def menu_list(request):
 
 
 def menu_detail(request, slug):
+    """ Display menu items in detail """
     menu_detail = Menu.objects.get(slug=slug)
 
     context = {'menu_detail': menu_detail}
@@ -37,6 +39,30 @@ def add_menu(request):
     template = 'Menus/add_menu.html'
     context = {
         'form': form,
+    }
+
+    return render(request, template, context)
+
+
+def edit_menu(request, slug):
+    """ Edit a product in the store """
+    menu = get_object_or_404(Menu, slug=slug)
+
+    if request.method == 'POST':
+        form = MenuForm(request.POST, request.FILES, instance=menu)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated Menu!')
+            return redirect(reverse('menu:menu_list'))
+        else:
+            messages.error(request, 'Failed to update Menu. Please ensure the form is valid.')
+    else:
+        form = MenuForm(None, instance=menu)
+
+    template = 'Menus/edit_menu.html'
+    context = {
+        'form': form,
+        'menu': menu,
     }
 
     return render(request, template, context)
