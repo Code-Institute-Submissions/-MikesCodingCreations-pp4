@@ -173,6 +173,10 @@ a {
     display: none;
 }
 
+#signup_form ul li {
+    display: none;
+}
+
     /* ----- Login section End ----- */
 
 /* ------------ Navbar CSS end------------ */
@@ -422,12 +426,24 @@ a {
 /* ------------ Footer/contact us Section End ------------ */
 
 
-.message-container {
-    position: fixed;
-    top: 100px;
-    right: 15px;
-    z-index: 999999999999999999999;
+/* Login/out/register */
+
+#logging-header {
+    font-family: var(--main-fnt);
+    color: var(--secondary-col);
+    font-size: 32px ;
 }
+
+.logging-link {
+    color: var(--secondary-col);
+}
+
+/* .message-container {
+    position: fixed;
+    top: 150px;
+    right: 35px;
+    z-index: 999999999999999999999;
+} */
 
 .custom-toast {
     overflow: visible;

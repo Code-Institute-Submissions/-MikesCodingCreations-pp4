@@ -10,14 +10,14 @@
 <div class="container ">
     <div class="row">
         <div class="col-md-8 mt-5 offset-md-2">
-            <h3>{% trans "Sign In" %}</h3>
+            <h3 id="logging-header">{% trans "Sign In" %}</h3>
 
             <p>{% blocktrans %}
               Welcome back to the La Grill. <br> 
               To review your reservations, leave a comment or like a post, please log in. 
               <br> 
               If you have not created an account yet, then 
-              <a class="link" href="{{ signup_url }}">sign up</a> first.
+              <a class="link logging-link" href="{{ signup_url }}">sign up</a> first.
           {% endblocktrans %}</p>
         </div>
     </div>
