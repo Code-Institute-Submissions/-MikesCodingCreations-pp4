@@ -15,7 +15,7 @@
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6" id="menu-mng-title">
                 <hr>
                 <h2 class="logo-font mb-4">Menu Management</h2>
                 <h4 class="text-muted">Add a Menu Item</h4>
@@ -35,7 +35,7 @@
                     {{ form | crispy }}
                     <br>
                     <div class="text-right">
-                        <a href="{% url 'menu:menu_list' %}" class="btn btn-outline-warning btn-md">Cancel</a>
+                        <a href="{% url 'menu:menu_list' %}" class="btn btn-outline-warning btn-md menu-mng-cancel-btn">Cancel</a>
                         <button class="btn btn-outline-warning btn-md" type="submit">Add A Menu Item</button>
                     </div>
                 </form>

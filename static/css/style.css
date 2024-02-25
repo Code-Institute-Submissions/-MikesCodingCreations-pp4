@@ -106,7 +106,6 @@ a {
         display: none;
         position: absolute;
         background-color: var(--primary-col);
-
         z-index: 1;
       }
       
@@ -120,6 +119,20 @@ a {
       
       .dropdown:hover .dropdown-content {
         display: block;
+      }
+
+      /* Add menu item */
+      
+
+      /* Edit menu item */
+      #menu-mng-title h2 {
+        font-family: var(--main-fnt);
+        font-size: 40px;
+        color: var(--secondary-col);
+      }
+
+      .menu-mng-cancel-btn {
+        margin-right: 20px;
       }
 
     /* ----- Menu Management section end ----- */
@@ -310,7 +323,8 @@ a {
 }
 
 .menu-item-photo {
-    width: 150px;
+    width: 200px;
+    height: 100%;
 }
 
 .menu-item-info {

@@ -45,7 +45,7 @@ def add_menu(request):
 
 
 def edit_menu(request, slug):
-    """ Edit a product in the store """
+    """ Edit a menu item """
     menu = get_object_or_404(Menu, slug=slug)
 
     if request.method == 'POST':
@@ -55,7 +55,7 @@ def edit_menu(request, slug):
             messages.success(request, 'Successfully updated Menu!')
             return redirect(reverse('menu:menu_list'))
         else:
-            messages.error(request, 'Failed to update Menu. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update Menu.')
     else:
         form = MenuForm(None, instance=menu)
 
@@ -66,3 +66,11 @@ def edit_menu(request, slug):
     }
 
     return render(request, template, context)
+
+
+def delete_menu(request, slug):
+    """ Delete a menu item """
+    menu = get_object_or_404(Menu, slug=slug)
+    menu.delete()
+    messages.success(request, f'Successfully deleted "{menu.name}".')
+    return redirect(reverse('menu:menu_list'))

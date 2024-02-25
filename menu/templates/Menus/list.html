@@ -4,7 +4,7 @@
 
         <!-- ********** Menu Section ********** -->
         <div class="section bg-warning">
-            <div class="container-fluid mh-100" id="menu-section">
+            <div class="container-fluid" id="menu-section">
                 <div class="row">
                     {% if messages %}
                         {% for message in messages %}
@@ -26,18 +26,28 @@
                                 {% for menu in menu_list %}
                                     <div class="col-lg-6 col-md-12">
                                         <div class="row menu-item-1">
-                                            <div class="col-lg-3 col-xl-3 col-md-5 col-sm-12 col-12 menu-item-photo-container">
+                                            <div class="col-lg-4 col-xl-4 col-md-5 col-sm-12 col-12 menu-item-photo-container">
                                                 <img class="menu-item-photo" src="{{menu.image.url}}" alt="menu item">
                                             </div>
-                                            <div class="col-lg-7 col-xl-7 col-md-5 col-sm-12 col-12 menu-item-details-container">
+                                            <div class="col-lg-6 col-xl-6 col-md-5 col-sm-12 col-12 menu-item-details-container">
                                                 <a class="text-warning" href="{% url 'menu:menu_detail' menu.slug %}">{{menu.name}}</a>
-                                                <p class="menu-item-info">{{menu.description|truncatewords:50}}</p>
+                                                <p class="menu-item-info">{{menu.description|truncatewords:60}}</p>
                                             </div>
                                             <div class="col-lg-2 col-xl-2 col-md-2 col-sm-12 col-12 menu-item-price-container">
                                                 <span class="dollar font-weight-bold">€{{menu.price}}</span>
                                             </div>
+
+                                            {% if request.user.is_superuser %}
+                                            <div class="col-lg-2 col-xl-2 col-md-2 col-sm-12 col-12">
+                                                <small>
+                                                    <a class="text-success edit-menu-btn" href="{% url 'menu:edit_menu' menu.slug %}">Edit</a>
+                                                    <a class="text-danger delete-menu-btn" href="{% url 'menu:delete_menu' menu.slug %}">Delete</a>
+                                                </small>
+                                            </div>
+                                            {% endif %}
+                                            
                                         </div>
-                                        <hr class="my-4">
+                                        <hr class="">
                                     </div>
                                 {% endfor %}
                             </div>
@@ -46,77 +56,6 @@
                 </div>
             </div>
         </div>
-
-        {% comment %}
-        <!-- ********** Gallery Section ********** -->
-            <div class="gallery padding" id="gallery-section">
-                <div class="container">
-                    <div class="row mb-4">
-                        <div class="col-12 gallery-top">
-                            <div class="gallery-title text-center">
-                                <h3 class="gallery-section-header"> ~ La Grill Gallery ~ </h3>
-                                <p class="gallery-section-info">View just some of our exclusive menu items below.</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 ">
-                            <a href="/assets/images/gallery-images/gallery-image1.jpeg" data-lightbox="id" data-title="Testing"><img src="/assets/images/gallery-images/gallery-image1.jpeg" alt="" class="img-fluid mb-2"></a>
-                            <a href="/assets/images/gallery-images/gallery-image2.jpeg" data-lightbox="id"><img src="/assets/images/gallery-images/gallery-image2.jpeg" alt="" class="img-fluid mb-2"></a>
-                            <a href="/assets/images/gallery-images/gallery-image3.jpeg" data-lightbox="id"><img src="/assets/images/gallery-images/gallery-image3.jpeg" alt="" class="img-fluid mb-2" ></a>
-                        </div>
-                        <div class="col-sm-4">
-                            <a href="/assets/images/gallery-images/gallery-image4.jpeg" data-lightbox="id">  <img src="/assets/images/gallery-images/gallery-image4.jpeg" alt="" class="img-fluid mb-2"></a>
-                            <a href="/assets/images/gallery-images/gallery-image5.jpeg" data-lightbox="id">  <img src="/assets/images/gallery-images/gallery-image5.jpeg" alt="" class="img-fluid mb-2"></a>
-                        </div>
-                        <div class="col-sm-4">
-                            <a href="/assets/images/gallery-images/gallery-image6.jpeg" data-lightbox="id"><img src="/assets/images/gallery-images/gallery-image6.jpeg" alt=""  class="img-fluid mb-2"></a>
-                            <a href="/assets/images/gallery-images/gallery-image7.jpeg" data-lightbox="id"><img src="/assets/images/gallery-images/gallery-image7.jpeg" alt=""  class="img-fluid mb-2"></a>                    </div>
-                    </div>
-                </div>
-            </div>
-
-        <!-- ********** Reservations Section ********** -->
-            <section class="padding" id="reservation-section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="reservation-section-header text-center">
-                                <h3>Reservations</h3>
-                                <p>
-                                    Interested in trying some of our sublime dishes? <br>
-                                    Book a table with <span>La Grill</span> today.</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-xs-12">
-                            <div class="reservation-form">
-                                <form action="#">
-                                    <input type="text" name="Full name" id="full name" class="form-control mb-4 form-control-lg" placeholder="Full name">
-                                    <input type="number" name="Phone number" id="phone number" class="form-control mb-4 form-control-lg" placeholder="Phone number">
-                                    <input type="email" name="Email address" id="email address" class="form-control mb-4 form-control-lg" placeholder="E-mail address">
-                                </form>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-xs-12">
-                            <div class="reserv-form">
-                                <form action="#">
-                                    <select name="select" id="select-option" class="form-control form-control-lg mb-4">
-                                    <option value="0">Select Guests</option>
-                                    <option value="1">1 Guest</option>
-                                    <option value="2">2 Guests</option>
-                                    <option value="3">3 Guests</option>
-                                    <option value="4">4 Guests</option>
-                                    <option value="5">5 Guests</option>
-                                    <option value="6">6+ Guests</option>
-                                </select>
-                                    <input type="date" name="date" id="date" class="form-control form-control-lg mb-4">
-                                    <input type="time" name="date" id="date" class="form-control form-control-lg mb-4">
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <button  type="submit" class="btn btn-outline-warning btn-lg mx-auto d-block">RESERVE A TABLE</button>
-                </div>
-            </section>
-        {% endcomment %}
     </div>
 
 {% endblock %}
