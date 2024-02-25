@@ -39,7 +39,7 @@ a {
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%;
-    margin-bottom: 100px;
+    z-index: 1000000000;
 }
 
 .navbar button {
@@ -166,21 +166,38 @@ a .logo {
 
     /* ----- Login section Start ----- */
 
-#id_password,
-#id_login {
-    display: block;
-}
+    #logging-header {
+        font-family: var(--main-fnt);
+        color: var(--secondary-col);
+        font-size: 32px ;
+    }
 
-.login .helptext {
-    display: none;
-}
+    .logging-link {
+        color: var(--secondary-col);
+    }
+
+    #id_password,
+    #id_login {
+        display: block;
+    }
+
+    .login .helptext {
+        display: none;
+    }
 
 
-#signup_form ul li {
-    display: none;
-}
+    #signup_form ul li {
+        display: none;
+    }
 
     /* ----- Login section End ----- */
+
+
+    /* Superuser menu */
+
+    #super-user-menu {
+        margin-right: 20px;
+    }
 
 /* ------------ Navbar CSS end------------ */
 
@@ -429,32 +446,19 @@ a .logo {
 /* ------------ Footer/contact us Section End ------------ */
 
 
-/* Login/out/register */
 
-#logging-header {
-    font-family: var(--main-fnt);
-    color: var(--secondary-col);
-    font-size: 32px ;
-}
 
-.logging-link {
-    color: var(--secondary-col);
-}
 
-/* .message-container {
-    position: fixed;
-    top: 150px;
-    right: 35px;
-    z-index: 999999999999999999999;
-} */
 
-.custom-toast {
-    overflow: visible;
-}
 
-.toast-capper {
-    height: 2px;
-}
+
+
+
+
+
+
+
+
 
 /* ------------Media Queries------------ */
 @media only screen and (max-width: 768px) {

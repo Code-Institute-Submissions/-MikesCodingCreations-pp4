@@ -1,5 +1,5 @@
 from .models import Reservation
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from .forms import ReserveTableForm
 from django.contrib.auth.decorators import login_required
@@ -22,9 +22,25 @@ def thank_you(request):
 
 @login_required
 def reservation_management(request):
+    """ Display Reservations """
     reservation_management = Reservation.objects.all()
     context = {
         'reservation_management' : reservation_management,
     }
 
     return render(request, 'reservation/reservation_management.html', context)
+
+
+@login_required
+def delete_reservation(request, reservation_id):
+    """ Delete a reservation """
+    reservation_management = get_object_or_404(Reservation, pk=reservation_id)
+    reservation_management.delete()
+    messages.success(request, f'Successfully deleted reservation of "{Reservation.full_Name}".')
+    context = {
+        'reservation_management' : reservation_management,
+
+        'Reservation.id': Reservation.id,
+
+    }
+    return redirect(reverse('reservation:reservation_management'))

@@ -29,6 +29,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
+                <!-- Main nav -->
                 <div class="collapse navbar-collapse align-items-center justify-content-around" id="navbarSupportedContent">
 
                     <ul class="navbar-nav d-flex justify-content-center align-items-center">
@@ -53,17 +54,6 @@
                         </li>
 
                         {% if request.user.is_authenticated %}
-                            {% if request.user.is_superuser %}
-
-                            <li class="dropdown nav-item">
-                                <a href="javascript:void(0)" class="dropbtn">-Management-</a>
-                                <div class="dropdown-content">
-                                <a href="{% url 'menu:add_menu' %}">Menus</a>
-                                <a href="{% url 'reservation:reservation_management' %}" class="nav-link">Reservations</a>
-                                </div>
-                            </li>
-                                
-                            {% endif %}
 
                         <li class="nav-item">
                             <a href="{% url 'profile' %}" class="nav-link">My Account</a>
@@ -83,7 +73,26 @@
                         {% endif %}
 
                     </ul>
+                    
+                    <!-- Superuser nav -->
+                    <ul class="navbar-nav d-flex justify-content-center align-items-center">
+                        {% if request.user.is_superuser %}
+    
+                        <li class="dropdown nav-item">
+                            <a href="javascript:void(0)" class="dropbtn">Management</a>
+                            <div class="dropdown-content">
+                            <a href="{% url 'menu:add_menu' %}">Menus</a>
+                            <a href="{% url 'reservation:reservation_management' %}" class="nav-link">Reservations</a>
+                            </div>
+                        </li>
+                            
+                        {% endif %}
+                    </ul>
                 </div>
+
+
+                
+
             </div>
         </nav>
 

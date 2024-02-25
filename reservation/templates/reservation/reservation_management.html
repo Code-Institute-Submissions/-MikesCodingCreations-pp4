@@ -11,6 +11,14 @@
                             <h2 class="heading pt-3">Reservations</h2>
                             <p class="lead pb-2">Review all reservations below.</p>
                         </div>
+                        {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert bg-success alert-dismissable text-center fade show" role="alert">
+                                {{message}}
+                                <button type="button" class="btn-close close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
                     </div>
                 </div>
             </div>
@@ -26,7 +34,7 @@
                             <div class="media d-block media-bg-white mb-3" data-aos="fade-up" data-aos-delay="350">
                                 <div class="media-body">
                                     {% comment %}<h3><a href="{% url 'reservation:reservation_management' %}">{{Reservation}}</a></h3>{% endcomment%}
-                                    <h3>Reservation No# {{Reservation.id}}</h3>
+                                    <h3 id="logging-header">Reservation No# {{Reservation.id}}</h3>
                                     <hr>
 
                                     <div class="mb-2">
@@ -54,6 +62,13 @@
                                         <p class="p-0 m-0">Reservation submitted on:</p>
                                         <p class="p-0 m-0">{{Reservation.created}}</p>
                                     </div>
+                                    {% if request.user.is_superuser %}
+                                    <div class="col-12 mt-3 mb-3">
+                                        <small class="">
+                                            <a class="text-dark delete-menu-btn" href="{% url 'reservation:delete_reservation' Reservation.id %}">Cancel Reservation</a>
+                                        </small>
+                                    </div>
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>
