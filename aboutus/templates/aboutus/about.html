@@ -43,7 +43,7 @@
                 <div class="row justify-content-center mb-5 why-choose-us-header" data-aos="fade-up">
                     <div class="col-md-8 text-center">
                         <h2 class="mb-3 mt-3 lead display-5" style="color: #EEB307">Why Choose Us</h2>
-                        <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste, illum.</p>
+                        <p class="lead">Whilst we take pride in being number one, below are just some of the reasons why you should choose us.</p>
                     </div>
                 </div>
                 <div class="row large-gutters">
@@ -80,10 +80,10 @@
                 <div class="row">
                     {% for one in chef %}
                     <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
-                        <img src="{{one.image.url}}" alt="Chef1" class="img-fluid mb-4 rounded chef-img" style="width: 300; height: 400;">
-                        <h3 class="mb-3" style="font-size: 24;">{{one.name}}</h3>
-                        <p class="post-meta text-muted">{{one.title}}</p>
-                        <p class="mb-5" style="font-size: 12;">{{one.bio}}</p>
+                        <img src="{{one.image.url}}" alt="Chef1" class="img-fluid mb-4 rounded chef-img">
+                        <h3 class="mb-3 chef-name" >{{one.name}}</h3>
+                        <p class="post-meta text-muted chef-title">{{one.title}}</p>
+                        <p class="mb-5 chef-bio">{{one.bio}}</p>
                     </div>
                     {% endfor %}
                 </div>
