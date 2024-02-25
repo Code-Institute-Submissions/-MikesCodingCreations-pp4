@@ -6,11 +6,16 @@
         <div class="section bg-warning">
             <div class="container-fluid" id="menu-section">
                 <div class="row">
+
+                    {% comment %}
+
                     {% if messages %}
                         {% for message in messages %}
                             <div class="alert bg-success alert-dismissible p-2 text-center">{{ message }}</div>
                         {% endfor %}
                     {% endif %}
+
+                    {% endcomment %}
                     
                         <div class="container col-10 text-center p-4">
                             <h3>Our Menu</h3>
@@ -38,7 +43,7 @@
                                             </div>
 
                                             {% if request.user.is_superuser %}
-                                            <div class="col-lg-2 col-xl-2 col-md-2 col-sm-12 col-12">
+                                            <div class="col-12 mt-3">
                                                 <small>
                                                     <a class="text-success edit-menu-btn" href="{% url 'menu:edit_menu' menu.slug %}">Edit</a>
                                                     <a class="text-danger delete-menu-btn" href="{% url 'menu:delete_menu' menu.slug %}">Delete</a>
