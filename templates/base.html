@@ -52,18 +52,23 @@
                             <a class="nav-link" href="#footer">Contact Us</a>
                         </li>
 
-                        
                         {% if request.user.is_authenticated %}
-                        {% if request.user.is_superuser %}
-                        <li class="nav-item">
-                            <a href="{% url 'menu:add_menu' %}" class="nav-link">Menu Management</a>
-                        </li>
-                            
-                        {% endif %}
+                            {% if request.user.is_superuser %}
+
+                            <li class="dropdown nav-item">
+                                <a href="javascript:void(0)" class="dropbtn">-Management-</a>
+                                <div class="dropdown-content">
+                                <a href="{% url 'menu:add_menu' %}">Menus</a>
+                                <a href="{% url 'reservation:reservation_management' %}" class="nav-link">Reservations</a>
+                                </div>
+                            </li>
+                                
+                            {% endif %}
+
                         <li class="nav-item">
                             <a href="{% url 'profile' %}" class="nav-link">My Account</a>
                         </li>
-                        
+
                         <li class="nav-item">
                             <a href="{% url 'account_logout' %}" class="nav-link" aria-current="page">Logout</a>
                         </li>
@@ -82,16 +87,16 @@
             </div>
         </nav>
 
+    {% comment %}
         {% if messages %}
-        <div class="message-container">
             {% for message in messages %}
-
-                {% include 'includes/toasts/toast_success.html' %}
-
-
+                <div class="alert bg-success alert-dismissable text-center fade show" role="alert">
+                    {{message}}
+                    <button type="button" class="btn-close close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
             {% endfor %}
-        </div>
         {% endif %}
+    {% endcomment %}
 
         <!-- Main content goes here!! -->
         <main class="flex-shrink-0 main-bg">
@@ -135,11 +140,6 @@
 
 
         {% block postloadjs %}
-        <!-- Toasts -->
-        <script>
-            $('.toast').toast('show');
-        </script>
-
         <!-- Font Awesome -->
         <script src="https://kit.fontawesome.com/1a5fa01ebf.js" crossorigin="anonymous"></script>
 

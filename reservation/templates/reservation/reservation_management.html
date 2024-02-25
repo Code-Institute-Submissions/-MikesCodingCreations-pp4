@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <div class="main-wrap">
+        <div class="cover_1 cover_sm">
+            <div class="img_bg">
+                <div class="container">
+                    <div class="row align-items center justify-content-center">
+                        <div class="col-md-7" id="post-heading-container" data-aos="fade-up">
+                            <h2 class="heading pt-3">Reservations</h2>
+                            <p class="lead pb-2">Review all reservations below.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="container">
+
+                <div class="row mb-5">
+                    {% if request.user.is_superuser %}
+                        {% for Reservation in reservation_management %}
+                        <div class="col-md-4">
+                            <div class="media d-block media-bg-white mb-3" data-aos="fade-up" data-aos-delay="350">
+                                <div class="media-body">
+                                    {% comment %}<h3><a href="{% url 'reservation:reservation_management' %}">{{Reservation}}</a></h3>{% endcomment%}
+                                    <h3>Reservation No# {{Reservation.id}}</h3>
+                                    <hr>
+
+                                    <div class="mb-2">
+                                        <p class="p-0 m-0">Customer: {{Reservation.full_Name}}</p>
+                                    </div>
+
+                                    <div class="mb-2">
+                                        <p class="p-0 m-0">Email: {{Reservation.email}}</p>
+                                    </div>
+
+                                    <div class="mb-2">
+                                        <p class="p-0 m-0">Phone Number: {{Reservation.phone}}</p>
+                                    </div>
+
+                                    <div class="mb-2">
+                                        <p class="p-0 m-0">Party size: {{Reservation.guests}}</p>
+                                    </div>
+
+                                    <div class="mb-2">
+                                        <p class="p-0 m-0">Reservation Date & Time:</p>
+                                        <p class="p-0 m-0">{{Reservation.date}} - {{Reservation.time}}</p>
+                                    </div>
+                                    <hr>
+                                    <div class="mb-2">
+                                        <p class="p-0 m-0">Reservation submitted on:</p>
+                                        <p class="p-0 m-0">{{Reservation.created}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -2,6 +2,7 @@ from .models import Reservation
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import ReserveTableForm
+from django.contrib.auth.decorators import login_required
 
 def reserve_table(request):
     reserve_form = ReserveTableForm()
@@ -19,3 +20,11 @@ def reserve_table(request):
 def thank_you(request):
     return render(request ,'reservation/thank_you.html')
 
+@login_required
+def reservation_management(request):
+    reservation_management = Reservation.objects.all()
+    context = {
+        'reservation_management' : reservation_management,
+    }
+
+    return render(request, 'reservation/reservation_management.html', context)

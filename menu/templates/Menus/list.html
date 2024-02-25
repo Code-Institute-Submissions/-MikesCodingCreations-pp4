@@ -7,17 +7,16 @@
             <div class="container-fluid" id="menu-section">
                 <div class="row">
 
-                    {% comment %}
-
                     {% if messages %}
                         {% for message in messages %}
-                            <div class="alert bg-success alert-dismissible p-2 text-center">{{ message }}</div>
+                            <div class="alert bg-success alert-dismissable text-center fade show" role="alert">
+                                {{message}}
+                                <button type="button" class="btn-close close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
                         {% endfor %}
                     {% endif %}
 
-                    {% endcomment %}
-                    
-                        <div class="container col-10 text-center p-4">
+                        <div class="container col-10 text-center p-3">
                             <h3>Our Menu</h3>
                             <p class="mb-4">A culinary canvas where artistry and indulgence converge, each dish a symphony of flavors meticulously crafted to delight the senses and leave a lasting impression.</p>
                         </div>
@@ -63,10 +62,4 @@
         </div>
     </div>
 
-{% endblock %}
-
-{% block postloadjs %}
-    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/toastr.css' %}" media="all">
-    <script type="text/javascript" src="{% static 'js/toastr.min.js' %}"></script>  
 {% endblock %}

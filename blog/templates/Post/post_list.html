@@ -23,9 +23,6 @@
                     {% for post in post_list %}
                     <div class="col-md-4">
                         <div class="media d-block media-bg-white mb-3" data-aos="fade-up" data-aos-delay="350">
-                            <!-- <figure>
-                                <a href="{% url 'blog:post_detail' post.id %}"><img src="/media/blog/testing.jpg" style="max-width: 200px;" alt="post image" class="img-fluid"></a>
-                            </figure> -->
                             <div class="media-body">
                                 <h3><a href="{% url 'blog:post_detail' post.id %}" id="post_list_title">{{post}}</a></h3>
                                 <p class="post-meta"><span class="fa fa-calendar"> {{post.created}}</span></p>
@@ -35,36 +32,6 @@
                         </div>
                     </div>
                     {% endfor %}
-
-                </div>
-                <div class="row">
-
-                    {% if post_list.has_other_pages %}
-                        <div class="col-md-12">
-                            <ul class="pagination custom-pagination">
-                                {% if post_list.has_previous %}
-                                    <li class="page-item prev"><a href="?page={{post_list.previous_page_number}}" class="page-link"><i class="fa fa-angle-left"></i></a></li>
-                                {% else %}
-                                    <li class="disabled"></li>
-                                {% endif %}
-
-                                {% for pages in post_list.paginator.page_range %}
-                                    {% if post_list.number == pages %}
-                                        <li class="page-item active"><a href="#" class="page-link">{{pages}}</a></li>
-                                    {% else %}
-                                        <li class="page-item active"><a href="?page={{pages}}" class="page-link">{{pages}}</a></li>
-                                    {% endif %}
-                                
-                                {% endfor %}
-                                
-                                {% if post_list.has_next %}
-                                    <li class="page-item next"><a href="?page={{post_list.next_page_number}}" class="page-link"><i class="fa fa-angel-right"></i></a></li>
-                                {% else %}
-                                    <li class="disabled"></li>
-                                {% endif %}
-                            </ul>
-                        </div>
-                    {% endif %}
                 </div>
             </div>
         </div>

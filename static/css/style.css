@@ -107,14 +107,15 @@ a .logo {
         position: absolute;
         background-color: var(--primary-col);
         z-index: 1;
+
       }
       
       .dropdown-content a {
         color: var(--secondary-col);
-        padding: 12px 16px;
         text-decoration: none;
         display: block;
-        text-align: left;
+        text-align: center;
+        padding: 5px 0 0 0;
       }
       
       .dropdown:hover .dropdown-content {
@@ -122,7 +123,12 @@ a .logo {
       }
 
       /* Add menu item */
-      
+      #menu-update-btn button {
+        background-color: var(--secondary-col);
+        color: var(--primary-col);
+        border: none;
+        border-radius: 3px;
+      }
 
       /* Edit menu item */
       #menu-mng-title h2 {
@@ -169,9 +175,6 @@ a .logo {
     display: none;
 }
 
-.login p:nth-child(4) {
-    display: none;
-}
 
 #signup_form ul li {
     display: none;
