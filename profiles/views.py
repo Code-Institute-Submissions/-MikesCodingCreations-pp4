@@ -3,9 +3,10 @@ from django.contrib import messages
 
 from .models import UserProfile
 from .forms import UserProfileForm
-
+from django.contrib.auth.decorators import login_required
 from reservation.models import Reservation
 
+@login_required
 def profile(request):
     """ Display the user's profile. """
     profile = get_object_or_404(UserProfile, user=request.user)
@@ -19,7 +20,6 @@ def profile(request):
             messages.error(request, "Update failed.")
     else:
         form = UserProfileForm(instance=profile)        
-    reservation = profile.Reservation.all()
 
     template = 'profiles/profile.html'
     context = {}

@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.urls import reverse
-
+from django.contrib.auth.decorators import login_required
 from .models import Menu
 from .forms import MenuForm
 
@@ -24,8 +24,13 @@ def menu_detail(request, slug):
     return render(request, 'Menus/detail.html', context)
 
 
+@login_required
 def add_menu(request):
     """ Add a menu item """
+    if not request.user.is_superuser:
+        messages.error(request, "Only store owners can access this.")
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = MenuForm(request.POST, request.FILES)
         if form.is_valid():
@@ -44,6 +49,7 @@ def add_menu(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_menu(request, slug):
     """ Edit a menu item """
     menu = get_object_or_404(Menu, slug=slug)
@@ -68,6 +74,7 @@ def edit_menu(request, slug):
     return render(request, template, context)
 
 
+@login_required
 def delete_menu(request, slug):
     """ Delete a menu item """
     menu = get_object_or_404(Menu, slug=slug)
