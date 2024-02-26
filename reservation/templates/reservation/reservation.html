@@ -17,11 +17,12 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-10 p-1 form-wrap">
-                    <form action="#" method="POST" class="d-flex justify-content-center align-items-center flex-column center">
+
+                    <form action="{% url 'reservation:reserve_table' %}" method="POST" class="d-flex justify-content-center align-items-center flex-column center">
                         {% csrf_token %}
                         <div class="row mb-2">
                             <div class="form-group col-md-6 pb-3">
-                                <label for="name" class="label">Name</label>
+                                <label for="name" class="label">Full Name</label>
                                 <div class="form-field-icon-wrap">
                                     <span class="icon ion-android-person"></span>
                                     <input type="text" class="form-control" id="name" name="full_Name" placeholder="e.g John Smith">
