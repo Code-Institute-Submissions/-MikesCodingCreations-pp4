@@ -36,7 +36,7 @@ def delete_reservation(request, reservation_id):
     """ Delete a reservation """
     reservation_management = get_object_or_404(Reservation, pk=reservation_id)
     reservation_management.delete()
-    messages.success(request, f'Successfully deleted reservation of "{Reservation.full_Name}".')
+    messages.success(request, 'Successfully deleted reservation.')
     context = {
         'reservation_management' : reservation_management,
 
