@@ -1,8 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from .models import Post, Category, Comment
 from django.http import HttpResponse
 from taggit.models import Tag
 from .forms import CommentForm
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
+
 # Create your views here.
 
 def post_list(request):
@@ -47,3 +50,18 @@ def post_by_category(request, category):
     }
 
     return render(request, 'Post/post_list.html', context)
+
+
+@login_required
+def delete_post(request, id):
+    """ Delete a blog post """
+
+    post = get_object_or_404(Post, id=id)
+    post.delete()
+    messages.success(request, f'Successfully deleted post "{post.title}".')
+
+    context = {
+        'post_list' : post_list,
+    }
+
+    return redirect('blog:post_list')

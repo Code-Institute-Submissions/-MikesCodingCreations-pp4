@@ -16,6 +16,17 @@
             </div>
         </div>
 
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert bg-success alert-dismissable text-center fade show" role="alert">
+                    {{message}}
+                    <button type="button" class="btn-close close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+        {% endif %}
+        
+
+
         <div class="section" id="blog_post-list_section">
             <div class="container">
 
@@ -28,6 +39,13 @@
                                 <p class="post-meta"><span class="fa fa-calendar"> {{post.created}}</span></p>
                                 <p class="mb-4">{{post.content|truncatechars:25}}</p>
                                 <p><a href="{% url 'blog:post_detail' post.id %}" class="btn btn-outline-warning btn-sm">Read More</a></p>
+                            {% if request.user.is_superuser %}
+                                <div class="col-12 mt-3 pb-3">
+                                    <small>
+                                        <a class="text-danger delete-menu-btn" href="{% url 'blog:delete_post' post.id %}">Delete Post</a>
+                                    </small>
+                                </div>
+                            {% endif %}
                             </div>
                         </div>
                     </div>
