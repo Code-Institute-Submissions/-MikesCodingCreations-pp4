@@ -1,7 +1,7 @@
 /* ------------ Root Styles ------------ */
 :root {
     --primary-col: rgb(26, 26, 26);
-    --secondary-col: #EEB307;
+    --secondary-col: #ffc107;
     --tertiary-col: #F0F0F0;
     --main-fnt: 'Rozha One', serif;
 }
@@ -143,7 +143,7 @@ a .logo {
 
       .edit-menu-btn,
       .delete-menu-btn {
-        border: 2px solid var(--secondary-col);
+        border: 1px solid var(--secondary-col);
         border-radius: 3px;
         padding: 5px 10px;
         font-size: 1rem;
