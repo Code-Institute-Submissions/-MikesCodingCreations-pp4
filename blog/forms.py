@@ -7,3 +7,10 @@ class CommentForm(forms.ModelForm):
         fields = [
             'content'
         ]
+
+class BlogForm(forms.ModelForm):
+
+    class Meta:
+        model = Post
+        fields = "__all__"
+        exclude = ['author', 'created']

@@ -14,7 +14,7 @@
                         {% if request.user.is_superuser %}
                             <div class="col-12 mt-3 pb-5 d-flex justify-content-center">
                                 <small>
-                                    <a class="text-success edit-menu-btn" href="">Create A Post</a>
+                                    <a class="text-success edit-menu-btn" href="{% url 'blog:add_post' %}">Create A Post</a>
                                 </small>
                             </div>
                         {% endif %}
