@@ -6,7 +6,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <!-- ********** Header ********** -->
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,86 +15,65 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Rozha+One&display=swap" rel="stylesheet">
-
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
         <title>La Grill - Fine Dining Restaurant</title>
     </head>
 
     <body>
-        <!-- ********** Navbar Section********** -->
-        <nav class="navbar navbar-expand-sm d-flex fixed">
-            <div class="container-fluid">
-                <a href="/"><img src="/static/images/logo1.png" alt="website logo" class="logo"></a>
-                <button class="navbar-toggler text-success bg-alert" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
 
-                <!-- Main nav -->
-                <div class="collapse navbar-collapse align-items-center justify-content-around" id="navbarSupportedContent">
+    <nav class="navbar navbar-expand-sm d-flex fixed">
+        <div class="container-fluid">
+            <a href="/"><img src="/static/images/logo1.png" alt="website logo" class="logo"></a>
+            <button class="navbar-toggler text-success bg-alert" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                    <ul class="navbar-nav d-flex justify-content-center align-items-center">
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'aboutus:aboutus_list' %}">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'blog:post_list' %}">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'menu:menu_list' %}">Menu</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'reservation:reserve_table' %}">Reservations</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#footer">Contact Us</a>
-                        </li>
-
-                        {% if request.user.is_authenticated %}
-
-                            <!-- My Profile -->
-                            {% comment %}
-                            <li class="nav-item">
-                                <a href="{% url 'profile' %}" class="nav-link">My Account</a>
-                            </li>
-                            {% endcomment %}
-
-                        <li class="nav-item">
-                            <a href="{% url 'account_logout' %}" class="nav-link" aria-current="page">Logout</a>
-                        </li>
-                        {% else %}
-
-                        <li class="nav-item">
-                            <a href="{% url 'account_signup' %}" class="nav-link" aria-current="page">Register</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{% url 'account_login' %}" class="nav-link" aria-current="page">Login</a>
-                        </li>
-                        {% endif %}
-                    
-                    <!-- Superuser nav -->
-                        {% if request.user.is_superuser %}
-    
-                        <li class="dropdown nav-item superuser-menu-container">
-                            <a href="javascript:void(0)" class="dropbtn">Management</a>
-                            <div class="dropdown-content">
-                                <a href="{% url 'menu:add_menu' %}">Menus</a>
-                                <a href="{% url 'reservation:reservation_management' %}" class="nav-link">Reservations</a>
-                            </div>
-                        </li>
-                            
-                        {% endif %}
-                    </ul>
-                </div>
-
-
+            <div class="collapse navbar-collapse align-items-center justify-content-around" id="navbarSupportedContent">
+                <ul class="navbar-nav d-flex justify-content-center align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'aboutus:aboutus_list' %}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'blog:post_list' %}">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'menu:menu_list' %}">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'reservation:reserve_table' %}">Reservations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#footer">Contact Us</a>
+                    </li>
+                    {% if request.user.is_authenticated %}
+                    <li class="nav-item">
+                        <a href="{% url 'account_logout' %}" class="nav-link" aria-current="page">Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a href="{% url 'account_signup' %}" class="nav-link" aria-current="page">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'account_login' %}" class="nav-link" aria-current="page">Login</a>
+                    </li>
+                    {% endif %}
                 
-
+                    {% if request.user.is_superuser %}
+                    <li class="dropdown nav-item superuser-menu-container">
+                        <a href="javascript:void(0)" class="dropbtn">Management</a>
+                        <div class="dropdown-content">
+                            <a href="{% url 'menu:add_menu' %}">Menus</a>
+                            <a href="{% url 'reservation:reservation_management' %}" class="nav-link">Reservations</a>
+                        </div>
+                    </li>
+                    {% endif %}
+                </ul>
             </div>
-        </nav>
+        </div>
+    </nav>
 
     {% comment %}
         {% if messages %}
@@ -107,55 +86,47 @@
         {% endif %}
     {% endcomment %}
 
-        <!-- Main content goes here!! -->
-        <main class="flex-shrink-0 main-bg">
-            <div class="page-content pb-5">
-                {% block content %}
-                <!-- Content Goes here -->
-                {% endblock content %}
-            </div>
-        </main>
+    <main class="flex-shrink-0 main-bg">
+        <div class="page-content pb-5">
+            {% block content %}
+            {% endblock content %}
+        </div>
+    </main>
 
-        <!-- ***** Footer / Contact Us Section ***** -->
-        <footer id="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-4 my-4 col-xs-12">
-                        <div class="footer-about">
-                            <h3>About La Grill</h3>
-                            <p>La Grill offer a unique and elevated dining experience, with a focus on high-quality ingredients, innovative cuisine, and impeccable service.</p>
-                            <p>&copy;2023 - La Grill. All rights reserved.</p>
-                        </div>
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 my-4 col-xs-12">
+                    <div class="footer-about">
+                        <h3>About La Grill</h3>
+                        <p>La Grill offer a unique and elevated dining experience, with a focus on high-quality ingredients, innovative cuisine, and impeccable service.</p>
+                        <p>&copy;2023 - La Grill. All rights reserved.</p>
                     </div>
-                    <div class="col-sm-4 my-4 col-xs-12">
-                        <div class="footer-contact">
-                            <h3>Contact Us</h3>
-                            <p><i class="fas fa-map-marker"></i> One Restaurant Place, Food City, 0000</p>
-                            <p><i class="fas fa-phone-volume"></i> +123 456 7890</p>
-                            <p><i class="fas fa-envelope"></i> Bookings@lagrill.com</p>
-                        </div>
+                </div>
+                <div class="col-sm-4 my-4 col-xs-12">
+                    <div class="footer-contact">
+                        <h3>Contact Us</h3>
+                        <p><i class="fas fa-map-marker"></i> One Restaurant Place, Food City, 0000</p>
+                        <p><i class="fas fa-phone-volume"></i> +123 456 7890</p>
+                        <p><i class="fas fa-envelope"></i> Bookings@lagrill.com</p>
                     </div>
-                    <div class="col-sm-4 my-4 col-xs-12">
-                        <div class="footer-hours">
-                            <h3>Opening Hours:</h3>
-                            <p>Monday - Closed</p>
-                            <p>Tuesday - Thursday : 04:00 PM - 01:00 AM</p>
-                            <p>Friday - Sunday : 03:00 PM - 03:00 AM</p>
-                        </div>
+                </div>
+                <div class="col-sm-4 my-4 col-xs-12">
+                    <div class="footer-hours">
+                        <h3>Opening Hours:</h3>
+                        <p>Monday - Closed</p>
+                        <p>Tuesday - Thursday : 04:00 PM - 01:00 AM</p>
+                        <p>Friday - Sunday : 03:00 PM - 03:00 AM</p>
                     </div>
                 </div>
             </div>
-        </footer>
+        </div>
+    </footer>
 
-
-        {% block postloadjs %}
-        <!-- Font Awesome -->
-        <script src="https://kit.fontawesome.com/1a5fa01ebf.js" crossorigin="anonymous"></script>
-
-        <!-- Bootstrap -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-        {% endblock %}
+    {% block postloadjs %}
+    <script src="https://kit.fontawesome.com/1a5fa01ebf.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    {% endblock %}
     </body>
 </html>
 

@@ -10,7 +10,7 @@
             <div class="container">
                 <div class="row align-items center justify-content-center">
                     <div class="col-md-7 text-center" data-aos="fade-up">
-                        <h2 class="heading mt-3">{{post_detail}}</h2>
+                        <h2 class="heading mt-5">{{post_detail}}</h2>
 
                         <div class="post-info">
                             <div class="date-info">{{post_detail.created}}</div>
@@ -27,12 +27,11 @@
     <div class="section">
         <div class="container">
             <div class="row">
-                <!-- Main blog section -->
                 <div class="col-md-9">
                     <p>{{post_detail.content}}</p>
 
                     <div class="mt-5">
-                        <h3 class="mb-1">Comments</h3>
+                        <h2 class="mb-1">Comments</h2>
                         <ul class="comment-list">
                             {% for comment in comments %}
                             <li class="comment">
@@ -48,7 +47,7 @@
 
                         <div class="comment-form-wrap pt-2 mb-3">
                             {% if user.is_authenticated %}
-                            <h3 class="mb-5">Leave a comment</h3>
+                            <h4 class="mb-3">Leave a comment</h4>
                             <form method="POST" class="p-3 bg-light">
                                 {% csrf_token %}
                                 {{comment_form | crispy}}
@@ -60,7 +59,6 @@
                     </div>
                 </div>
 
-                <!-- Right Sidebar -->
                 <div class="col-md-3 sidebar">
                     <div class="sidebar-box">
                         <div class="categories">

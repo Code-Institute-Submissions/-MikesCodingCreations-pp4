@@ -5,8 +5,6 @@ from django.db import models
 class AboutUs(models.Model):
     title = models.CharField(max_length = 50)
     content = models.TextField()
-    # image = models.ImageField(upload_to='about_us/')
-
     class Meta:
         verbose_name = 'about us'
         verbose_name_plural = 'abous us'

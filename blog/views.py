@@ -5,7 +5,6 @@ from taggit.models import Tag
 from .forms import CommentForm
 # Create your views here.
 
-# POST LIST
 def post_list(request):
     post_list = Post.objects.all()
     context = {
@@ -14,7 +13,6 @@ def post_list(request):
 
     return render(request, 'Post/post_list.html', context)
 
-# POST DETAIL
 def post_detail(request, id):
     post_detail = Post.objects.get(id=id)
     categories = Category.objects.all()
@@ -42,7 +40,6 @@ def post_detail(request, id):
 
     return render(request, 'Post/post_detail.html', context)
 
-# CATEGORIES
 def post_by_category(request, category):
     post_by_category = Post.objects.filter(category__category_name=category)
     context = {

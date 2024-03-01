@@ -15,9 +15,4 @@ def aboutus_list(request):
         'chef' : chef
     }
 
-    # if why_choose_us:
-    #     context['why_choose_us'] = why_choose_us
-    # else:
-    #     context['why_choose_us'] = None
-
     return render(request, 'aboutus/about.html', context)

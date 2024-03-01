@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block content %}
 
+{% block content %}
     <div class="main-wrap">
         <div class="cover_1 cover_sm">
             <div class="img_bg">
@@ -26,7 +26,6 @@
 
         <div class="section">
             <div class="container">
-
                 <div class="row mb-5">
                     {% if request.user.is_superuser %}
                         {% for Reservation in reservation_management %}
@@ -72,12 +71,10 @@
                                 </div>
                             </div>
                         </div>
-                        
                         {% endfor %}
                     {% endif %}
                 </div>
             </div>
         </div>
     </div>
-
 {% endblock %}

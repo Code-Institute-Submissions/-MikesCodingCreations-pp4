@@ -1,7 +1,6 @@
 from django import forms
 from .models import Order
   
-# creating a form 
 class InputForm(forms.Form):
 
     first_name = forms.CharField(max_length = 200)

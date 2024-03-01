@@ -17,7 +17,6 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-10 p-1 form-wrap">
-
                     <form action="{% url 'reservation:reserve_table' %}" method="POST" class="d-flex justify-content-center align-items-center flex-column center">
                         {% csrf_token %}
                         <div class="row mb-2">
@@ -72,14 +71,6 @@
             </div>
         </div>
     </div>
-    
-    <!-- {% if messages %}
-    <ul class="messages">
-        {% for message in messages %}
-        <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
-        {% endfor %}
-    </ul>
-    {% endif %} -->
 </section>
 
 

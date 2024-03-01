@@ -4,34 +4,30 @@
 {% load static %}
 
 {% block content %}
+<div class="container-fluid mh-100" id="menu-section">
+    <div class="row d-flex justify-content-center">
+        <div class="col-lg-6 col-md-12">
+            <div class="row menu-item-1 d-flex justify-content-center">
+                <h2 class="text-center pt-3 display-2 text-warning" id="menu-detail-title">{{menu_detail}}</h2>
+                <img src="{{menu_detail.image.url}}" alt="menu item image" style=" width: 500px; align-items: center;" class="pb-3 pt-3">
+                <p class="text-center">{{menu_detail.description}}</p>
 
-        <!-- ********** Menu Section ********** -->
-            <div class="container-fluid mh-100" id="menu-section">
-                <div class="row d-flex justify-content-center">
-                    <div class="col-lg-6 col-md-12">
-                        <div class="row menu-item-1 d-flex justify-content-center">
-                            <h2 class="text-center pt-3 display-2 text-warning" id="menu-detail-title">{{menu_detail}}</h2>
-                            <img src="{{menu_detail.image.url}}" alt="menu item image" style=" width: 500px; align-items: center;" class="pb-3 pt-3">
-                            <p class="text-center">{{menu_detail.description}}</p>
-
-                            <p class="text-center">For: {{menu_detail.people}} Guests</p>
-                            <p class="text-center">Price: {{menu_detail.price}}$</p>
-                            {% comment %}
-                            {% if request.user.is_superuser %}
-                            <div class="">
-                                <small>
-                                    <a class="text-success" href="{% url 'menu:edit_menu' menu.slug %}">Edit</a>
-                                    <a class="text-danger" href="{% url 'menu:delete_menu' menu.slug %}">Delete</a>
-                                </small>
-                            </div>
-                            {% endif %}
-                            {% endcomment %}
-                        </div>
-                        <hr class="my-4">
-                    </div>
+                <p class="text-center">For: {{menu_detail.people}} Guests</p>
+                <p class="text-center">Price: {{menu_detail.price}}$</p>
+                {% comment %}
+                {% if request.user.is_superuser %}
+                <div class="">
+                    <small>
+                        <a class="text-success" href="{% url 'menu:edit_menu' menu.slug %}">Edit</a>
+                        <a class="text-danger" href="{% url 'menu:delete_menu' menu.slug %}">Delete</a>
+                    </small>
                 </div>
+                {% endif %}
+                {% endcomment %}
             </div>
+            <hr class="my-4">
         </div>
     </div>
+</div>
 
 {% endblock %}
