@@ -17,6 +17,13 @@
                 <div class="container col-10 text-center p-3">
                     <h3>Our Menu</h3>
                     <p class="mb-4">A culinary canvas where artistry and indulgence converge, each dish a symphony of flavors meticulously crafted to delight the senses and leave a lasting impression.</p>
+
+                    {% if request.user.is_superuser %}
+                        <div class="col-12 mt-3 pb-5 d-flex justify-content-center">
+                            <a class="text-success edit-menu-btn" href="{% url 'menu:add_menu' %}">Add a Menu Item</a>
+                        </div>
+                    {% endif %}
+
                 </div>
 
                 <div class="menu-items">

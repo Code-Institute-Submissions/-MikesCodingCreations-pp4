@@ -22,13 +22,14 @@
                 </div>
             </div>
         </div>
-
         {% if messages %}
             {% for message in messages %}
+                {% if message.level == 'success' %}
                 <div class="alert bg-success alert-dismissable text-center fade show" role="alert">
-                    {{message}}
+                    {{ message }}
                     <button type="button" class="btn-close close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
+                {% endif %}
             {% endfor %}
         {% endif %}
         

@@ -61,7 +61,7 @@ def delete_post(request, id):
     messages.success(request, f'Successfully deleted post "{post.title}".')
 
     context = {
-        'post_list' : post_list,
+        'messages': messages,
     }
 
     return redirect('blog:post_list')
@@ -72,11 +72,12 @@ def add_post(request):
     """ Add a Blog post """
     if not request.user.is_superuser:
         messages.error(request, "Only store owners can access this.")
-        return redirect(reverse('home'))
+        return redirect(reverse('blog:post_list'))
 
     if request.method == 'POST':
         form = BlogForm(request.POST, request.FILES)
         if form.is_valid():
+            form.instance.author = request.user
             form.save()
             messages.success(request, 'Successfully added blog post!')
             return redirect('blog:post_list')
