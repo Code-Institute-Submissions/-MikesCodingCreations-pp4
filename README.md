@@ -167,10 +167,13 @@ The project was deployed to Heroku using the following steps...
     Chef 3 - https://unsplash.com/photos/a-man-cooking-food-in-a-kitchen-wNQoaYCFcsI
     Chef 4 - https://unsplash.com/photos/man-in-black-nike-jacket-wearing-white-cap-SiQgni-cqFg
 
-    Menu item 1 (pasta) - https://unsplash.com/photos/pasta-in-tomato-sauce-PLyJqEJVre0
-    Menu item 2 (osyers) - https://www.pexels.com/photo/delicious-oysters-with-lemon-served-in-fancy-restaurant-4946440/
-    Menu item 3 (gnocci) - https://www.pexels.com/photo/plate-of-food-next-to-glass-of-red-wine-2878742/
-    Menu item 4 (lobster) - https://www.pexels.com/photo/delicious-boiled-lobster-on-plate-in-restaurant-4553120/
-    Menu item 5 (steak) - https://www.pexels.com/photo/appetizing-steak-served-on-table-with-mussel-salad-6542793/
-    Menu item 6 (tacos) - https://www.pexels.com/photo/tacos-served-in-a-restaurant-19250424/ 
+    Menu Item - Pasta - https://unsplash.com/photos/pasta-in-tomato-sauce-PLyJqEJVre0
+    Menu Item - Osyers - https://www.pexels.com/photo/delicious-oysters-with-lemon-served-in-fancy-restaurant-4946440/
+    Menu Item - Gnocci - https://www.pexels.com/photo/plate-of-food-next-to-glass-of-red-wine-2878742/
+    Menu Item - Lobster - https://lobsteranywhere.com/recipes/classic-lobster-thermidor-recipe/
+    Menu Item - Tacos - https://www.pexels.com/photo/tacos-served-in-a-restaurant-19250424/ 
+    Menu Item - Steak - https://flawlessfood.co.uk/cote-de-boeuf-bone-in-ribeye-steak/
+    Menu Item - Lamb - https://whatgreatgrandmaate.com/mint-chimichurri-lamb-chops/
+    Menu Item - Mushrooms - https://www.sarcasticcooking.com/2020/08/31/grilled-goat-cheese-stuffed-mushrooms/
+    Menu Item - Halloumi - https://thedeliciousspoon.com/greek-halloumi-kebabs/
 -->
