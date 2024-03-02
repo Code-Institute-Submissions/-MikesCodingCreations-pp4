@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-
     <div class="main-wrap">
         <div class="cover_1 cover_sm">
             <div class="img_bg">
@@ -32,19 +31,15 @@
                 {% endif %}
             {% endfor %}
         {% endif %}
-        
-
-
         <div class="section" id="blog_post-list_section">
             <div class="container">
-
                 <div class="row mb-5">
                     {% for post in post_list %}
                     <div class="col-md-4">
                         <div class="media d-block media-bg-white mb-3" data-aos="fade-up" data-aos-delay="350">
                             <div class="media-body">
                                 <h3><a href="{% url 'blog:post_detail' post.id %}" id="post_list_title">{{post}}</a></h3>
-                                <p class="post-meta"><span class="fa fa-user"> {{post.author}}</span></p>
+                                <p class="post-meta"><span class="fa fa-user fa-xs"> {{post.author}}</span></p>
                                 <p class="post-meta"><span class="fa fa-calendar"> {{post.created}}</span></p>
                                 <p class="mb-4">{{post.content|truncatechars:25}}</p>
                                 <p><a href="{% url 'blog:post_detail' post.id %}" class="btn btn-outline-warning btn-sm">Read More</a></p>
@@ -59,10 +54,8 @@
                         </div>
                     </div>
                     {% endfor %}
-
                 </div>
             </div>
         </div>
     </div>
-
 {% endblock %}

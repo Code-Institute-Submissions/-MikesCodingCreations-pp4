@@ -1,72 +1,71 @@
 {% extends 'base.html' %}
 {% load static %}
 
-    <body>
-    {% block content %}
-        <div class="banner">
-            <div class="mask d-flex justify-content-center align-items-center">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-5">
-                            <div class="banner-middle text-center text-justify text-break mb-5">
-                                <p class="display-5">
-                                    Bar
-                                    <span class="text-warning p-1">/</span>
-                                    Restaurant
-                                </p>
-                                <a href="/"><img src="/static/images/logo1.png" alt="website logo" width="90" class="logo"></a>
-                                <p>Incredible Food, Unforgettable Experiences.<br>
-                                    If you are looking for a truly special dining experience, then La Grill is the perfect choice.
-                                    <br>
-                                    It is an opportunity to experience the pinnacle of culinary artistry and to create lasting memories.</p>
-                                <a href="{% url 'reservation:reserve_table' %}" class="btn btn-outline-warning btn-lg mt-3" role="button">RESERVE A TABLE</a>
-                            </div>
-                        </div>
-
-                        <div class="col-xs-5 col-sm-12 col-md-5 col-lg-6 col-xl-6">
-                            <div class="banner-social text-light text-center pb-3">
-                                <i class="fab fa-facebook"></i>
-                                <i class="fab fa-instagram"></i>
-                                <i class="fab fa-twitter"></i>
-                            </div>
-                        </div>
-
-                        <div class="col-xs-7 col-sm-12 col-md-7 col-lg-6 col-xl-6">
-                            <div class="banner-address">
-                                <p class="text-light text-center"><i class="fas fa-map-marker text-warning p-1"></i> One Restaurant Place, Food City, NW</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="gallery padding" id="gallery-section">
+<body>
+{% block content %}
+    <div class="banner">
+        <div class="mask d-flex justify-content-center align-items-center">
             <div class="container">
-                <div class="row mb-2">
-                    <div class="col-12 gallery-top">
-                        <div class="gallery-title text-center">
-                            <h3 class="gallery-section-header"> ~ La Grill Gallery ~ </h3>
-                            <p class="gallery-section-info">View just some of our exclusive menu items below.</p>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-5">
+                        <div class="banner-middle text-center text-justify text-break mb-5">
+                            <p class="display-5">
+                                Bar
+                                <span class="text-warning p-1">/</span>
+                                Restaurant
+                            </p>
+                            <a href="/"><img src="/static/images/logo1.png" alt="website logo" width="90" class="logo"></a>
+                            <p>Incredible Food, Unforgettable Experiences.<br>
+                                If you are looking for a truly special dining experience, then La Grill is the perfect choice.
+                                <br>
+                                It is an opportunity to experience the pinnacle of culinary artistry and to create lasting memories.</p>
+                            <a href="{% url 'reservation:reserve_table' %}" class="btn btn-outline-warning btn-lg mt-3" role="button">RESERVE A TABLE</a>
                         </div>
                     </div>
-                <div class="col-sm-4 ">
-                    <a href="" data-lightbox="id" data-title="Testing"><img src="{% static '/images/gallery-images/gallery-image1.jpeg' %}" alt="Galler image" class="img-fluid mb-2"></a>
-                    <a href="#" data-lightbox="id"><img src="{% static '/images/gallery-images/gallery-image2.jpeg' %}" alt="Galler image" class="img-fluid mb-2"></a>
-                    <a href="#" data-lightbox="id"><img src="{% static '/images/gallery-images/gallery-image3.jpeg' %}" alt="Galler image" class="img-fluid mb-2" ></a>
-                </div>
-                <div class="col-sm-4">
-                    <a href="#" data-lightbox="id">  <img src="{% static '/images/gallery-images/gallery-image4.jpeg' %}" alt="Galler image" class="img-fluid mb-2"></a>
-                    <a href="#" data-lightbox="id">  <img src="{% static '/images/gallery-images/gallery-image5.jpeg' %}" alt="Galler image" class="img-fluid mb-2 mt-3"></a>
-                </div>
-                <div class="col-sm-4">
-                    <a href="#" data-lightbox="id"><img src="{% static '/images/gallery-images/gallery-image6.jpeg' %}" alt="Galler image"  class="img-fluid mb-2"></a>
-                    <a href="#" data-lightbox="id"><img src="{% static '/images/gallery-images/gallery-image7.jpeg' %}" alt="Galler image"  class="img-fluid mb-2 mt-3"></a></div>
+
+                    <div class="col-xs-5 col-sm-12 col-md-5 col-lg-6 col-xl-6">
+                        <div class="banner-social text-light text-center pb-3">
+                            <i class="fab fa-facebook"></i>
+                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                    </div>
+                    <div class="col-xs-7 col-sm-12 col-md-7 col-lg-6 col-xl-6">
+                        <div class="banner-address">
+                            <p class="text-light text-center"><i class="fas fa-map-marker text-warning p-1"></i> One Restaurant Place, Food City, NW</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    {% endblock %}
-    <script src="https://kit.fontawesome.com/1a5fa01ebf.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
-</html>
+    </div>
+
+    <div class="gallery padding" id="gallery-section">
+        <div class="container">
+            <div class="row mb-2">
+                <div class="col-12 gallery-top">
+                    <div class="gallery-title text-center">
+                        <h3 class="gallery-section-header"> ~ La Grill Gallery ~ </h3>
+                        <p class="gallery-section-info">View just some of our exclusive menu items below.</p>
+                    </div>
+                </div>
+            <div class="col-sm-4 ">
+                <a href="" data-lightbox="id" data-title="Testing"><img src="{% static '/images/gallery-images/gallery-image1.jpeg' %}" alt="Galler image" class="img-fluid mb-2"></a>
+                <a href="#" data-lightbox="id"><img src="{% static '/images/gallery-images/gallery-image2.jpeg' %}" alt="Galler image" class="img-fluid mb-2"></a>
+                <a href="#" data-lightbox="id"><img src="{% static '/images/gallery-images/gallery-image3.jpeg' %}" alt="Galler image" class="img-fluid mb-2" ></a>
+            </div>
+            <div class="col-sm-4">
+                <a href="#" data-lightbox="id">  <img src="{% static '/images/gallery-images/gallery-image4.jpeg' %}" alt="Galler image" class="img-fluid mb-2"></a>
+                <a href="#" data-lightbox="id">  <img src="{% static '/images/gallery-images/gallery-image5.jpeg' %}" alt="Galler image" class="img-fluid mb-2 mt-3"></a>
+            </div>
+            <div class="col-sm-4">
+                <a href="#" data-lightbox="id"><img src="{% static '/images/gallery-images/gallery-image6.jpeg' %}" alt="Galler image"  class="img-fluid mb-2"></a>
+                <a href="#" data-lightbox="id"><img src="{% static '/images/gallery-images/gallery-image7.jpeg' %}" alt="Galler image"  class="img-fluid mb-2 mt-3"></a></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+<script src="https://kit.fontawesome.com/1a5fa01ebf.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>

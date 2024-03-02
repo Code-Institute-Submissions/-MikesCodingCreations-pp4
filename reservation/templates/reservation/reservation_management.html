@@ -23,7 +23,6 @@
                 </div>
             </div>
         </div>
-
         <div class="section">
             <div class="container">
                 <div class="row mb-5">
@@ -35,23 +34,18 @@
                                     {% comment %}<h3><a href="{% url 'reservation:reservation_management' %}">{{Reservation}}</a></h3>{% endcomment%}
                                     <h3 id="logging-header">Reservation No# {{Reservation.id}}</h3>
                                     <hr>
-
                                     <div class="mb-2">
                                         <p class="p-0 m-0">Customer: {{Reservation.full_Name}}</p>
                                     </div>
-
                                     <div class="mb-2">
                                         <p class="p-0 m-0">Email: {{Reservation.email}}</p>
                                     </div>
-
                                     <div class="mb-2">
                                         <p class="p-0 m-0">Phone Number: {{Reservation.phone}}</p>
                                     </div>
-
                                     <div class="mb-2">
                                         <p class="p-0 m-0">Party size: {{Reservation.guests}}</p>
                                     </div>
-
                                     <div class="mb-2">
                                         <p class="p-0 m-0">Reservation Date & Time:</p>
                                         <p class="p-0 m-0">{{Reservation.date}} - {{Reservation.time}}</p>

@@ -3,9 +3,7 @@
 {% load static %}
 
 {% block content %}
-
     <div class="main-wrap">
-
         <div class="cover_1 cover_sm mt-5">
             <div data-stellar-background-ratio="0.5">
                 <div class="container">
@@ -18,7 +16,6 @@
                 </div>
             </div>
         </div>
-    
         <div class="section mb-5 our-history-container">
             <div class="container">
                 <div class="row mt-5 our-history-container-inner">
@@ -32,7 +29,6 @@
                 </div>
             </div>
         </div>
-
         <div class="section why-choose-us-container">
             <div class="container">
                 <div class="row justify-content-center mb-5 why-choose-us-header" data-aos="fade-up">
@@ -62,7 +58,6 @@
                 </div>
             </div>
         </div>
-
         <div class="section" id="chef-section">
             <div class="container">
                 <div class="row justify-content-center mb-5" data-aos="fade-up">
@@ -74,7 +69,7 @@
                 <div class="row">
                     {% for one in chef %}
                     <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
-                        <img src="{{one.image.url}}" alt="Chef1" class="img-fluid mb-4 rounded chef-img">
+                        <img src="{{one.image.url}}" alt="Chef image" class="img-fluid mb-4 rounded chef-img">
                         <h3 class="mb-3 chef-name" >{{one.name}}</h3>
                         <p class="post-meta text-muted chef-title">{{one.title}}</p>
                         <p class="mb-5 chef-bio">{{one.bio}}</p>
@@ -85,5 +80,4 @@
         </div>
 
     </div>
-
 {% endblock %}
