@@ -43,7 +43,7 @@
                     <div class="col-md-4">
                         <div class="media d-block media-bg-white mb-3" data-aos="fade-up" data-aos-delay="350">
                             <div class="media-body">
-                                <h3><a href="{% url 'blog:post_detail' post.id %}" id="post_list_title">Title: {{post}}</a></h3>
+                                <h3><a href="{% url 'blog:post_detail' post.id %}" id="post_list_title">{{post}}</a></h3>
                                 <p class="post-meta"><span class="fa fa-user"> {{post.author}}</span></p>
                                 <p class="post-meta"><span class="fa fa-calendar"> {{post.created}}</span></p>
                                 <p class="mb-4">{{post.content|truncatechars:25}}</p>

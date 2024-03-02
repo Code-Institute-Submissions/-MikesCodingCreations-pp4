@@ -35,11 +35,11 @@
                                         <div class="col-lg-4 col-xl-4 col-md-5 col-sm-12 col-12 menu-item-photo-container">
                                             <img class="menu-item-photo" src="{{menu.image.url}}" alt="menu item">
                                         </div>
-                                        <div class="col-lg-6 col-xl-6 col-md-5 col-sm-12 col-12 menu-item-details-container">
+                                        <div class="col-lg-7 col-xl-7 col-md-6 col-sm-12 col-12 menu-item-details-container">
                                             <a class="text-warning" href="{% url 'menu:menu_detail' menu.slug %}">{{menu.name}}</a>
                                             <p class="menu-item-info">{{menu.description|truncatewords:60}}</p>
                                         </div>
-                                        <div class="col-lg-2 col-xl-2 col-md-2 col-sm-12 col-12 menu-item-price-container">
+                                        <div class="col-lg-1 col-xl-1 col-md-1 col-sm-12 col-12 menu-item-price-container">
                                             <span class="dollar font-weight-bold">€{{menu.price}}</span>
                                         </div>
                                         {% if request.user.is_superuser %}
