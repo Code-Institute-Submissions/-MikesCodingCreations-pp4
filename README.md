@@ -91,11 +91,65 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 -   [W3C Markup Validator](https://validator.w3.org/)
     - The code passes all HTML html validation as seen [here](https://github.com/MikesCodingCreations/pp4/blob/main/media/testing-media/w3%20html%20checker.png)
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_uri)
-    - The code passes all *major* validation as seen [here](https://github.com/MikesCodingCreations/pp4/blob/main/media/testing-media/w3%20css%20checker.png). There is some failure regarding *parse error*, however that is due to bootstrap classes which cannot be altered.  
+    - The code passes all *major* validation as seen [here](https://github.com/MikesCodingCreations/pp4/blob/main/media/testing-media/w3%20css%20checker.png). 
+    - There is some failure regarding *parse error*, however that is due to bootstrap classes which cannot be altered.  
 -   [Python testing]()
     - 
-### Testing User Stories from the User Experience (UX) Section
 
+### Testing User Stories from the User Experience (UX) Section
+#### Customer Goals
+    1. As a Customer I can navigate the website smoothly on any device, so that I can find out about the company no matter the device I posses.
+        - 
+    2. As a customer I can fully understand the company's offerings, so that I can make a formal decision on attending the restaurant or not.
+
+    3. As a customer I can make contact with the owners, so that I can enquire about a reservation, menu item, or anything that I may wish to know.
+        - 
+    4. As a customer I can locate the companies' social media links, so that determine how trusted and known they are.
+        - 
+    5. As a customer I can research staff members, so that I can understand the inspiration behind the cooking and the skills I can expect to experience.
+        - 
+    6. As a customer I can review the menu, so that I can decide to attend the restaurant or not.
+        - 
+    7. As a customer I can view blog posts, so that Keep up to date with company news.
+        - 
+    8. As a customer I can view blog post comments, so that I can have an understanding of the customer base.
+        - 
+    9. As a customer I can make blog a comment, so that interact with the business.
+        - 
+    10. As a customer I can Search blogs by category, so that easily navigate to similar blog posts.
+        - 
+    11. As a customer I can create an account, so that have the ability to interact with the website and/or company.
+        - 
+    12. As a customer I can login to my created account, so that I can make comments on blogs to let owner/s know what I think.
+        - 
+    13. As a customer I can logout of my account, so that securely save my data and keep my credentials safe.
+        - 
+    14. As a customer I can review current and new menu items so that I can understand what is being served.
+        - 
+    15. As a customer I can make a reservation, so that I can attend the restaurant and be seated.
+        - 
+    16. As a customer I can receive confirmation of reservation, so that I can feel confident about my table booking.
+        - 
+    17. As a customer I can make a reservation for a certain date, time, and number of people, so that I can attend with whom I want at my chosen date.
+        - 
+
+#### Site Owner Goals
+    1. As a site owner I can Create blog posts, so that I can offer customers the latest news & grow customer base.
+        - 
+    2. As a site owner I can delete blog posts, so that remove old or unwanted blogs to reduce customer confusion.
+        - 
+    3. As a site owner I can view administrator-only pages, so that I can create, edit, or delete menu items or blog posts.
+        - 
+    4. As a site owner I can create new menu items, so that I can offer customers the latest menu on offer.
+        - 
+    5. As a site owner I can edit current menu items, so that customers have the latest menu information/make changes to old menus.
+        - 
+    6. As a site owner I can delete menu items, so that I can remove outdated menu items to reduce customer confusion.
+        - 
+    7. As a site owner I can review reservations, so that avoid double or fake bookings.
+        - 
+    8. As a site owner I can delete reservations, so that I can manage the restaurant attendance.
+        -   
     
 
 
