@@ -46,11 +46,11 @@ Welcome to La Grill, a fine dining restaurant. Here we have specially catered fo
         -   The wireframe mockups were made using Figma and can be accessed via this [link:](https://www.figma.com/file/XKsMr6U3Ne7jjkrnuNeiNt/PP4-Workflow?type=whiteboard&node-id=0%3A1&t=KJOwujAo3JGR7sj5-1)
     -   #### Colour Scheme
         -   The three main colors used are black, white, and gold.
-            - The reasoning behind the color choices is from backed studies from [[AlabamaChain](https://alabamachanin.com/journal/2015/01/inspiration-black-and-gold)], [[LoveHappens Magazine] (https://www.lovehappensmag.com/blog/2023/01/10/black-and-gold-an-iconic-color-combo/)] and [[My Smart Blog], (https://mystart.com/blog/shining-in-contrast-unveiling-the-symbolism-behind-black-gold/)] that indicate colors such as black and gold are associated with importance, luxury, or prestige. Something the company strives for. Moreover, the white is then used for text to stand out on the page.
+            The reasoning behind the color choices is from backed studies from [[AlabamaChain](https://alabamachanin.com/journal/2015/01/inspiration-black-and-gold)], [[LoveHappens Magazine] (https://www.lovehappensmag.com/blog/2023/01/10/black-and-gold-an-iconic-color-combo/)] and [[My Smart Blog], (https://mystart.com/blog/shining-in-contrast-unveiling-the-symbolism-behind-black-gold/)] that indicate colors such as black and gold are associated with importance, luxury, or prestige. Something the company strives for. Moreover, the white is then used for text to stand out on the page.
     -   #### Typography
-            -   The Rozha One font is the main font used throughout the whole website with  Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. Rozha One is a clean font used frequently in restaurant websites, so it is both attractive and appropriate.
+            The Rozha One font is the main font used throughout the whole website with  Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. Rozha One is a clean font used frequently in restaurant websites, so it is both attractive and appropriate.
     -   #### Imagery
-            -   Imagery is important, and so is the lack of imagery. The large, background hero page which is just black signifies the simplicity and fine dining   establishment that it is. You will see from trends that the lower class an organization/restaurant is, the more colors and images they have going on. Therefore keeping the background image a plain black page with strong colors such as white and gold will provide the user with all the information they need.
+            Imagery is important, and so is the lack of imagery. The large, background hero page which is just black signifies the simplicity and fine dining   establishment that it is. You will see from trends that the lower class an organization/restaurant is, the more colors and images they have going on. Therefore keeping the background image a plain black page with strong colors such as white and gold will provide the user with all the information they need.
 
 ## Features
 -   Responsive on all device sizes.
@@ -91,7 +91,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 -   [W3C Markup Validator](https://validator.w3.org/)
     - The code passes all HTML html validation as seen [here](https://github.com/MikesCodingCreations/pp4/blob/main/media/testing-media/w3%20html%20checker.png)
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_uri)
-    - The code passes all *major* validation. There is some failure regarding *parse error*, however that is due to bootstrap classes which cannot be altered.  
+    - The code passes all *major* validation as seen [here](https://github.com/MikesCodingCreations/pp4/blob/main/media/testing-media/w3%20css%20checker.png). There is some failure regarding *parse error*, however that is due to bootstrap classes which cannot be altered.  
 -   [Python testing]()
     - 
 ### Testing User Stories from the User Experience (UX) Section
