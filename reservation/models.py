@@ -1,5 +1,4 @@
 from django.db import models
-from profiles.models import UserProfile
 from django.utils import timezone
 # Create your models here.
 

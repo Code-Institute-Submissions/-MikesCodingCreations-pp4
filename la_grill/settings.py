@@ -58,7 +58,6 @@ INSTALLED_APPS = [
     'reservation',
     'home',
     'aboutus',
-    'profiles',
     'blog',
 
     'django_summernote',

@@ -119,19 +119,39 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
         - *Blog test*:
             - Testing forms:
-            - Testing views:
-                - For the blog forms, we ran [three forms]().
+                - For the blog forms, we ran [three tests]
+                        (https://github.com/MikesCodingCreations/pp4/blob/main/media/testing-media/testing_blog/form_test/blog_forms_test.png). 
                     1. One for testing the CommentForm has the expected Field.
-                    2. One for testing the CommentForm with the conent.
+                    2. One for testing the CommentForm with the content.
                     3. And another for testing the CommentForm without content.
-                        - When running the test with *Python3 manage.py test* command, we saw that the first test [failed]().
+                        - When running the test with *Python3 manage.py test* command, we saw that the first test [failed]
+                            (https://github.com/MikesCodingCreations/pp4/blob/main/media/testing-media/testing_blog/form_test/failed_blog_forms_test.png).
                         - This is because of a mismatch between the expected and actual field names in the CommentForm.
                         - The test expects the form.fields.keys() to return a list containing only the key "content".
                         - However, the actual output shows dict_keys(['content']).
                     - Solution:
-                        - To fix this, we simply convert the dict_keys object to a list using the list() function. [Here's the updated test]().
-                    - The blog form test now passes all three [test]().
+                        - To fix this, we simply convert the dict_keys object to a list using the list() function. 
+                            [Here's the updated test](https://github.com/MikesCodingCreations/pp4/blob/main/media/testing-media/testing_blog/form_test/updated_blog_forms_test.png).
+                    - The blog form test now passes all three [tests]
+                            (https://github.com/MikesCodingCreations/pp4/blob/main/media/testing-media/testing_blog/form_test/passed_blog_forms_test.png).
+            - Testing views:
+                - For the blog views, we ran [three tests](https://github.com/MikesCodingCreations/pp4/blob/main/media/testing-media/xxxxxxxxxxxxx). 
+                    
+                    1. One for testing the post list view - PostListViewTest 
+                        - When running the test with *Python3 manage.py test* command, we saw that the following [passed].
+                        ()
 
+                    2. One for testing the post detail view - PostDetailViewTest
+                        - When running the test with *Python3 manage.py test* command, we saw that the following [passed].
+                        ()
+
+                    3. And another for the post by category view - PostByCategoryViewTest
+                        - When running the test with *Python3 manage.py test* command, we saw that the following [error].
+                        ()
+                        - The 'post by category' is missing a URL pattern for the view seen [here].
+                        ()
+                        - To fix this, we added a URL pattern for the 'post_by_category' view as [such].
+                        ()
         - *Home test*:
             - Testing forms:
             - Testing views:
@@ -144,7 +164,6 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
             - Testing forms:
             - Testing views:
         
-
 ### Further Testing
 -   The Website was tested on Google Chrome, Microsoft Edge and Safari browsers.
 -   The website was viewed on a variety of devices such as Desktop, Laptop, and iPhone X.
