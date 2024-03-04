@@ -29,7 +29,7 @@ def add_menu(request):
     """ Add a menu item """
     if not request.user.is_superuser:
         messages.error(request, "Only store owners can access this.")
-        return redirect(reverse('home'))
+        return redirect('/')
 
     if request.method == 'POST':
         form = MenuForm(request.POST, request.FILES)

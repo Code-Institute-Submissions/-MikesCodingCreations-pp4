@@ -6,7 +6,6 @@ Welcome to La Grill, a fine dining restaurant. Here we have specially catered fo
 
 <h2 align="center"><img src="https://github.com/MikesCodingCreations/pp4/blob/main/la-grill-full-site.png"></h2>
 
-
 ## User Experience (UX)
 ### Design
 #### Wireframe mockup
@@ -114,13 +113,13 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
     - Automated testing:
         - *About us test*:
-            - Testing forms:
-            - Testing views:
-
+            - For the about us views, we ran one test. 
+                    1. One for testing the about us views - AboutUsListViewTest 
+                        - When running the test with *Python3 manage.py test* command, we saw that the following [failed].
+                        ()
         - *Blog test*:
             - Testing forms:
-                - For the blog forms, we ran [three tests]
-                        (https://github.com/MikesCodingCreations/pp4/blob/main/media/testing-media/testing_blog/form_test/blog_forms_test.png). 
+                - For the blog forms, we ran three tests. 
                     1. One for testing the CommentForm has the expected Field.
                     2. One for testing the CommentForm with the content.
                     3. And another for testing the CommentForm without content.
@@ -135,31 +134,35 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
                     - The blog form test now passes all three [tests]
                             (https://github.com/MikesCodingCreations/pp4/blob/main/media/testing-media/testing_blog/form_test/passed_blog_forms_test.png).
             - Testing views:
-                - For the blog views, we ran [three tests](https://github.com/MikesCodingCreations/pp4/blob/main/media/testing-media/xxxxxxxxxxxxx). 
-                    
+                - For the blog views, we ran three tests. 
                     1. One for testing the post list view - PostListViewTest 
                         - When running the test with *Python3 manage.py test* command, we saw that the following [passed].
-                        ()
+                        (https://github.com/MikesCodingCreations/pp4/blob/main/media/testing-media/testing_blog/views_test/postlistview_test_success.png)
 
                     2. One for testing the post detail view - PostDetailViewTest
                         - When running the test with *Python3 manage.py test* command, we saw that the following [passed].
-                        ()
+                        (https://github.com/MikesCodingCreations/pp4/blob/main/media/testing-media/testing_blog/views_test/postdetailview_test_success.png)
 
                     3. And another for the post by category view - PostByCategoryViewTest
                         - When running the test with *Python3 manage.py test* command, we saw that the following [error].
-                        ()
-                        - The 'post by category' is missing a URL pattern for the view seen [here].
-                        ()
+                        (https://github.com/MikesCodingCreations/pp4/blob/main/media/testing-media/testing_blog/views_test/postbycategoryview_test_fail.png)
                         - To fix this, we added a URL pattern for the 'post_by_category' view as [such].
-                        ()
-        - *Home test*:
-            - Testing forms:
-            - Testing views:
-
+                        (https://github.com/MikesCodingCreations/pp4/blob/main/media/testing-media/testing_blog/views_test/new_blog_urls_test.png)
+                        - The test now [passes](https://github.com/MikesCodingCreations/pp4/blob/main/media/testing-media/testing_blog/views_test/postbycategoryview_test_pass.png)
         - *Menu test*:
             - Testing forms:
-            - Testing views:
-            
+                For the menu forms, we ran one test. 
+                        1. One for testing the MenuFormTest can handle inital data and has all fields.
+                            - When running the test with *Python3 manage.py test* command, we saw that the first test [passed].
+                                ()
+            - Testing views: 
+                - For the MenuViewsTests, we ran four tests. 
+                        1. One for testing that the Menu model's save method generates slugs correctly.
+                        2. One for testing that add menu view returns a permission error for non-superusers with valid data.
+                        3. One for testing that add menu view handles invalid data for superusers.
+                        4. One for testing that edit menu view handles invalid data for superusers.
+                            - When running the test with *Python3 manage.py test* command, we saw that the following [passed].
+                            ()
         - *Reservation test*:
             - Testing forms:
             - Testing views:
@@ -170,10 +173,8 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 -   A large amount of testing was done to ensure that all pages were connecting correctly.
 -   Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
 
-
 ### Known Bugs
 -   On some mobile devices the About Us and menu sections are not centrally aligned.
-
 
 ## Deployment
 ### Heroku
@@ -189,10 +190,8 @@ The project was deployed to Heroku using the following steps.
 7. Include the app url in the allowed hosts within your settings file.
 8. Hit deploy in Heroku and your app should be live.
 
-
 ### Content
 -   All content was written by the developer.
-
 
 ### Media
 -   All Images were gathered from Google, Pexels and Upsplash
