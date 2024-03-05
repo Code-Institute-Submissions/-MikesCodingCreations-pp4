@@ -32,8 +32,6 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # SECRET_KEY = 'p@ei#69*b*zz3u4yie-$()@cy^l(+x9&@6ypx+b0lm(3%_9hr7'
 SECRET_KEY = os.environ.get('SECRET_KEY', 'p@ei#69*b*zz3u4yig-$()@cy^l(+x9&@6ypx+b0lm(3%_9hr7')
 
-
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
