@@ -4,7 +4,7 @@
 
 Welcome to La Grill, a fine dining restaurant. Here I have specially catered food from the top chefs around the world.
 
-<h2 align="center"><img src="https://github.com/MikesCodingCreations/pp4/blob/main/la-grill-full-site.png"></h2>
+<h2 align="center"><img src="https://github.com/MikesCodingCreations/pp4/blob/main/media/full_responsive_site.png"></h2>
 
 ## User Experience (UX)
 ### Design
