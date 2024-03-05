@@ -258,16 +258,3 @@ The project was deployed to Heroku using the following steps.
 
 ### Media
 -   All Images were gathered from Google, Pexels and Upsplash
-    - Chef 1 - https://unsplash.com/photos/man-in-black-t-shirt-holding-stainless-steel-bowl-eBmyH7oO5wY
-    - Chef 2 - https://unsplash.com/photos/man-preparing-food-v3OlBE6-fhU
-    - Chef 3 - https://unsplash.com/photos/a-man-cooking-food-in-a-kitchen-wNQoaYCFcsI
-    - Chef 4 - https://unsplash.com/photos/man-in-black-nike-jacket-wearing-white-cap-SiQgni-cqFg
-    - Menu Item - Pasta - https://unsplash.com/photos/pasta-in-tomato-sauce-PLyJqEJVre0
-    - Menu Item - Osyers - https://www.pexels.com/photo/delicious-oysters-with-lemon-served-in-fancy-restaurant-4946440/
-    - Menu Item - Gnocci - https://www.pexels.com/photo/plate-of-food-next-to-glass-of-red-wine-2878742/
-    - Menu Item - Lobster - https://lobsteranywhere.com/recipes/classic-lobster-thermidor-recipe/
-    - Menu Item - Tacos - https://www.pexels.com/photo/tacos-served-in-a-restaurant-19250424/ 
-    - Menu Item - Steak - https://flawlessfood.co.uk/cote-de-boeuf-bone-in-ribeye-steak/
-    - Menu Item - Lamb - https://whatgreatgrandmaate.com/mint-chimichurri-lamb-chops/
-    - Menu Item - Mushrooms - https://www.sarcasticcooking.com/2020/08/31/grilled-goat-cheese-stuffed-mushrooms/
-    - Menu Item - Halloumi - https://thedeliciousspoon.com/greek-halloumi-kebabs/
