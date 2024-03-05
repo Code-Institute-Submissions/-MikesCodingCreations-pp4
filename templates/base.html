@@ -14,14 +14,14 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Rozha+One&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
         <title>La Grill - Fine Dining Restaurant</title>
     </head>
 
     <body>
         <nav class="navbar navbar-expand-sm d-flex fixed">
             <div class="container-fluid">
-                <a href="/"><img src="/static/images/logo1.png" alt="website logo" class="logo"></a>
+                <a href="/"><img src="{% static /images/logo1.png %}" alt="website logo" class="logo"></a>
                 <button class="navbar-toggler text-success bg-alert" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
