@@ -2,7 +2,7 @@
 
 [View the live project here.](https://la-grill-pp4-40d10c869885.herokuapp.com/)
 
-Welcome to La Grill, a fine dining restaurant. Here we have specially catered food from the top chefs around the world.
+Welcome to La Grill, a fine dining restaurant. Here I have specially catered food from the top chefs around the world.
 
 <h2 align="center"><img src="https://github.com/MikesCodingCreations/pp4/blob/main/la-grill-full-site.png"></h2>
 
@@ -107,65 +107,88 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
     - 
 
 
-### Testing User Stories from the User Experience (UX) Section
+### Testing User Stories from the User Experience (UX) Section & Django Testing
 - Two differwnt types of testing were taken to ensure all features of the website/app work. Both manual and automated testing have taken place. Below is information on each of these in more details.
     - Manual Testing:
 
     - Automated testing:
         - *About us test*:
-            - For the about us views, we ran one test. 
-                    1. One for testing the about us views - AboutUsListViewTest 
-                        - When running the test with *Python3 manage.py test* command, we saw that the following [failed].
-                        ()
+            - For the about us views, I created a test case - AboutUsListViewTest and within it, I ran 2 tests.
+                    1. One for testing that the aboutus_list view returns a 200 status code and the expected context.
+                        - When running the test with *Python3 manage.py test* command, I saw that the following [failed].
+                            ()
+                    2. One for testing that the aboutus_list view handles an empty database gracefully.
+                        - When running the test with *Python3 manage.py test* command, I saw that the following [failed].
+                            ()
         - *Blog test*:
             - Testing forms:
-                - For the blog forms, we ran three tests. 
+                - For the blog forms, I ran three tests. 
                     1. One for testing the CommentForm has the expected Field.
                     2. One for testing the CommentForm with the content.
                     3. And another for testing the CommentForm without content.
-                        - When running the test with *Python3 manage.py test* command, we saw that the first test [failed]
-                            (https://github.com/MikesCodingCreations/pp4/blob/main/media/testing-media/testing_blog/form_test/failed_blog_forms_test.png).
+                        - When running the test with *Python3 manage.py test* command, I saw that the first test [failed], whereas all the rest passed.
+                            (https://github.com/MikesCodingCreations/pp4/blob/main/media/testing-media/testing_blog/form_test/failed_blog_forms_test.png)
                         - This is because of a mismatch between the expected and actual field names in the CommentForm.
                         - The test expects the form.fields.keys() to return a list containing only the key "content".
                         - However, the actual output shows dict_keys(['content']).
                     - Solution:
-                        - To fix this, we simply convert the dict_keys object to a list using the list() function. 
+                        - To fix this, I simply convert the dict_keys object to a list using the list() function. 
                             [Here's the updated test](https://github.com/MikesCodingCreations/pp4/blob/main/media/testing-media/testing_blog/form_test/updated_blog_forms_test.png).
                     - The blog form test now passes all three [tests]
                             (https://github.com/MikesCodingCreations/pp4/blob/main/media/testing-media/testing_blog/form_test/passed_blog_forms_test.png).
             - Testing views:
-                - For the blog views, we ran three tests. 
+                - For the blog views, I ran three tests. 
                     1. One for testing the post list view - PostListViewTest 
-                        - When running the test with *Python3 manage.py test* command, we saw that the following [passed].
+                        - When running the test with *Python3 manage.py test* command, I saw that the following [passed].
                         (https://github.com/MikesCodingCreations/pp4/blob/main/media/testing-media/testing_blog/views_test/postlistview_test_success.png)
 
                     2. One for testing the post detail view - PostDetailViewTest
-                        - When running the test with *Python3 manage.py test* command, we saw that the following [passed].
+                        - When running the test with *Python3 manage.py test* command, I saw that the following [passed].
                         (https://github.com/MikesCodingCreations/pp4/blob/main/media/testing-media/testing_blog/views_test/postdetailview_test_success.png)
 
                     3. And another for the post by category view - PostByCategoryViewTest
-                        - When running the test with *Python3 manage.py test* command, we saw that the following [error].
+                        - When running the test with *Python3 manage.py test* command, I saw that the following [error].
                         (https://github.com/MikesCodingCreations/pp4/blob/main/media/testing-media/testing_blog/views_test/postbycategoryview_test_fail.png)
-                        - To fix this, we added a URL pattern for the 'post_by_category' view as [such].
+                        - To fix this, I added a URL pattern for the 'post_by_category' view as [such].
                         (https://github.com/MikesCodingCreations/pp4/blob/main/media/testing-media/testing_blog/views_test/new_blog_urls_test.png)
                         - The test now [passes](https://github.com/MikesCodingCreations/pp4/blob/main/media/testing-media/testing_blog/views_test/postbycategoryview_test_pass.png)
         - *Menu test*:
             - Testing forms:
-                For the menu forms, we ran one test. 
+                For the menu forms, I ran one test. 
                         1. One for testing the MenuFormTest can handle inital data and has all fields.
-                            - When running the test with *Python3 manage.py test* command, we saw that the first test [passed].
+                            - When running the test with *Python3 manage.py test* command, I saw that the test [passed].
                                 ()
             - Testing views: 
-                - For the MenuViewsTests, we ran four tests. 
+                - For the MenuViewsTests, I ran four tests. 
                         1. One for testing that the Menu model's save method generates slugs correctly.
                         2. One for testing that add menu view returns a permission error for non-superusers with valid data.
                         3. One for testing that add menu view handles invalid data for superusers.
                         4. One for testing that edit menu view handles invalid data for superusers.
-                            - When running the test with *Python3 manage.py test* command, we saw that the following [passed].
+                            - When running the test with *Python3 manage.py test* command, I saw that the following [passed].
                             ()
         - *Reservation test*:
             - Testing forms:
+                For the reservation forms, I created a test case - ReserveTableFormTests and within it, I ran 5 tests.
+                    1. One for testing that the form includes all fields from the model except 'created'.
+                    2. One for testing the 'name' field is required.
+                    3. One for testing the 'phone_number' field is required.
+                    4. One for testing the 'email' field is required.
+                    4. One for testing the 'email' field is valid.
+                    5. One for testing a valid email address is accepted.
+                        - When running the test with *Python3 manage.py test* command, I saw that the tests [passed].
+                            ()
             - Testing views:
+                For the reservation views, I created a test case - ReservationViewTests and within it ran, 8 tests.
+                    1. One for testing the reserve table get request.
+                    2. One for testing the reserve table post has valid data.
+                    3. One for testing the reserve table post has invalid data.
+                    4. One for testing the thank you view.
+                    5. One for testing the reservation management login is required.
+                    6. One for testing the reservation management is authenticated.
+                    7. One for testing the delete reservation login is required.
+                    8. One for testing the delete reservation is authenticated.
+                        - When running the test with *Python3 manage.py test* command, I saw that all tests [passed].
+                            ()
         
 ### Further Testing
 -   The Website was tested on Google Chrome, Microsoft Edge and Safari browsers.
